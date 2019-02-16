@@ -1,0 +1,52 @@
+# required by dev-python/pypy3 (argument)
+=dev-python/pypy3-6.0.0 ~amd64
+# required by fquery (argument)
+=app-portage/fquery-0.2.3 ~amd64
+# required by x11-misc/ftmenu (argument)
+=x11-misc/ftmenu-0.4.0-r1 ~amd64
+# required by x11-wm/qtile (argument)
+=x11-wm/qtile-0.12.0 ~amd64
+# required by sys-apps/pacman (argument)
+=sys-apps/pacman-5.0.2-r2 ~amd64
+# required by net-im/telegram-desktop-bin (argument)
+=net-im/telegram-desktop-bin-1.5.4 ~amd64
+# required by dev-libs/sway-1.0_beta2::gentoo
+# required by sway (argument)
+=dev-libs/wlroots-0.2 ~amd64
+# required by dev-libs/sway-1.0_beta2::gentoo
+# required by sway (argument)
+=app-text/scdoc-1.5.2 ~amd64
+# required by dev-libs/sway-1.0_beta2::gentoo
+# required by sway (argument)
+=dev-libs/json-c-0.13.1-r1 ~amd64
+# required by dev-java/openjdk-bin (argument)
+=dev-java/openjdk-bin-11.0.1_p13 ~amd64
+# required by media-sound/pulseaudio-modules-bt (argument)
+=media-sound/pulseaudio-modules-bt-9999 **
+# required by imlib2_loaders (argument)
+=media-plugins/imlib2_loaders-1.5.1 ~amd64
+# required by www-client/qutebrowser-1.5.2::gentoo
+# required by qutebrowser (argument)
+=dev-python/pypeg2-2.15.2 ~amd64
+# required by app-editors/beaver (argument)
+=app-editors/beaver-0.4.1 ~amd64
+# required by bcfg2 (argument)
+=app-admin/bcfg2-1.2.4-r1 ~amd64
+# required by alsamixer-app (argument)
+=media-sound/alsamixer-app-0.1-r1 ~amd64
+# required by app-editors/atom-1.32.1::gentoo
+# required by app-editors/atom (argument)
+=dev-util/electron-2.0.10 ~amd64
+# required by dev-util/electron-2.0.10::gentoo
+# required by app-editors/atom-1.32.1::gentoo
+# required by app-editors/atom (argument)
+=app-eselect/eselect-electron-2.1 ~amd64
+# required by app-editors/atom (argument)
+=app-editors/atom-1.32.1 ~amd64
+# required by maim (argument)
+=media-gfx/maim-5.5.1 ~amd64
+# required by media-gfx/maim-5.5.1::gentoo
+# required by maim (argument)
+=x11-misc/slop-7.4 ~amd64
+# required by app-editors/sublime-text (argument)
+=app-editors/sublime-text-3_p3176 ~amd64
