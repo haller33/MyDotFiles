@@ -1,0 +1,2 @@
+#!/bin/sh
+python undervolt.py --core -121 --gpu -89 --cache -121 --uncore -80 --analogio -89
