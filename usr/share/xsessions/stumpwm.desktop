@@ -1,0 +1,19 @@
+[Desktop Entry]
+Encoding=UTF-8
+Type=XSession
+Name=Stump WM
+GenericName=Window Manager
+GenericName[da]=Vindueshåndtering
+TryExec=/usr/local/bin/stumpwm
+Exec=/usr/local/bin/stumpwm
+NoDisplay=false
+Hidden=false
+Categories=Application;System;
+StartupNotify=false
+DesktopNames=STMPWM
+X-LightDM-DesktopName=stumpwm
+
+[Window Manager]
+Name=stumpwm
+SessionManaged=true
+StartupNotification=false
