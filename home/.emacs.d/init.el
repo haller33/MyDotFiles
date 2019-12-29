@@ -6,6 +6,10 @@
 ;; You may delete these explanatory comments.
 (package-initialize)
 
+(load (expand-file-name "~/quicklisp/slime-helper.el"))
+;; Replace "sbcl" with the path to your implementation
+(setq inferior-lisp-program "/usr/bin/sbcl")
+
 (when (>= emacs-major-version 24)
   (require 'package)
   (add-to-list
