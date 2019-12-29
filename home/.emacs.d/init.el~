@@ -6,6 +6,10 @@
 ;; You may delete these explanatory comments.
 (package-initialize)
 
+
+(load (expand-file-name "~/quicklisp/slime-helper.el"))
+(setq inferior-lisp-program "sbcl")
+
 (when (>= emacs-major-version 24)
   (require 'package)
   (add-to-list
@@ -24,7 +28,7 @@
  '(minimap-mode nil)
  '(package-selected-packages
    (quote
-    (elm-mode minimap stumpwm-mode slime scheme-complete lispy racket-mode rcirc-menu circe hy-mode dr-racket-like-unicode zoom-window quack racer lsp-rust cargo flycheck-rust use-package emmet-mode markdown-mode noflet code-archive js-auto-beautify zoom vue-mode color-theme-modern async web web-beautify)))
+    (minimap stumpwm-mode slime scheme-complete lispy racket-mode rcirc-menu circe hy-mode dr-racket-like-unicode zoom-window quack racer lsp-rust cargo flycheck-rust use-package emmet-mode markdown-mode noflet code-archive js-auto-beautify zoom vue-mode color-theme-modern async web web-beautify)))
  '(scroll-bar-mode nil)
  '(server-mode t)
  '(show-paren-mode t)
