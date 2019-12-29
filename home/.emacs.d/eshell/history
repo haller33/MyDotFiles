@@ -1,0 +1,128 @@
+make some
+./some  
+make some
+./some  
+make some
+./some  
+make some
+./some  
+gcc -o main.c main
+make some
+./some  
+make some
+./some  
+make some
+./some  
+make some
+./some 
+ls
+./some 
+make some
+./some 
+make some
+./some 
+make some
+./some 
+make some
+./some 
+make some
+./some 
+./some 
+./some 
+make some
+./some 
+make some
+./some 
+ls
+cat fff
+make some
+./some 
+make some
+./some 
+make some
+./some 
+./some 
+wc -l bluabla. 
+echo "asdf" | wc -l
+cd ..
+cd
+ls
+pwd
+cd ..
+cd ..
+cd clone/
+git clone 
+git clone https://github.com/RobertBaruch/plugh-1.git
+cd plugh-1/
+ls
+ranger .
+q
+fff
+../fff/fff
+ls
+cat microaddr_counter.v
+cd -
+cd ..
+cd lucena/
+cd verilog/
+ls
+verilator -Wall -cc microaddr.v microaddr_counter.v --prefix = Microaddr
+verilator -wall -cc microaddr.v microaddr_counter.v --prefix = Microaddr
+varilator
+source /home/amnesia/.zsh_history
+flatpak list
+flatpak run com.spotify.Client
+zypper se libcurl
+zypper in libcurl-devel
+sudo zypper in libcurl-devel
+flatpak run com.spotify.Client
+ls
+chmod +x spotify 
+uptime
+man uptime
+man 8 uptime
+man 5 uptime
+help uptime
+uptime --help
+uptime
+uptime d
+uptime ddd
+uptime -d
+ls
+cd 
+cd git/clone/MyDotFiles/
+git status
+ls
+ls usr/
+ls
+cp /home/amnesia/.emacs.d/ .
+sudo cp /home/amnesia/.emacs.d/ .
+ls
+ls -a
+cp -a /home/amnesia/.emacs.d/init.el .
+ls
+mkdir home
+mv init.el home/
+cp ~/.xinitrc home/
+cp 
+cd
+ls
+cd -
+git status
+git add .
+git commit -m "my config hoje file, emacs config"
+git push
+uanem -r
+uname -k
+uname -r
+cd
+cd
+ls .local/
+ls .local/bin/
+cd -
+cd git/clone/MyDotFiles/
+ls scr
+ls Scripts/
+ls
+ls Scripts/batery.status.sh 
+cat Scripts/batery.status.sh 
