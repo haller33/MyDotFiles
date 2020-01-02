@@ -10,7 +10,6 @@
 ;; Replace "sbcl" with the path to your implementation
 (setq inferior-lisp-program "/usr/local/bin/sbcl")
 
-
 ;; Keybinds for clear Slime IDE
 (local-set-key [(control l)] 'slime-repl-clear-buffer)
 
@@ -75,5 +74,8 @@
 (require 'emmet-mode)
 
 (add-to-list 'custom-theme-load-path (expand-file-name "~/.emacs.d/themes/"))
+
+(setq common-lisp-hyperspec-root
+      (concat "file://" (expand-file-name "~/.emacs/HyperSpec/HyperSpec/")))
 
 (load-theme 'gotham t)
