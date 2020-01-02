@@ -8,7 +8,11 @@
 
 (load (expand-file-name "~/quicklisp/slime-helper.el"))
 ;; Replace "sbcl" with the path to your implementation
-(setq inferior-lisp-program "/usr/bin/sbcl")
+(setq inferior-lisp-program "/usr/local/bin/sbcl")
+
+
+;; Keybinds for clear Slime IDE
+(local-set-key [(control l)] 'slime-repl-clear-buffer)
 
 (when (>= emacs-major-version 24)
   (require 'package)
