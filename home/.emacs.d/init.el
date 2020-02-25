@@ -13,6 +13,35 @@
 ;; Keybinds for clear Slime IDE
 (local-set-key [(control l)] 'slime-repl-clear-buffer)
 
+;;;;
+;;; Telega.el Session
+;;
+
+(use-package telega
+  :load-path  "/home/amnesia/.telega"
+  :commands (telega)
+  :defer t)
+
+;; (add-to-list 'load-path "/home/amnesia/.telega")
+;; (require 'telega)
+
+(add-hook 'telega-chat-mode-hook
+          (lambda ()
+            (set (make-local-variable 'company-backends)
+                 (append '(telega-company-emoji
+                           telega-company-username
+                           telega-company-hashtag)
+                         (when (telega-chat-bot-p telega-chatbuf--chat)
+                           '(telega-company-botcmd))))
+            (company-mode 1)))
+
+(setq telega-proxies
+      (list
+       '(:server "127.0.0.1" :port 9050 :enable :false
+                 :type (:@type "proxyTypeSocks5"
+                               :username "rkn" :password "jopa"))))
+
+
 (when (>= emacs-major-version 24)
   (require 'package)
   (add-to-list
@@ -74,8 +103,8 @@
 (require 'emmet-mode)
 
 (add-to-list 'custom-theme-load-path (expand-file-name "~/.emacs.d/themes/"))
-
+ 
 (setq common-lisp-hyperspec-root
-      (concat "file://" (expand-file-name "~/.emacs/HyperSpec/HyperSpec/")))
+      (concat "file:/" (expand-file-name "~/.emacs/HyperSpec/HyperSpec/")))
 
 (load-theme 'gotham t)

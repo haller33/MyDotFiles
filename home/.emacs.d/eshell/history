@@ -1,119 +1,3 @@
-make some
-./some  
-make some
-./some  
-make some
-./some  
-make some
-./some  
-gcc -o main.c main
-make some
-./some  
-make some
-./some  
-make some
-./some  
-make some
-./some 
-ls
-./some 
-make some
-./some 
-make some
-./some 
-make some
-./some 
-make some
-./some 
-make some
-./some 
-./some 
-./some 
-make some
-./some 
-make some
-./some 
-ls
-cat fff
-make some
-./some 
-make some
-./some 
-make some
-./some 
-./some 
-wc -l bluabla. 
-echo "asdf" | wc -l
-cd ..
-cd
-ls
-pwd
-cd ..
-cd ..
-cd clone/
-git clone 
-git clone https://github.com/RobertBaruch/plugh-1.git
-cd plugh-1/
-ls
-ranger .
-q
-fff
-../fff/fff
-ls
-cat microaddr_counter.v
-cd -
-cd ..
-cd lucena/
-cd verilog/
-ls
-verilator -Wall -cc microaddr.v microaddr_counter.v --prefix = Microaddr
-verilator -wall -cc microaddr.v microaddr_counter.v --prefix = Microaddr
-varilator
-source /home/amnesia/.zsh_history
-flatpak list
-flatpak run com.spotify.Client
-zypper se libcurl
-zypper in libcurl-devel
-sudo zypper in libcurl-devel
-flatpak run com.spotify.Client
-ls
-chmod +x spotify 
-uptime
-man uptime
-man 8 uptime
-man 5 uptime
-help uptime
-uptime --help
-uptime
-uptime d
-uptime ddd
-uptime -d
-ls
-cd 
-cd git/clone/MyDotFiles/
-git status
-ls
-ls usr/
-ls
-cp /home/amnesia/.emacs.d/ .
-sudo cp /home/amnesia/.emacs.d/ .
-ls
-ls -a
-cp -a /home/amnesia/.emacs.d/init.el .
-ls
-mkdir home
-mv init.el home/
-cp ~/.xinitrc home/
-cp 
-cd
-ls
-cd -
-git status
-git add .
-git commit -m "my config hoje file, emacs config"
-git push
-uanem -r
-uname -k
 uname -r
 cd
 cd
@@ -126,3 +10,119 @@ ls Scripts/
 ls
 ls Scripts/batery.status.sh 
 cat Scripts/batery.status.sh 
+chmod +x scripting.lisp 
+./scripting.lisp 
+./scripting.lisp 234 dfg  qgsdfg sfhg
+ls
+cd 
+cd git/clone/
+git clone https://github.com/ecraven/sab-files
+cd sab-files/
+ls
+whereis sbcl
+cd 
+cd git/clone/sbcl/
+sudo make install
+./install.sh 
+sudo ./install.sh 
+zsh
+cd git/clone/cl-telegram-bot-api/
+ls
+git remote -v
+whereis sbcl
+chmod +x cameron.lisp 
+./cameron.lisp 
+ps aux | grep sbcl
+./cameron.lisp 
+./cameron.lisp 
+ls Documentos/HyperSpec/
+cd 
+cd Documentos/
+cd HyperSpec/
+pwd
+cd ..
+mkdir  ../.emacs.d/HyperSpec
+mv HyperSpec-7-0.tar.gz ../.emacs.d/HyperSpec/
+mv HyperSpec/ ../.emacs.d/HyperSpec/
+cd ../.emacs.d/
+cd HyperSpec/
+ls
+ls HyperSpec/
+cd ..
+cd ..
+cp -ra .emacs.d/HyperSpec/ git/clone/MyDotFiles/home/.emacs.d/
+cd git/clone/MyDotFiles/home/
+cd ..
+git status
+git add .
+g
+cp -a ~/.emacs.d/init.el home/.emacs.d/
+ls
+git status
+git add .
+git commit -m "HyperSpec Documentation"
+git push
+git push
+git push
+ls
+ls
+docker run -it cameron /bin/bash
+ls
+docker build -t cameron .
+docker build -t cameron .
+docker build -t cameron ..
+docker build -t cameron ..
+cd verilog/
+ls
+cd -
+cd 
+cd Downloads/Telegram\ Desktop/
+ls
+rm 07\ Exploit.zip 
+rm 02\ Scanning.zip 
+rm 02\ Introdução\ à\ programação\ com\ Python.zip 
+rm 04\ Wireless\ Hacking.zip 
+rm 03\ Python\ Hacking.zip 
+rm Python\ Black-Hat\ -\ Parte\ 02.rar
+rm Python\ Black-Hat\ -\ Parte\ 01.rar 
+rm Mantra_OM_AUM_Meditação_tibetana.m4a 
+rm How\ to\ Design\ Programs,\ Second\ Edition\ \(converted\ from\ HTML\).pdf 
+rm Editorial\ Estado\ de\ São\ Paulo.txt
+rm Raymond_m__smullyan_to_mock_a_mo.epub 
+rm Reviewing_the_Thrithemian_conjuration.pdf 
+rm Encyclopedia\ of\ Big\ Data\ Technologies.pdf 
+rm Adam\ McLean\ -\ The\ Steganographia\ of\ Johannes\ Trithemius.pdf 
+rm 05.zip 
+rm Defensive_Security_Handbook.pdf 
+rm illustrative-introduction-algorithms.epub 
+rm 06\ Vulnerabilidades.zip 
+rm 08\ Attacks.zip 
+rm Dominando\ Linux\ Firewall\ Iptables\ -\ Urubatan\ Neto.pdf 
+du -sh .
+df -h
+docker search dotnet
+cd 
+cd git/wget/dotnet-too/
+ls
+docker build
+docker build .
+s
+ls
+cd 
+cp .zshrc git/clone/MyDotFiles/home/
+cp .emacs.d/ git/clone/MyDotFiles/home/ -ra
+sudo cp .emacs.d/ git/clone/MyDotFiles/home/ -ra
+sudo cp quicklisp/ -ra git/clone/MyDotFiles/
+ls
+ls Backup/
+cp -ra .stumpwmrc git/clone/MyDotFiles/home/
+cd git/clone/MyDotFiles/
+git status
+ps aux
+cd ..
+cd git/clone/telega.el/
+ls
+make clean
+make 
+make test
+make install
