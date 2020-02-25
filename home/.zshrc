@@ -100,7 +100,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 export DENO_INSTALL="/home/amnesia/.deno"
-export PATH="$DENO_INSTALL/bin:/home/amnesia/.local/bin:/home/amnesia/anaconda3/bin:/home/amnesia/.racket/bin:/home/amnesia/git/clone/simh/BIN:$PATH"
+export PATH="$DENO_INSTALL/bin:/home/amnesia/.local/bin:/home/amnesia/anaconda3/bin:/home/amnesia/.racket/bin:/home/amnesia/git/clone/simh/BIN:/home/amnesia/.roswell/bin:/snap/bin:$PATH"
 export VISUAL="emacsclient -nw"
 export EDITOR="emacsclient -nw"
 
@@ -110,9 +110,12 @@ alias simpleterminal="exec st -t \"Simple Terminal\" -f \"Source Code Pro:style=
 
 
 alias hy="hy --repl-output-fn=hy.contrib.hy-repr.hy-repr"
+alias gitcloneclone="cd /home/amnesia/git/clone ; git clone "
 
 # alias alexa-telegram='telegram-desktop -many -workdir /home/amnesia/Downloads/Telegram-Alexa'
 
-export API_TELEGRAM_BOTNET="959462479:AAFG6FVD2nPW5-oANqnKq829gQAilEM2cTw"
+export API_TELEGRAM_BOTNET="959462479:AAENoYPpOmLYOpI7I238zz1YQTpXNdGy3_Y"
 
+
+sh /home/amnesia/.nix-profile/etc/profile.d/nix.sh
 
