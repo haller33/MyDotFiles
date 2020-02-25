@@ -1,0 +1,12 @@
+[Unit]
+Description=Shell Script Bot Telegram
+
+[Service]
+Type=forking
+ExecStart=/usr/bin/node /home/amnesia/git/clone/shell-bot/server.js & echo $! > /tmp/pidshellserver.
+ExecStop=/usr/bin/kill $( cat /tmp/pidshellserver. ) && rm /tmp/pidshellserver.
+Environment=SSH_AUTH_SOCK=%t/keyring/ssh
+Restart=on-failure
+
+[Install]
+WantedBy=default.target
