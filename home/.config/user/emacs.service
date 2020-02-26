@@ -1,0 +1,13 @@
+[Unit]
+Description=Emacs: the extensible MACRO, self-documenting text editor
+Documentation=info:emacs man:emacs(1) https://gnu.org/software/emacs/
+
+[Service]
+Type=forking
+ExecStart=exec /usr/local/bin/emacs --daemon
+ExecStop=exec /usr/local/bin/emacsclient --eval "(kill-emacs)"
+Environment=SSH_AUTH_SOCK=%t/keyring/ssh
+Restart=always
+           
+[Install]
+WantedBy=default.target
