@@ -1,76 +1,3 @@
-uname -r
-cd
-cd
-ls .local/
-ls .local/bin/
-cd -
-cd git/clone/MyDotFiles/
-ls scr
-ls Scripts/
-ls
-ls Scripts/batery.status.sh 
-cat Scripts/batery.status.sh 
-chmod +x scripting.lisp 
-./scripting.lisp 
-./scripting.lisp 234 dfg  qgsdfg sfhg
-ls
-cd 
-cd git/clone/
-git clone https://github.com/ecraven/sab-files
-cd sab-files/
-ls
-whereis sbcl
-cd 
-cd git/clone/sbcl/
-sudo make install
-./install.sh 
-sudo ./install.sh 
-zsh
-cd git/clone/cl-telegram-bot-api/
-ls
-git remote -v
-whereis sbcl
-chmod +x cameron.lisp 
-./cameron.lisp 
-ps aux | grep sbcl
-./cameron.lisp 
-./cameron.lisp 
-ls Documentos/HyperSpec/
-cd 
-cd Documentos/
-cd HyperSpec/
-pwd
-cd ..
-mkdir  ../.emacs.d/HyperSpec
-mv HyperSpec-7-0.tar.gz ../.emacs.d/HyperSpec/
-mv HyperSpec/ ../.emacs.d/HyperSpec/
-cd ../.emacs.d/
-cd HyperSpec/
-ls
-ls HyperSpec/
-cd ..
-cd ..
-cp -ra .emacs.d/HyperSpec/ git/clone/MyDotFiles/home/.emacs.d/
-cd git/clone/MyDotFiles/home/
-cd ..
-git status
-git add .
-g
-cp -a ~/.emacs.d/init.el home/.emacs.d/
-ls
-git status
-git add .
-git commit -m "HyperSpec Documentation"
-git push
-git push
-git push
-ls
-ls
-docker run -it cameron /bin/bash
-ls
-docker build -t cameron .
-docker build -t cameron .
-docker build -t cameron ..
 docker build -t cameron ..
 cd verilog/
 ls
@@ -126,3 +53,76 @@ make clean
 make 
 make test
 make install
+ls
+cd ..
+cp .emacs.d/ git/clone/MyDotFiles/home/ -ra
+sudo cp .emacs.d/ git/clone/MyDotFiles/home/ -ra
+ls
+cd git/clone/MyDotFiles/
+ls
+git status
+git add .
+git status
+git reset quicklisp/
+git status
+git status
+git commit -m "big change in emacs desktop home"
+git push
+git push
+git pull
+git pull -f
+git status
+git diff
+git commit -m "merge pull"
+git push
+git push
+git status
+rm -rf quicklisp/
+ls
+cd
+cd git/clone/telega.el/
+ls
+cp /home/amnesia/.telega/cache/documents/lisp-i-programmers-manual-ibm-704-1960.pdf /home/amnesia/Downloads/Telegram\ Desktop/
+rm -rf /home/amnesia/.telega/
+git status
+df -h
+ls
+ls ..
+cd ..
+cd
+cd -
+cd telega.el/
+sudo make install
+cd -
+make install
+cd -
+make install
+cd 
+ls .telega/
+cd -
+make test
+whereis emacs
+cd
+cd .telega/
+ls
+cp ../git/clone/telega.el/* -ra .
+ls
+whereis sbcl
+whereis emacs
+/usr/local/bin/emacs --daemon
+/usr/local/bin/emacsclient --eval "(kill-emacs)"
+exec /usr/local/bin/emacs --daemon
+systemctl status --user emacs
+systemctl stop --user emacs
+systemctl status --user emacs
+systemctl start --user emacs
+systemctl start --user emacs
+systemctl
+systemctl --user
+systemctl --user --all
+systemctl disable emacs
+systemctl disable emacs --user
+ls
+ps aux | grep tele
+htop
+htop

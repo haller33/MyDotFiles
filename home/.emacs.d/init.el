@@ -8,7 +8,7 @@
 
 (load (expand-file-name "~/quicklisp/slime-helper.el"))
 ;; Replace "sbcl" with the path to your implementation
-(setq inferior-lisp-program "/usr/local/bin/sbcl")
+(setq inferior-lisp-program "/usr/bin/sbcl")
 
 ;; Keybinds for clear Slime IDE
 (local-set-key [(control l)] 'slime-repl-clear-buffer)
@@ -17,13 +17,13 @@
 ;;; Telega.el Session
 ;;
 
-(use-package telega
-  :load-path  "/home/amnesia/.telega"
-  :commands (telega)
-  :defer t)
+;; (use-package telega
+;;  :load-path  "/home/amnesia/.telega"
+;;  :commands (telega)
+;;  :defer t)
 
-;; (add-to-list 'load-path "/home/amnesia/.telega")
-;; (require 'telega)
+(add-to-list 'load-path "/home/amnesia/.telega")
+(require 'telega)
 
 (add-hook 'telega-chat-mode-hook
           (lambda ()
@@ -41,7 +41,6 @@
                  :type (:@type "proxyTypeSocks5"
                                :username "rkn" :password "jopa"))))
 
-
 (when (>= emacs-major-version 24)
   (require 'package)
   (add-to-list
@@ -49,6 +48,7 @@
    ;; '("Melpa" . "http://stable.melpa.org/packages/") ; many packages won't show if using stable
    '("melpa" . "http://melpa.milkbox.net/packages/")
       t))
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -57,12 +57,12 @@
  '(delete-selection-mode nil)
  '(display-battery-mode t)
  '(menu-bar-mode nil)
- '(minimap-mode nil)
+ ;; '(minimap-mode nil)
  '(package-selected-packages
    (quote
-    (minimap stumpwm-mode slime scheme-complete lispy racket-mode rcirc-menu circe hy-mode dr-racket-like-unicode zoom-window quack racer lsp-rust cargo flycheck-rust use-package emmet-mode markdown-mode noflet code-archive js-auto-beautify zoom vue-mode color-theme-modern async web web-beautify)))
+    (stumpwm-mode slime scheme-complete lispy racket-mode rcirc-menu circe hy-mode dr-racket-like-unicode zoom-window quack racer lsp-rust cargo flycheck-rust use-package emmet-mode markdown-mode noflet code-archive js-auto-beautify zoom vue-mode color-theme-modern async web web-beautify)))
  '(scroll-bar-mode nil)
- '(server-mode t)
+ ;; '(server-mode nil)
  '(show-paren-mode t)
  '(size-indication-mode t)
  '(tool-bar-mode nil)
@@ -107,4 +107,8 @@
 (setq common-lisp-hyperspec-root
       (concat "file:/" (expand-file-name "~/.emacs/HyperSpec/HyperSpec/")))
 
-(load-theme 'gotham t)
+
+(load-theme 'taming-mr-arneson t t)
+(enable-theme 'taming-mr-arneson)
+
+
