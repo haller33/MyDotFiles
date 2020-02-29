@@ -79,7 +79,7 @@
 ;; Launch Emacs
 (define-key *root-map* (kbd "C-e") "exec emacsclient -c")
 ;; Launch Dmenuww?
-(define-key *root-map* (kbd "d") "exec dmenu_run")
+(define-key *root-map* (kbd "d") "exec dmenu_run &")
 (define-key *root-map* (kbd "C-d") "exec dmenu_run")
 ;; My Dmenu Scripts
 (define-key *root-map* (kbd "C-E") "exec ./.dmenu/dmenu-edit-configs.sh")
