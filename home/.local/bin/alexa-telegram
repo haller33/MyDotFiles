@@ -1,0 +1,3 @@
+#!/bin/bash
+telegram-desktop -many -workdir /home/amnesia/Downloads/Telegram-Alexa
+
