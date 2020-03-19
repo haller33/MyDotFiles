@@ -11,7 +11,6 @@
 
 (in-package :stumpwm)
 
-
 ;;; Startup Programs
 ;;; Set Background
 (run-shell-command "nitrogen --restore")
@@ -32,11 +31,13 @@
 
 (defvar color1 "#ff92d0")
 (defvar color2 "#282a36")
+(defvar color3 "#333333")
+(defvar color4 "#7799CC")
 
 (setf
  stumpwm:*mode-line-background-color* color2 
  stumpwm:*mode-line-foreground-color* color1
- stumpwm:*mode-line-border-color* "#333333"
+ stumpwm:*mode-line-border-color* color3
  stumpwm:*screen-mode-line-format* (list "%g | %v ^>^7 | " '(:eval (show-hostname)) "| " '(:eval (show-batery-status)) "% | %d ")
  stumpwm:*mode-line-border-width* 1
  stumpwm:*mode-line-pad-x* 6
@@ -48,7 +49,7 @@
  stumpwm:*window-format* "^b^(:fg \"#9aedfe\")<%25t>"
  stumpwm:*window-border-style* :tight
  stumpwm:*normal-border-width* 1)
-(stumpwm:set-focus-color "#7799CC")
+(stumpwm:set-focus-color color4)
 
 (stumpwm:grename "Alpha")
 (stumpwm:gnewbg "Beta")
@@ -80,7 +81,12 @@
 (define-key *root-map* (kbd "C-e") "exec emacsclient -c")
 ;; Launch Dmenuww?
 (define-key *root-map* (kbd "d") "exec dmenu_run &")
-(define-key *root-map* (kbd "C-d") "exec dmenu_run")
+(define-key *root-map* (kbd "C-d") "exec dmenu_run &")
+;; Change Volume
+(define-key *root-map* (kbd "M-E") "exec /usr/bin/amixer -D pulse sset Master 25%+")
+(define-key *root-map* (kbd "M-D") "exec /usr/bin/amixer -D pulse sset Master 25%-")
+;; Reload Stumpwm
+(define-key *root-map* (kbd "C-M-G") "reload")
 ;; My Dmenu Scripts
 (define-key *root-map* (kbd "C-E") "exec ./.dmenu/dmenu-edit-configs.sh")
 (define-key *root-map* (kbd "C-N") "exec ./.dmenu/dmenu-sysmon.sh")
@@ -88,6 +94,8 @@
 (define-key *root-map* (kbd "C-R") "exec ./.dmenu/dmenu-reddio.sh")
 (define-key *root-map* (kbd "C-S") "exec ./.dmenu/dmenu-surfraw.sh")
 (define-key *root-map* (kbd "C-T") "exec ./.dmenu/dmenu-trading.sh")
+;; ScreenShort
+(define-key *root-map* (kbd "C-M-i") "colon1 sleep 2 && exec scrot ")
 ;; Browse somewhere
 (define-key *root-map* (kbd "b") "colon1 exec firefox http://www.")
 ;; Ssh somewhere
@@ -107,7 +115,10 @@
 (define-key *root-map* (kbd "M-s") "startpage")
 
 ;; Message window font
+;;; font old of code
 (set-font "-xos4-terminus-medium-r-normal--14-140-72-72-c-80-iso8859-14")
+
+;; (set-font (make-instance 'xft:font "-xos4-terminus-medium-r-normal--14-140-72-72-c-80-iso8859-14")
 
 ;;; Define window placement policy...
 
