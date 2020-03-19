@@ -1,0 +1,40 @@
+;;; -*- coding: utf-8 -*-
+
+;; ----- ido-last-directory-list -----
+(
+ ("/home/amnesia/" . ".emacs.d/")
+ ("/home/" . "amnesia/")
+ ("/" . "home/")
+)
+
+;; ----- ido-work-directory-list -----
+(
+ "/home/amnesia/.emacs.d/"
+)
+
+;; ----- ido-work-file-list -----
+(
+ "init.el"
+)
+
+;; ----- ido-dir-file-cache -----
+(
+ ("/home/amnesia/.emacs.d/" (24179 62841 40029 332000) "init.el" "init.el~" "#init.el#~" "sites/" "init.fasl" "HyperSpec/" "url/" "themes/" "eshell/" "elpa/" "auto-save-list/" "../" "./")
+
+ ("/home/" (24066 6138 625644 644000) "linuxbrew/" "amnesia/" "../" "./")
+
+ ("/home/amnesia/" (24179 62845 892029 492000) ".z" ".zsh_history" ".xinitrc" ".xinitrc~" ".clfswmrc" ".clfswmrc~" ".viminfo" ".xinitrc.bkp" ".xinitrc.bkp~" "xstart.sh" ".stumpwmrc" ".stumpwmrc~" "x.log" "startx.sh~" "i2p/" "i2p-bkp/" "pki/" ".thunderbird/" ".purple/" ".python_history" "boletineletronico.jpg" "lucy.jpg" "mydest.jpg" "hahaha.jpg" "mydesk.jpg" "mydes.jpg" ".audacity-data/" "hahahatovendo.jpg" "desk.jpg" ".serverauth.11373" "ohmypdf.jpg" "maehm.jpg" "foto.jpg" ".telega/" "mydeskt.jpg" "lisp-in-less-than-200-lines-of-c.html" "img.jpg" "2020-02-24-220501_1366x768_scrot.png" "asdf.lisp" ".openbazaar/" ".openbazaar2.0-clientData/" ".zshrc" ".zshrc~" "stopped." ".zcompdump-amnesia-5.8" ".zcompdump" ".nuget/" ".templateengine/" ".dotnet/" "snap/" ".serverauth.2403" "default.nix" "default.nix~" ".profile" ".nix-channels" ".nix-profile/" ".nix-defexpr/" ".serverauth.2511" ".serverauth.2763" ".serverauth.2394" ".roswell/" ".eclrc" "sbcl-arm/" "botnet." "botnet" ".sbclrc" ".sbclrc~" ".swp" ".xsession" "Telecomix.Crypto.Munitions.Bureau." "messageofhope.telecomix.org." "rpmbuild/" "scsh/" ".buildman" "its/" "common-lisp/" ".slime-history.eld" ".sqlite_history" "kkk.png" ".serverauth.8168" ".stumpwm.d/" ".zcompdump-amnesia-5.7.1-test-2" "irc/" ".slime/" "openbsdvm.sh" "openbsdvm.sh~" "opbsd66.img" ".xsession-errors" ".xsession-errors.old" ".subversion/" ".dmrc" ".Xauthority" ".hy-history" "timeEnvPy/" ".initrc~" "user.change.dm." "quicklisp/" "text/" ".qmmp/" "sourcewharever/" ".zsh_history~" ".pyhistory" ".theano/" "fdpds./" "bin/" ".lesshst" "ing stable" ".irssi/" "package-lock.json" "node_modules/" ".dosbox/" "hello.ml" ".wine/" "start.amnesia.sh" "att/" ".jupyter/" "awsepubs/" "Biblioteca do calibre/" "test.hy" "test.hy~" "__pycache__/" ".keras/" "apresentation/" ".ipython/" ".condarc" ".conda/" ".anaconda/" ".bashrc" "dbb/" "foo.image" "hda.img" "testingimage.img" ".z.13418" ".links/" ".dwm_log" ".xdg_menu_cache/" ".icewm/" ".terminfo/" ".jssc/" "Arduino/" ".arduino15/" ".oracle_jre_usage/" ".gnome/" ".deno/" ".docker/" "awesome/" "env/" "uptime." ".chezscheme_history" ".w3m/" ".cargo/" ".racket/" ".i2p/" ".java/" "Backup/" ".gitconfig" ".node_repl_history" ".npm/" ".vscode-oss/" ".pki/" ".var/" ".zcompdump-amnesia-5.7.1" "gnome-sdk.gpg" "start-tor-browser.desktop" ".scdhistory" ".zdirs" ".directory_history/" ".otp/" ".emacs.d/" ".zcompdump-linux-hne6-5.7.1" ".oh-my-zsh/" ".wget-hsts" ".y2usersettings" ".y2log" ".tor/" "git/" ".gnupg/" ".ssh/" ".esd_auth" ".mozilla/" ".bash_history" ".config/" "Vídeos/" "Imagens/" "Música/" "Documentos/" "Público/" "Modelos/" "Downloads/" "Área de trabalho/" ".local/" ".cache/" "../" "./")
+
+ ("/home/amnesia/git/" (24148 33476 518193 565000) "dict." "crypt/" "dnscrypt.csv" "wget/" "dat/" ".vscode/" "lucena/" "clone/" "../" "./")
+
+ ("/home/amnesia/git/clone/" (24179 62733 312025 786000) "emacsos/" "clfswm/" "i2p.i2p/" "construct/" "poezio/" "blx32-i2p/" "Altfolio/" "telegram-bot-bash/" "counsel-spotify/" "melpa/" "swiper/" "stumpwm.wiki/" "fe." "fear." "replace-colorthemes/" "stumpwm/" "tump." "emacs/" "td/" "imgix-emacs/" "spotify-tui/" "dicto." "dict." "shell-bot/" "spiderfoot/" "Universal-Reddit-Scraper/" "irssiscripts/" "Petalisp/" "KatroLogger/" "roip/" "chattervox/" "kiss-tnc/" "newscat/" "true-rng/" "dotnet/" "starwar/" "quicklisp-client/" "roswell/" "BuildYourOwnLisp/" "micro-in-mini/" "faster-miniKanren/" "miniKanren-with-symbolic-constraints/" "gnunet/" "FunTOTP/" "Awesome-Hacking/" "systemE/" "yadm/" "orangepi-scripts/" "telega.el/" "u-boot-suse/" "u-boot/" "__testbranch/" "current/" ".bm-work/" "___dev___testbranch/" "arm-trusted-firmware/" "orangepi_uboot/" "ultralisp/" "cl-telegram-bot-api/" "sab-files/" "klh10/" "its/" "EagleEye/" "lserver/" "yalo/" "cl-telegram-bot/" "lisp-chat/" "ecl/" "getac/" "LispMicrocontroller/" "slime/" "quicklisp-slime-helper/" "elisp-guide/" "st-luks/" "plugh-1/" "asi64/" "fairylog/" "cpus-caddr/" "advent-unlambda/" "stumpwm-config/" "stumpwm-gnome/" "stumpwm-contrib/" "sbcl/" "chaos/" "powerlisp/" "99-lisp-problems/" "informer/" "i2pmirror/" "OnionSiteSearch/" "schism/" "youtube-dl/" "HylangPresentation/" "fluxus/" "cypherpunks.com.br/" "Telegram-bot/" "udemy-dl/" "udemy-dl-js/" "callbag/" "callbag-take/" "callbag-basics/" "bonsai.sh/" "desafios/" "lambda-zsh-theme/" "community/" "kiss-init/" "kiss/" "ii/" "magnus23/" "fff/" "pure-sh-bible/" "pfetch/" "scripts.d/" "gotham-theme/" "iftop/" "irssi/" "sic/" "docker-cjdns/" "docs/" "i2pd/" "coq-8.10.0/" "CNPJ-API-Request/" "cryptoanarchy.org/" "Basic-Mathematics-for-Machine-Learning/" "books-bsd/" "slideshow-simple/" "MyDotFiles/" "secAES-ATmega8515/" "ulisp-zero/" "ulisp/" "ulisp-arm/" "ulisp-msp430/" "pLam/" "gekko/" "ansi-Common-Lisp/" "racket/" "ChezScheme/" "learnRustBook/" "learnRust/" "Oh-my-schema/" "howtodesignprograms2edition/" "functional-programming-js/" "cydev/" "baby-names-analysis/" "minisign/" "dat/" "st-transparency/" "unstrip/" "st/" "API_Rest_Node/" "anonym8/" "cjdns/" "yggdrasil-go/" "peers-api/" "edex-ui/" "hy/" "../" "./")
+
+ ("/home/amnesia/git/clone/emacsos/" (24179 62733 312025 786000) "exwm/" "exwm.wiki/" "elpakit/" "xelb/" "Hawck/" "keyremaplinux/" "xkeysnail/" "emacs-mini-modeline/" "pyim/" "emacs-application-framework/" "emacs-libvterm/" "../" "./")
+
+ ("/home/amnesia/git/clone/emacsos/elpakit/" (24179 61536 696548 958000) "recipes/" "fake-package-with-elisp/" "examples/" "emacs-kv/" "emacs-db/" "elpakit.el" "elpakit-tests.el" "elpakit-run.el" "elnode-auth/" "demo-multifile/" "README.creole" ".gitignore" ".git/" "../" "./")
+
+ ("/home/amnesia/git/clone/emacsos/elpakit/elnode-auth/" (24179 61536 688548 958000) "recipes/" "elnode_tutorial.org" "elnode_tutorial.creole" "elnode.org" "elnode.el" "elnode-wiki.el" "elnode-tools.el" "elnode-testsupport.el" "elnode-tests.el" "elnode-service-tests.el" "elnode-rle.el" "elnode-proxy.el" "elnode-proxy-test.el" "elnode-log-mode.el" "elnode-lists.el" "elnode-js.el" "elnode-js-tests.el" "elnode-compat.el" "default-wiki-logo.gif" "default-wiki-index.creole" "default-webserver-test.html" "default-webserver-image.png" "README.creole" "Makefile" "FAQ.creole" "COPYING" "../" "./")
+)
+
+;; ----- ido-unc-hosts-cache -----
+t

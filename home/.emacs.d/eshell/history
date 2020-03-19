@@ -1,105 +1,3 @@
-docker build -t cameron ..
-cd verilog/
-ls
-cd -
-cd 
-cd Downloads/Telegram\ Desktop/
-ls
-rm 07\ Exploit.zip 
-rm 02\ Scanning.zip 
-rm 02\ Introdução\ à\ programação\ com\ Python.zip 
-rm 04\ Wireless\ Hacking.zip 
-rm 03\ Python\ Hacking.zip 
-rm Python\ Black-Hat\ -\ Parte\ 02.rar
-rm Python\ Black-Hat\ -\ Parte\ 01.rar 
-rm Mantra_OM_AUM_Meditação_tibetana.m4a 
-rm How\ to\ Design\ Programs,\ Second\ Edition\ \(converted\ from\ HTML\).pdf 
-rm Editorial\ Estado\ de\ São\ Paulo.txt
-rm Raymond_m__smullyan_to_mock_a_mo.epub 
-rm Reviewing_the_Thrithemian_conjuration.pdf 
-rm Encyclopedia\ of\ Big\ Data\ Technologies.pdf 
-rm Adam\ McLean\ -\ The\ Steganographia\ of\ Johannes\ Trithemius.pdf 
-rm 05.zip 
-rm Defensive_Security_Handbook.pdf 
-rm illustrative-introduction-algorithms.epub 
-rm 06\ Vulnerabilidades.zip 
-rm 08\ Attacks.zip 
-rm Dominando\ Linux\ Firewall\ Iptables\ -\ Urubatan\ Neto.pdf 
-du -sh .
-df -h
-docker search dotnet
-cd 
-cd git/wget/dotnet-too/
-ls
-docker build
-docker build .
-s
-ls
-cd 
-cp .zshrc git/clone/MyDotFiles/home/
-cp .emacs.d/ git/clone/MyDotFiles/home/ -ra
-sudo cp .emacs.d/ git/clone/MyDotFiles/home/ -ra
-sudo cp quicklisp/ -ra git/clone/MyDotFiles/
-ls
-ls Backup/
-cp -ra .stumpwmrc git/clone/MyDotFiles/home/
-cd git/clone/MyDotFiles/
-git status
-ps aux
-cd ..
-cd git/clone/telega.el/
-ls
-make clean
-make 
-make test
-make install
-ls
-cd ..
-cp .emacs.d/ git/clone/MyDotFiles/home/ -ra
-sudo cp .emacs.d/ git/clone/MyDotFiles/home/ -ra
-ls
-cd git/clone/MyDotFiles/
-ls
-git status
-git add .
-git status
-git reset quicklisp/
-git status
-git status
-git commit -m "big change in emacs desktop home"
-git push
-git push
-git pull
-git pull -f
-git status
-git diff
-git commit -m "merge pull"
-git push
-git push
-git status
-rm -rf quicklisp/
-ls
-cd
-cd git/clone/telega.el/
-ls
-cp /home/amnesia/.telega/cache/documents/lisp-i-programmers-manual-ibm-704-1960.pdf /home/amnesia/Downloads/Telegram\ Desktop/
-rm -rf /home/amnesia/.telega/
-git status
-df -h
-ls
-ls ..
-cd ..
-cd
-cd -
-cd telega.el/
-sudo make install
-cd -
-make install
-cd -
-make install
-cd 
-ls .telega/
-cd -
 make test
 whereis emacs
 cd
@@ -126,3 +24,105 @@ ls
 ps aux | grep tele
 htop
 htop
+cat /etc/resolv.conf
+systemctl status dnscrypt-proxy
+scrot hahaha.jpg
+git remote -v
+ls
+c
+cd
+cd Documentos/RosaCruz/
+ls
+python3.7 transforma.py
+python3.7 transforma.py
+python3.7 transforma.py
+pip3 install pandas
+python3.7 transforma.py
+ls
+mv Planilha\ Eliseu.xls peliseu.xls
+mv Planilha\ Eliseu.xls peliseu.xls
+python3.7 transforma.py
+python3.7 transforma.py
+pip3 install xlrd
+python3.7 transforma.py
+python3.7 transforma.py
+python3.7 transforma.py
+python3.7 transforma.py
+python3.7 transforma.py
+python3.7 transforma.py
+python3.7 transforma.py
+ls
+ls
+flatpak lis
+flatpak list
+whereis clfwm
+whereis clfswm
+ls
+htop
+dmenu
+links
+sbcl
+ls
+cd ..
+git clone https://github.com/akermu/emacs-libvterm/
+git clone https://github.com/tumashu/pyim
+mkdir emacsos
+cd emacsos/
+mv ../emacs-libvterm/ .
+mv ../emacs-application-framework/ .
+mv ../pyim/ .
+git clone https://github.com/manateelazycat/emacs-application-framework
+git clone https://github.com/manateelazycat/emacs-application-framework
+git clone https://github.com/kiennq/emacs-mini-modeline
+git clone https://github.com/mooz/xkeysnail
+git clone https://github.com/kozikow/keyremaplinux
+git clone https://github.com/snyball/Hawck
+ls
+systemctl suspend
+cd ..
+cd exwm/
+ls
+cd 
+cd i2p/
+ls
+./i2prouter status
+tor
+ps aux | grep tor
+kill 9299
+ps aux | grep tor
+kill -9 9299
+ps aux | grep tor
+top
+zypper se gnome-settings-daemon
+sudo systemctl start dnscrypt-proxy
+sudo systemctl status dnscrypt-proxy
+tor
+ls
+links startpage.com
+git clone https://github.com/ch11ng/xelb
+mv xelb/ emacsos
+mv elpakit/ emacsos
+mv exwm* emacsos
+cd emacsos
+ls
+ls -la
+pwd
+ranger
+top
+ls
+ps
+f -h
+df -h
+cd ..
+du sh telega
+ls
+cat .xinitc
+ps au
+ls
+ps au
+ps au
+ls
+ranger
+sbcl
+htop
+glances
