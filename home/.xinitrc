@@ -16,4 +16,4 @@ export VISUAL=emacsclient
 export EDITOR="$VISUAL"
 
 # Finally launch emacs.
-exec dbus-launch --exit-with-session emacs
+exec dbus-launch --exit-with-session emacsclient -c
