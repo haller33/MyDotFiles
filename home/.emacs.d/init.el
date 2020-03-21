@@ -13,6 +13,7 @@
 ;; Keybinds for clear Slime IDE
 (local-set-key [(control l)] 'slime-repl-clear-buffer)
 
+
 ;;;;
 ;;; Telega.el Session
 ;;
@@ -61,9 +62,11 @@
  '(display-time-mode t)
  '(fringe-mode 1 nil (fringe))
  '(ivy-mode t)
+ '(blink-cursor-mode t)
+ '(visible-cursor nil)
  '(menu-bar-mode nil)
  '(package-selected-packages
-   '(exwm lisp-mode slime scheme-complete lispy racket-mode rcirc-menu circe hy-mode dr-racket-like-unicode zoom-window quack racer lsp-rust cargo flycheck-rust use-package emmet-mode markdown-mode noflet code-archive js-auto-beautify zoom vue-mode color-theme-modern async web web-beautify))
+   '(org org-mode exwm lisp-mode slime scheme-complete lispy racket-mode rcirc-menu circe hy-mode dr-racket-like-unicode zoom-window quack racer lsp-rust cargo flycheck-rust use-package emmet-mode markdown-mode noflet code-archive js-auto-beautify zoom vue-mode color-theme-modern async web web-beautify))
  '(scroll-bar-mode nil)
  '(setq display-time-default-load-average)
  '(show-paren-mode t)
@@ -76,6 +79,13 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
+;;; Org-mode
+;;
+(org-babel-load-file
+ (expand-file-name "org-mode.org"
+                   user-emacs-directory))
+
 
 ;;; Begin Scheme48
 ;; s48
@@ -127,6 +137,20 @@
 ;; Add paths (not required if EXWM is installed from GNU ELPA).
 (add-to-list 'load-path "/home/amnesia/git/clone/emacsos/xelb/")
 (add-to-list 'load-path "/home/amnesia/git/clone/emacsos/exwm/")
+
+
+(defvar blink-cursor-interval-visible .2)
+(defvar blink-cursor-interval-invisible .2)
+
+(defadvice internal-show-cursor (before unsymmetric-blink-cursor-interval)
+  (when blink-cursor-timer
+    (setf (timer--repeat-delay blink-cursor-timer)
+          (if (internal-show-cursor-p)
+              blink-cursor-interval-visible
+            blink-cursor-interval-invisible))))
+
+(ad-activate 'internal-show-cursor)
+
 
 ;; Load EXWM.
 (require 'exwm)
@@ -184,7 +208,7 @@
         ([s-f2] . (lambda ()
 		    (interactive)
 		    (start-process "" nil "/usr/bin/slock")))))
-011931171009
+
 ;; To add a key binding only available in line-mode, simply define it in
 ;; `exwm-mode-map'.  The following example shortens 'C-c q' to 'C-q'.
 (define-key exwm-mode-map [?\C-q] #'exwm-input-send-next-key)
