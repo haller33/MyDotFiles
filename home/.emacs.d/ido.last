@@ -2,9 +2,6 @@
 
 ;; ----- ido-last-directory-list -----
 (
- ("/home/amnesia/git/clone/emacsos/" . "exwm/")
- ("/home/amnesia/git/clone/" . "emacsos/")
- ("/home/amnesia/git/" . "clone/")
  ("/home/amnesia/" . ".emacs.d/")
  ("/home/" . "amnesia/")
  ("/" . "home/")
@@ -14,25 +11,21 @@
 (
  "/home/amnesia/"
  "/home/amnesia/.emacs.d/"
- "/home/amnesia/git/clone/emacsos/exwm.wiki/"
 )
 
 ;; ----- ido-work-file-list -----
 (
  ".xinitrc"
  "init.el"
- "EXWM-User-Guide.md"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
- ("/home/amnesia/" (24181 8315 555986 202000) ".zsh_history" ".z" "init2.jpg" "init.jpg" "myemacs.jpg" ".dbus/" ".xinitrc" ".xinitrc~" ".clfswmrc" ".clfswmrc~" ".viminfo" ".xinitrc.bkp" ".xinitrc.bkp~" "xstart.sh" ".stumpwmrc" ".stumpwmrc~" "x.log" "startx.sh~" "i2p/" "i2p-bkp/" "pki/" ".thunderbird/" ".purple/" ".python_history" "boletineletronico.jpg" "lucy.jpg" "mydest.jpg" "hahaha.jpg" "mydesk.jpg" "mydes.jpg" ".audacity-data/" "hahahatovendo.jpg" "desk.jpg" ".serverauth.11373" "ohmypdf.jpg" "maehm.jpg" "foto.jpg" ".telega/" "mydeskt.jpg" "lisp-in-less-than-200-lines-of-c.html" "img.jpg" "2020-02-24-220501_1366x768_scrot.png" "asdf.lisp" ".openbazaar/" ".openbazaar2.0-clientData/" ".zshrc" ".zshrc~" "stopped." ".zcompdump-amnesia-5.8" ".zcompdump" ".nuget/" ".templateengine/" ".dotnet/" "snap/" ".serverauth.2403" "default.nix" "default.nix~" ".profile" ".nix-channels" ".nix-profile/" ".nix-defexpr/" ".serverauth.2511" ".serverauth.2763" ".serverauth.2394" ".roswell/" ".eclrc" "sbcl-arm/" "botnet." "botnet" ".sbclrc" ".sbclrc~" ".swp" ".xsession" "Telecomix.Crypto.Munitions.Bureau." "messageofhope.telecomix.org." "rpmbuild/" "scsh/" ".buildman" "its/" "common-lisp/" ".slime-history.eld" ".sqlite_history" "kkk.png" ".serverauth.8168" ".stumpwm.d/" ".zcompdump-amnesia-5.7.1-test-2" "irc/" ".slime/" "openbsdvm.sh" "openbsdvm.sh~" "opbsd66.img" ".xsession-errors" ".xsession-errors.old" ".subversion/" ".dmrc" ".Xauthority" ".hy-history" "timeEnvPy/" ".initrc~" "user.change.dm." "quicklisp/" "text/" ".qmmp/" "sourcewharever/" ".zsh_history~" ".pyhistory" ".theano/" "fdpds./" "bin/" ".lesshst" "ing stable" ".irssi/" "package-lock.json" "node_modules/" ".dosbox/" "hello.ml" ".wine/" "start.amnesia.sh" "att/" ".jupyter/" "awsepubs/" "Biblioteca do calibre/" "test.hy" "test.hy~" "__pycache__/" ".keras/" "apresentation/" ".ipython/" ".condarc" ".conda/" ".anaconda/" ".bashrc" "dbb/" "foo.image" "hda.img" "testingimage.img" ".z.13418" ".links/" ".dwm_log" ".xdg_menu_cache/" ".icewm/" ".terminfo/" ".jssc/" "Arduino/" ".arduino15/" ".oracle_jre_usage/" ".gnome/" ".deno/" ".docker/" "awesome/" "env/" "uptime." ".chezscheme_history" ".w3m/" ".cargo/" ".racket/" ".i2p/" ".java/" "Backup/" ".gitconfig" ".node_repl_history" ".npm/" ".vscode-oss/" ".pki/" ".var/" ".zcompdump-amnesia-5.7.1" "gnome-sdk.gpg" "start-tor-browser.desktop" ".scdhistory" ".zdirs" ".directory_history/" ".otp/" ".emacs.d/" ".zcompdump-linux-hne6-5.7.1" ".oh-my-zsh/" ".wget-hsts" ".y2usersettings" ".y2log" ".tor/" "git/" ".gnupg/" ".ssh/" ".esd_auth" ".mozilla/" ".bash_history" ".config/" "Vídeos/" "Imagens/" "Música/" "Documentos/" "Público/" "Modelos/" "Downloads/" "Área de trabalho/" ".local/" ".cache/" "../" "./")
+ ("/home/amnesia/" (24181 59872 479972 398000) ".z" ".zsh_history" ".xinitrc" ".xinitrc~" "init2.jpg" "init.jpg" "myemacs.jpg" ".dbus/" ".clfswmrc" ".clfswmrc~" ".viminfo" ".xinitrc.bkp" ".xinitrc.bkp~" "xstart.sh" ".stumpwmrc" ".stumpwmrc~" "x.log" "startx.sh~" "i2p/" "i2p-bkp/" "pki/" ".thunderbird/" ".purple/" ".python_history" "boletineletronico.jpg" "lucy.jpg" "mydest.jpg" "hahaha.jpg" "mydesk.jpg" "mydes.jpg" ".audacity-data/" "hahahatovendo.jpg" "desk.jpg" ".serverauth.11373" "ohmypdf.jpg" "maehm.jpg" "foto.jpg" ".telega/" "mydeskt.jpg" "lisp-in-less-than-200-lines-of-c.html" "img.jpg" "2020-02-24-220501_1366x768_scrot.png" "asdf.lisp" ".openbazaar/" ".openbazaar2.0-clientData/" ".zshrc" ".zshrc~" "stopped." ".zcompdump-amnesia-5.8" ".zcompdump" ".nuget/" ".templateengine/" ".dotnet/" "snap/" ".serverauth.2403" "default.nix" "default.nix~" ".profile" ".nix-channels" ".nix-profile/" ".nix-defexpr/" ".serverauth.2511" ".serverauth.2763" ".serverauth.2394" ".roswell/" ".eclrc" "sbcl-arm/" "botnet." "botnet" ".sbclrc" ".sbclrc~" ".swp" ".xsession" "Telecomix.Crypto.Munitions.Bureau." "messageofhope.telecomix.org." "rpmbuild/" "scsh/" ".buildman" "its/" "common-lisp/" ".slime-history.eld" ".sqlite_history" "kkk.png" ".serverauth.8168" ".stumpwm.d/" ".zcompdump-amnesia-5.7.1-test-2" "irc/" ".slime/" "openbsdvm.sh" "openbsdvm.sh~" "opbsd66.img" ".xsession-errors" ".xsession-errors.old" ".subversion/" ".dmrc" ".Xauthority" ".hy-history" "timeEnvPy/" ".initrc~" "user.change.dm." "quicklisp/" "text/" ".qmmp/" "sourcewharever/" ".zsh_history~" ".pyhistory" ".theano/" "fdpds./" "bin/" ".lesshst" "ing stable" ".irssi/" "package-lock.json" "node_modules/" ".dosbox/" "hello.ml" ".wine/" "start.amnesia.sh" "att/" ".jupyter/" "awsepubs/" "Biblioteca do calibre/" "test.hy" "test.hy~" "__pycache__/" ".keras/" "apresentation/" ".ipython/" ".condarc" ".conda/" ".anaconda/" ".bashrc" "dbb/" "foo.image" "hda.img" "testingimage.img" ".z.13418" ".links/" ".dwm_log" ".xdg_menu_cache/" ".icewm/" ".terminfo/" ".jssc/" "Arduino/" ".arduino15/" ".oracle_jre_usage/" ".gnome/" ".deno/" ".docker/" "awesome/" "env/" "uptime." ".chezscheme_history" ".w3m/" ".cargo/" ".racket/" ".i2p/" ".java/" "Backup/" ".gitconfig" ".node_repl_history" ".npm/" ".vscode-oss/" ".pki/" ".var/" ".zcompdump-amnesia-5.7.1" "gnome-sdk.gpg" "start-tor-browser.desktop" ".scdhistory" ".zdirs" ".directory_history/" ".otp/" ".emacs.d/" ".zcompdump-linux-hne6-5.7.1" ".oh-my-zsh/" ".wget-hsts" ".y2usersettings" ".y2log" ".tor/" "git/" ".gnupg/" ".ssh/" ".esd_auth" ".mozilla/" ".bash_history" ".config/" "Vídeos/" "Imagens/" "Música/" "Documentos/" "Público/" "Modelos/" "Downloads/" "Área de trabalho/" ".local/" ".cache/" "../" "./")
 
- ("/home/amnesia/git/clone/emacsos/exwm/" (24180 3124 395607 274000) "#README.md#" ".#README.md" "xinitrc" "exwm.el" "exwm-xim.el" "exwm-workspace.el" "exwm-systemtray.el" "exwm-randr.el" "exwm-manage.el" "exwm-layout.el" "exwm-input.el" "exwm-floating.el" "exwm-core.el" "exwm-config.el" "exwm-cm.el" "README.md" ".gitignore" ".elpaignore" ".git/" "../" "./")
+ ("/home/amnesia/git/clone/emacsos/exwm.wiki/" (24181 6061 87987 558000) "x2go---EXWM.org" "images/" "_Sidebar.md" "The-Emacs-Operating-System.md" "Screenshots.md" "Notes-to-Spacemacs-users.org" "Installation-on-macOS.md" "Home.md" "EXWM-User-Guide.md" "Configuration-Example.md" ".git/" "../" "./")
 
- ("/home/amnesia/git/clone/emacsos/exwm.wiki/" (24180 4114 3587 92000) "x2go---EXWM.org" "images/" "_Sidebar.md" "The-Emacs-Operating-System.md" "Screenshots.md" "Notes-to-Spacemacs-users.org" "Installation-on-macOS.md" "Home.md" "EXWM-User-Guide.md" "Configuration-Example.md" ".git/" "../" "./")
-
- ("/home/amnesia/.emacs.d/" (24179 62913 876031 730000) "ido.last" "init.el" "init.el~" "#init.el#~" "sites/" "init.fasl" "HyperSpec/" "url/" "themes/" "eshell/" "elpa/" "auto-save-list/" "../" "./")
+ ("/home/amnesia/.emacs.d/" (24179 62841 40029 332000) "init.el" "init.el~" "#init.el#~" "sites/" "init.fasl" "HyperSpec/" "url/" "themes/" "eshell/" "elpa/" "auto-save-list/" "../" "./")
 
  ("/home/" (24066 6138 625644 644000) "linuxbrew/" "amnesia/" "../" "./")
 

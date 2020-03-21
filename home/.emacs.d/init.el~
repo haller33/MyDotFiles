@@ -180,7 +180,7 @@
         ([s-f2] . (lambda ()
 		    (interactive)
 		    (start-process "" nil "/usr/bin/slock")))))
-
+011931171009
 ;; To add a key binding only available in line-mode, simply define it in
 ;; `exwm-mode-map'.  The following example shortens 'C-c q' to 'C-q'.
 (define-key exwm-mode-map [?\C-q] #'exwm-input-send-next-key)
@@ -214,7 +214,7 @@
 
 ;; You can hide the minibuffer and echo area when they're not used, by
 ;; uncommenting the following line.
-;(setq exwm-workspace-minibuffer-position 'bottom)
+;; (setq exwm-workspace-minibuffer-position 'bottom)
 
 ;; Do not forget to enable EXWM. It will start by itself when things are
 ;; ready.  You can put it _anywhere_ in your configuration.
