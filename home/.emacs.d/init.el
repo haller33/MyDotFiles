@@ -118,9 +118,11 @@
 (setq common-lisp-hyperspec-root
       (concat "file:/" (expand-file-name "~/.emacs/HyperSpec/HyperSpec/")))
 
-(load-theme 'taming-mr-arneson t t)
-(enable-theme 'taming-mr-arneson)
-
+;;; theme for error in init.el
+;; (load-theme 'taming-mr-arneson t t)
+;; (enable-theme 'taming-mr-arneson)
+(load-theme 'gotham t t)
+(enable-theme 'gotham)
 
 ;; Add paths (not required if EXWM is installed from GNU ELPA).
 (add-to-list 'load-path "/home/amnesia/git/clone/emacsos/xelb/")
