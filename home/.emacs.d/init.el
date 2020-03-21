@@ -54,6 +54,8 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(custom-safe-themes
+   '("64bbc123707a1cc25f145921589d0708c4b6789015e2c50a2ec23cafcee76940" default))
  '(delete-selection-mode nil)
  '(display-battery-mode t)
  '(display-time-mode t)
