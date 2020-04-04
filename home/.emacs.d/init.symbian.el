@@ -23,8 +23,8 @@
 ;;  :commands (telega)
 ;;  :defer t)
 
-(add-to-list 'load-path "/home/amnesia/.telega")
-(require 'telega)
+;(add-to-list 'load-path "/home/amnesia/.telega")
+;(require 'telega)
 
 (add-hook 'telega-chat-mode-hook
           (lambda ()
@@ -36,11 +36,11 @@
                            '(telega-company-botcmd))))
             (company-mode 1)))
 
-(setq telega-proxies
-      (list
-       '(:server "127.0.0.1" :port 9050 :enable :false
-                 :type (:@type "proxyTypeSocks5"
-                               :username "rkn" :password "jopa"))))
+;(setq telega-proxies
+;      (list
+;       '(:server "127.0.0.1" :port 9050 :enable :false
+;                 :type (:@type "proxyTypeSocks5"
+;                               :username "rkn" :password "jopa"))))
 
 (when (>= emacs-major-version 24)
   (require 'package)
@@ -85,17 +85,6 @@
 (org-babel-load-file
  (expand-file-name "org-mode.org"
                    user-emacs-directory))
-
-
-;;;; Clear Emacs Shell Buffer (Eshell)
-;;
-
-(defun eshell/clear ()
-  "04Dec2001 - sailor, to clear the eshell buffer."
-  (interactive)
-  (let ((inhibit-read-only t))
-    (erase-buffer)))
-
 
 
 ;;; Begin Scheme48
@@ -146,8 +135,8 @@
 (enable-theme 'gotham)
 
 ;; Add paths (not required if EXWM is installed from GNU ELPA).
-(add-to-list 'load-path "/home/amnesia/git/clone/emacsos/xelb/")
-(add-to-list 'load-path "/home/amnesia/git/clone/emacsos/exwm/")
+(add-to-list 'load-path "/home/symbian/git/clone/emacsos/xelb/")
+(add-to-list 'load-path "/home/symbian/git/clone/emacsos/exwm/")
 
 
 (defvar blink-cursor-interval-visible .2)

@@ -69,7 +69,7 @@ ZSH_THEME="cdimascio-lambda"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(battery command-not-found common-aliases dnf docker docker-compose docker-machine encode64 firewalld git git-auto-fetch git-extras gitfast github gitignore git-remote-branch glassfish globalias gnu-utils go gpg-agent history history-substring-search jsontools man node npm npx nvm python rsync scala screen ssh-agent sudo systemd themes timer tmux tmux-cssh tmuxinator torrent transfer urltools vim-interaction vi-mode virtualenv yarn z zeus zsh-navigation-tools zsh_reload)
+plugins=(battery command-not-found common-aliases dnf docker docker-compose docker-machine encode64 firewalld git git-auto-fetch git-extras gitfast github gitignore git-remote-branch glassfish globalias gnu-utils go gpg-agent history history-substring-search jsontools man node npm npx nvm python rsync scala screen ssh-agent sudo systemd themes timer torrent transfer urltools vim-interaction vi-mode virtualenv yarn z zeus zsh-navigation-tools zsh_reload)
 
 source $ZSH/oh-my-zsh.sh
 
