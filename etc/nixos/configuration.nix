@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, lib, nixpkgs, pkgs, callPackage, ... }:
+{ config, lib, nixpkgs, pkgs, callPackage, virtualization,... }:
 
 {
   imports =
@@ -15,7 +15,10 @@
   # boot.loader.efi.canTouchEfiVariables = true;
 
   # https://bugzilla.kernel.org/show_bug.cgi?id=110941
-  boot.kernelParams = [ "intel_pstate=no_hwp" ];
+  boot.kernelParams = [
+    "intel_pstate=no_hwp,console=ttyUSB,115200n8"
+  ];
+  
 
   # Supposedly better for the SSD.
   fileSystems."/".options = [ "noatime" "nodiratime" "discard" ];
@@ -68,15 +71,20 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-     zsh git ranger screen dmenu htop iw 
+     zsh git ranger screen dmenu htop iw usbutils st qemu
      vim emacs gimp vim 
-     firefox nmap netcat wget openvpn tor wpa_supplicant
-     keepassxc 
+     firefox nmap netcat wget openvpn tor wpa_supplicant tor-browser-bundle-bin bind dnscrypt-proxy2
+     keepassxc
      vlc scrot 
   ];
 
   xdg.portal.enable = true;
   services.flatpak.enable = true;
+  # DNS
+  # services.bind.enable = true;
+  services.dnscrypt-proxy.enable = true;
+  virtualisation.docker.enable = true;
+  
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
@@ -86,7 +94,7 @@
   # List services that you want to enable:
 
   # Enable the OpenSSH daemon.
-  # services.openssh.enable = true;
+  services.openssh.enable = true;
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
