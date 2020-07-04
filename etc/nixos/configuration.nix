@@ -71,30 +71,48 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-     zsh git ranger screen dmenu htop iw usbutils st qemu
-     vim emacs gimp vim 
-     firefox nmap netcat wget openvpn tor wpa_supplicant tor-browser-bundle-bin bind dnscrypt-proxy2
+     zsh git ranger screen dmenu htop iw usbutils st qemu ncdu tmux radare2
+     vim emacs calibre arduino gimp vim okular xaos
+
+     nodejs ghc guile racket cabal2nix cabal-install
+
+     firefox nmap netcat wget openvpn tor wpa_supplicant tor-browser-bundle-bin bind opera
      keepassxc
-     vlc scrot 
+     vlc scrot
+     
+     openjdk
+     
+     oracle-instantclient odpic
   ];
+
+  
+  # Haskell hoogle Copy
+  
+  services.hoogle.enable = true;
 
   xdg.portal.enable = true;
   services.flatpak.enable = true;
   # DNS
-  # services.bind.enable = true;
-  services.dnscrypt-proxy.enable = true;
+  services.bind.enable = true;
+  # services.dnscrypt-proxy.enable = true;
   virtualisation.docker.enable = true;
-  
+  hardware.bluetooth.enable = false;
+  services.blueman.enable = false;
+  hardware.bluetooth.powerOnBoot = false;
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   programs.mtr.enable = true;
   programs.gnupg.agent = { enable = true; enableSSHSupport = true; };
+  users.extraUsers.synbian = {
+    shell = pkgs.zsh;
+  };
 
   # List services that you want to enable:
 
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
+  programs.zsh.enable = true;
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
@@ -109,6 +127,11 @@
   sound.enable = true;
   nixpkgs.config.pulseaudio = true;
   hardware.pulseaudio.enable = true;
+  nixpkgs.config = {
+
+    allowUnfree = true;
+    # oraclejdk.accept_license = true;
+  };
 
   # Enable the X11 windowing system.
   services.xserver.enable = true;

@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/amnesia/.oh-my-zsh"
+export ZSH="/home/$USER/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -99,8 +99,9 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-export DENO_INSTALL="/home/amnesia/.deno"
-export PATH="$DENO_INSTALL/bin:/home/amnesia/.local/bin:/home/amnesia/anaconda3/bin:/home/amnesia/.racket/bin:/home/amnesia/git/clone/simh/BIN:/home/amnesia/.roswell/bin:/snap/bin:$PATH"
+# export DENO_INSTALL="/home/$USER/.deno"
+# export PATH="$DENO_INSTALL/bin:/home/$USER/.local/bin:/home/$USER/anaconda3/bin:/home/$USER/.racket/bin:/home/$USER/git/clone/simh/BIN:/home/$USER/.roswell/bin:/snap/bin:$PATH"
+export PATH="/home/$USER/.local/bin:/home/$USER/.racket/bin:/home/$USER/git/clone/simh/BIN:/home/$USER/.roswell/bin:/snap/bin:$PATH"
 export VISUAL="emacsclient -nw"
 export EDITOR="emacsclient -nw"
 
@@ -117,5 +118,6 @@ alias gitcloneclone="cd /home/amnesia/git/clone ; git clone "
 export API_TELEGRAM_BOTNET="959462479:AAENoYPpOmLYOpI7I238zz1YQTpXNdGy3_Y"
 
 
-sh /home/amnesia/.nix-profile/etc/profile.d/nix.sh
 
+export DENO_INSTALL="/home/synbian/.deno"
+export PATH="$DENO_INSTALL/bin:$PATH"

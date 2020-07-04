@@ -1,128 +1,128 @@
-python3.7 transforma.py
-python3.7 transforma.py
-python3.7 transforma.py
-python3.7 transforma.py
-python3.7 transforma.py
-python3.7 transforma.py
-python3.7 transforma.py
+find zips -name '^[\w\d]+$'
+find zips -name '^[\w\d]*$'
+find zips -name '^.*[\w\d]*$'
+find zips -name '^.*[\w\d]$'
+find zips -name '^.*[\w\d]+$'
+find zips -name '.*[\w\d]+'
+find zips -name '[\w\d]+'
+find zips -name '[\w\d]*'
+find zips -name '[\w\d]+_[\w\s]*'
+find zips -name '[\w\d]+_[\w\s]+'
+find zips -name '[\w\d]+_[\w\s]+'
+find zips -name '[\w\d]_[\w\s]'
+find zips -regextype sed -regex "^.*[\s\w]+_[\s\w]+$"
+find zips -regextype sed -regex ".*[\s\w]+_[\s\w]+.*"
+sh star.sh find zips -regextype sed -regex ".*[\s\w]+_[\s\w]+.*"
+find zips -regextype sed -regex '\/[\d\w]+_[\w\d]+[^__MACOSX]$/'
+find zips -regextype sed -regex '\/[\d\w]+_[\w\d]+$/'
+find zips -regextype sed -regex '\/[\d\w]+_[\w\d]+$'
+find zips -regextype sed -regex '[\d\w]+_[\w\d]+$'
+find zips -regextype sed -regex '/[\d\w]+_[\w\d]+$/'
+find zips -regextype sed -regex '/^.*[\d\w]+_[\w\d]+$/'
+find zips -regextype sed -regex '/^.*[\d\w]+_[\w\d]+/'
+find zips -regextype sed -regex '/.*[\d\w]+_[\w\d]+/'
+find zips -regextype sed -regex '/[\d\w]+_[\w\d]+/'
+find zips -regextype sed -regex '/[\d\w]{1,}_[\w\d]{1,}/'
+find zips -regextype sed -regex '/[\d\w]{1,}_[\w\d]{1,}'
+find zips -regextype sed -regex '[\d\w]{1,}_[\w\d]{1,}'
+find zips -regextype sed -regex '[\w]'
+ls zips/30-BRADESCO/NAO_PROCESSADOS/
+ls zips/1-ODONTOPREV/
+ls zips/1-ODONTOPREV/NAO_PROCESSADOS/
+ls zips/1-ODONTOPREV/NAO_PROCESSADOS/1590080713099_1208981582292874/
+ls zips/1-ODONTOPREV/NAO_PROCESSADOS/1590080713099_1208981582292874/chats/
+ls zips/1-ODONTOPREV/NAO_PROCESSADOS/1590080713099_1208981582292874/chats/2020/
+ls zips/1-ODONTOPREV/NAO_PROCESSADOS/1590080713099_1208981582292874/chats/2020/05/
+ls zips/1-ODONTOPREV/NAO_PROCESSADOS/1590080713099_1208981582292874/chats/2020/05/20/
+c
 ls
-ls
-flatpak lis
-flatpak list
-whereis clfwm
-whereis clfswm
-ls
-htop
-dmenu
-links
-sbcl
-ls
+sh run.sh zips
+sh run.sh zips
+ls /home/synbian/ENV/TRNASFORM/Final/zips/40-ODONTOSYSTEM/NAO_PROCESSADOS//1590255599425_1213416784263710
+sh run.sh zips
+sh run.sh zips
+sh run.sh zips
+sh run.sh zips
+sh run.sh zips
+sh run.sh zips
+sh run.sh zips
+sh run.sh zips
+sh run.sh zips
+ls /home/synbian/ENV/TRNASFORM/Final/zips/40-ODONTOSYSTEM/NAO_PROCESSADOS/1590255667473_1213425608448298.zip
+ls /home/synbian/ENV/TRNASFORM/Final/zips/40-ODONTOSYSTEM/NAO_PROCESSADOS/1590255667473_1213425608448298.zip
+sh run.sh zips
+sh run.sh zips
+sh run.sh zips
+sh run.sh zips
+sh run.sh zips
+sh run.sh zips
+sh run.sh zips
+sh run.sh zips
+sh run.sh zips
+sh run.sh zips
+stringS='/home/synbian/ENV/TRNASFORM/Final/zips/1-ODONTOPREV/FINALIZADOS'
+/home/synbian/ENV/TRNASFORM/Final/zips/1-ODONTOPREV/NAO_PROCESSADOS
 cd ..
-git clone https://github.com/akermu/emacs-libvterm/
-git clone https://github.com/tumashu/pyim
-mkdir emacsos
-cd emacsos/
-mv ../emacs-libvterm/ .
-mv ../emacs-application-framework/ .
-mv ../pyim/ .
-git clone https://github.com/manateelazycat/emacs-application-framework
-git clone https://github.com/manateelazycat/emacs-application-framework
-git clone https://github.com/kiennq/emacs-mini-modeline
-git clone https://github.com/mooz/xkeysnail
-git clone https://github.com/kozikow/keyremaplinux
-git clone https://github.com/snyball/Hawck
-ls
-systemctl suspend
+ls 
+find . -name '*.zip'
 cd ..
-cd exwm/
-ls
-cd 
-cd i2p/
-ls
-./i2prouter status
-tor
-ps aux | grep tor
-kill 9299
-ps aux | grep tor
-kill -9 9299
-ps aux | grep tor
-top
-zypper se gnome-settings-daemon
-sudo systemctl start dnscrypt-proxy
-sudo systemctl status dnscrypt-proxy
-tor
-ls
-links startpage.com
-git clone https://github.com/ch11ng/xelb
-mv xelb/ emacsos
-mv elpakit/ emacsos
-mv exwm* emacsos
-cd emacsos
-ls
-ls -la
-pwd
-ranger
-top
-ls
-ps
-f -h
-df -h
 cd ..
-du sh telega
+find . -name '*.zip'
+node
+sh run.sh zips
+/home/synbian/ENV/TRNASFORM/Final/zips/1-ODONTOPREV/NAO_PROCESSADOS/1590080713099_1208981582292874/chats/2020/05/20/60c2f1b0-9ab8-11ea-90bf-b36247f8a6e4.json
+sh run.sh zips
+sh run.sh zips
+sh run.sh zips
+sh run.sh zips
+sh run.sh zips
+less result.json 
+sh run.sh zips
+find . -name '*.zip'
+find . -name '*.json'
+find zips -name '*.json'
+find zips -name '*.json' | sort
+find zips -name '*.json' | sort | less
+zips/40-ODONTOSYSTEM/NAO_PROCESSADOS/1590255667473_1213425608448298/chats/2020/05/22/fcad8b80-9c75-11ea-843d-537a18773c7c.json
+sh run.sh zips
+sh run.sh zips
+sh run.sh zips
+sh run.sh zips
+sh run.sh zips
+sh run.sh zips
+ls /home/synbian/ENV/TRNASFORM/Final/zips/1-ODONTOPREV/NAO_PROCESSADOS/1590080713099_1208981582292874
+sh run.sh zips
+ls /home/synbian/ENV/TRNASFORM/Final/zips/1-ODONTOPREV/NAO_PROCESSADOS/1590080713099_1208981582292874
+sh run.sh zips
+sh run.sh zips
+sh run.sh zips
+sh run.sh zips
+nix-shell -p unzip
+sh run.sh zips
+s=/home/synbian/ENV/TRNASFORM/Final/zips/40-ODONTOSYSTEM/NAO_PROCESSADOS
+s
+sh run.sh zips
+ls /home/synbian/ENV/TRNASFORM/Final/zips/40-ODONTOSYSTEM/NAO_PROCESSADOS
+sh run.sh zips/
+/home/synbian/ENV/TRNASFORM/Final/zips/40-ODONTOSYSTEM/NAO_PROCESSADOS
+cd -
+ls /home/synbian/ENV/TRNASFORM/Final/zips/40-ODONTOSYSTEM/NAO_PROCESSADOS
+sh run.sh zips/
+sh run.sh zips/
+ls /home/synbian/ENV/TRNASFORM/Final/zips/40-ODONTOSYSTEM/NAO_PROCESSADOS
+sh run.sh zips/
+ls /home/synbian/ENV/TRNASFORM/Final/zips/40-ODONTOSYSTEM/NAO_PROCESSADOS/1590255667473_1213425608448298
+ls /home/synbian/ENV/TRNASFORM/Final/zips/40-ODONTOSYSTEM/NAO_PROCESSADOS/1590255667473_1213425608448298
+sh run.sh zips/
+sh run.sh zips/
+sh run.sh zips/
+sh run.sh zips/
+nix-shell -p unzip
+mkdir lib
 ls
-cat .xinitc
-ps au
+mv jscheme-7.2.jar lib/
 ls
-ps au
-ps au
-ls
-ranger
-sbcl
-htop
-glances
-ls
-cd
-ls
-cd git/clone/
-cd MyDotFiles/
-cd home/
-ls
-cp ../../../../.emacs.d/init.el .emacs.d/
-cp ../../../../.xinitrc .
-cp ../../../../.xinitrc.bkp .xinit.clfswm.el
-git status
-cp -rf ../../../../.emacs.d/ .
-cp -raf ../../../../.emacs.d/ .
-sudo cp -raf ../../../../.emacs.d/ .
-sudo cp -raf ../../../../.emacs.d/ .
-sudo cp -raf ../../../../.emacs.d/ .
-git status
-git add .
-git status
-git checkout .emacs.d/init.el~
-git status
-git checkout .emacs.d/init.el\~
-git status
-git reset
-git status
-git add .emacs.d/eshell/*
-git add .emacs.d/eshell/
-git add .emacs.d/init.el
-git add .emacs.d/ido.last
-git add .emacs.d/sites/
-git add .xinit.clfswm.el
-git status
-git add .xinitrc
-git commit -m "new settings for Emacs Operation System"
-git push
-systemctl status dnscrypt-proxy
-systemctl start dnscrypt-proxy
-screen
-systemctl status --user emacs
-scrot myemacs.jpg
-mv myemacs.jpg ~
-ps aux | grep scren
-ls
-screen
-ps aux | grep tor
-ps aux | grep brow
+node
+nix-env -qa 'sublime.*'
+nix-env -i] 'sublimetext3'
+nix-env -i 'sublimetext3'
