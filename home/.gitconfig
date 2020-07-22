@@ -1,0 +1,5 @@
+[user]
+	email = eliseu42lucena@gmail.com
+	name = haller33
+[alias]
+    tree = log --graph --decorate --pretty=oneline --abbrev-commit
