@@ -133,7 +133,7 @@
   # networking.firewall.allowedTCPPorts = [ ... ];
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
-  networking.firewall.enable = false;
+  networking.firewall.enable = true;
 
   # Enable CUPS to print documents.
   # services.printing.enable = true;
@@ -153,17 +153,6 @@
   services.xserver.layout = "br";
   # services.xserver.xkbOptions = "eurosign:e";
   
-  # using lightdm
-  services.xserver = {
-    # desktopManager.default = "none";
-    desktopManager.xterm.enable = false;
-    displayManager = {
-      lightdm.enable = true;
-      gdm.enable = false;
-    };
-  };
-
-
 
   # Xmonad window manager
   services.xserver = {
