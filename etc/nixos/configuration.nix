@@ -1,4 +1,4 @@
-# Edit this configuration file to define what should be installed on
+#  Edit this configuration file to define what should be installed on
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
@@ -71,24 +71,35 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-     zsh git ranger screen dmenu htop iw usbutils st qemu ncdu tmux radare2
+     zsh git ranger screen dmenu htop iw usbutils st qemu ncdu tmux radare2 qemu gdb 
      vim emacs calibre arduino gimp vim okular xaos
 
      nodejs ghc guile racket cabal2nix cabal-install
 
-     firefox nmap netcat wget openvpn tor wpa_supplicant tor-browser-bundle-bin bind opera
-     keepassxc
+     firefox nmap netcat wget tor wpa_supplicant bind opera openvpn
+     keepassxc 
      vlc scrot
-     
+
+     logmein-hamachi
+
      openjdk
      
-     oracle-instantclient odpic
+     # oracle-instantclient odpic
+
+     # Haskell packages for XMonad
+     haskellPackages.xmobar
+     haskellPackages.xmonad
+     haskellPackages.xmonad-contrib
+     haskellPackages.xmonad-extras
+     stack
   ];
 
   
   # Haskell hoogle Copy
   
   services.hoogle.enable = true;
+
+  # services.logmein-hamachi.enable = false;
 
   xdg.portal.enable = true;
   services.flatpak.enable = true;
@@ -99,6 +110,10 @@
   hardware.bluetooth.enable = false;
   services.blueman.enable = false;
   hardware.bluetooth.powerOnBoot = false;
+
+  # services.xserver.libinput.enable = false;
+  # services.xserver.synaptics.enable = true;
+
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
@@ -111,7 +126,7 @@
   # List services that you want to enable:
 
   # Enable the OpenSSH daemon.
-  services.openssh.enable = true;
+  # services.openssh.enable = true;
   programs.zsh.enable = true;
 
   # Open ports in the firewall.
@@ -137,17 +152,55 @@
   services.xserver.enable = true;
   services.xserver.layout = "br";
   # services.xserver.xkbOptions = "eurosign:e";
-
+  
+  # using lightdm
   services.xserver = {
-    desktopManager = {
-      default = "xfce";
-      xterm.enable = false;
-      xfce.enable = true;
+    # desktopManager.default = "none";
+    desktopManager.xterm.enable = false;
+    displayManager = {
+      lightdm.enable = true;
+      gdm.enable = false;
     };
   };
 
+
+
+  # Xmonad window manager
+  services.xserver = {
+
+    windowManager.xmonad = {
+      enable = true;
+      enableContribAndExtras = true;
+    };
+    
+    wacom.enable = true;
+  };
+
+
+
+  # config for dwm
+  # services.xserver = {
+  #   desktopManager.xterm.enable=false;
+  #   # desktopManager.default="none";
+  #   windowManager.dwm.enable = true;
+  # };
+
+  # olds xfce4 interface
+  #  services.xserver = {
+  #    desktopManager = {
+  #      default = "xfce";
+  #      xterm.enable = false;
+  #      xfce.enable = true;
+  #    };
+  # }
+
   # Enable touchpad support.
   services.xserver.libinput.enable = true;
+
+
+  services.printing.enable = true;
+  # Show the manual on virtual console 8 :
+  services.nixosManual.showManual = true;
 
   # Enable the KDE Desktop Environment.
   # services.xserver.displayManager.sddm.enable = true;

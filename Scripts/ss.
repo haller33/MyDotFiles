@@ -1,0 +1,15 @@
+xset -b 
+setxkbmap pl
+#xrdb ~/.Xresources
+
+#exec xrandr --output VGA-0 --mode 1920x975 --rate 60 &
+exec nitrogen --restore &
+#exec plank & 
+
+while true ; do xsetroot -name "`date '+%Y-%m-%d %H:%M.%S'` Load15: `uptime |awk -F "load" '{print $2}' |cut -d " " -f 5 `; Up: `uptime |cut -d "," -f 1 |awk -F "up" '{print $2}'`"; sleep 1 ; done &
+
+#if you have compton 
+#compton -b --config ~/.config/compton.conf & 
+
+exec dwm
+
