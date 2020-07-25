@@ -114,6 +114,7 @@
   # services.xserver.libinput.enable = false;
   # services.xserver.synaptics.enable = true;
 
+  services.emacs.enable = true;
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
@@ -152,18 +153,22 @@
   services.xserver.enable = true;
   services.xserver.layout = "br";
   # services.xserver.xkbOptions = "eurosign:e";
+
+
+  # EXWM
   
+  services.xserver.windowManager.exwm.enable = true;
 
   # Xmonad window manager
-  services.xserver = {
+  # services.xserver = {
 
-    windowManager.xmonad = {
-      enable = true;
-      enableContribAndExtras = true;
-    };
+  #  windowManager.xmonad = {
+  #    enable = true;
+  #    enableContribAndExtras = true;
+  #  };
     
-    wacom.enable = true;
-  };
+  #  wacom.enable = true;
+  # };
 
 
 
