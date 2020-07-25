@@ -105,6 +105,10 @@
  (expand-file-name "org-mode.org"
                    user-emacs-directory))
 
+;;; Zoom using scrool
+;;
+(global-set-key [C-mouse-4] 'text-scale-increase)
+(global-set-key [C-mouse-5] 'text-scale-decrease)
 
 ;;;; Clear Emacs Shell Buffer (Eshell)
 ;;
