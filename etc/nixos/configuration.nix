@@ -71,7 +71,7 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-     zsh git ranger screen dmenu htop iw usbutils st qemu ncdu tmux radare2 qemu gdb 
+     zsh git ranger screen dmenu htop iw usbutils st qemu ncdu tmux radare2 qemu gdb nitrogen
      vim emacs calibre arduino gimp vim okular xaos
 
      nodejs ghc guile racket cabal2nix cabal-install
@@ -157,18 +157,18 @@
 
   # EXWM
   
-  services.xserver.windowManager.exwm.enable = true;
+  # services.xserver.windowManager.exwm.enable = true;
 
   # Xmonad window manager
-  # services.xserver = {
-
-  #  windowManager.xmonad = {
-  #    enable = true;
-  #    enableContribAndExtras = true;
-  #  };
-    
-  #  wacom.enable = true;
-  # };
+  services.xserver = {
+  
+   windowManager.xmonad = {
+     enable = true;
+     enableContribAndExtras = true;
+   };
+  
+   wacom.enable = true;
+  };
 
 
 
