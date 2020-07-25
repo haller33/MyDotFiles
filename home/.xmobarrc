@@ -1,6 +1,9 @@
 Config
    { font = "xft:Inconsolata:size=12"
-   , additionalFonts = []        -- default: []
+   , additionalFonts = [ "xft:Mononoki Nerd Font:pixelsize=11:antialias=true:hinting=true"
+                           , "xft:Mononoki Nerd Font:pixelsize=16:antialias=true:hinting=true"
+                           , "xft:FontAwesome:pixelsize=13"
+                           ]
    , borderColor = "white"
    , border = NoBorder
    , bgColor = "black"
@@ -19,7 +22,8 @@ Config
    , commands =
       [ Run BatteryP ["BAT1"]
          [ "-t", "<acstatus><left>%, <timeleft> rem"
-         , "-L", "20", "-l", "red"
+	 , "-H", "75"
+         , "-L", "36", "-l", "red"
          , "--"
          , "-O", "<icon=battery-plug-icon_24.xpm/>"
          , "-i", "<icon=battery-plug-icon_24.xpm/>"
@@ -27,6 +31,11 @@ Config
          , "-m", "white"
          , "-p", "green"  -- This appears to not be working on my X1 Carbon
          ] 600
+      , Run Cpu
+      	["-t", "<fn=1>\xf108</fn> cpu: (<total>%)"
+	 , "-H","50","--high"
+	 , "red"
+	 ] 20
       , Run CoreTemp
          [ "-t", "<icon=thermometer-icon_24.xpm/><core0>°C"
          , "-H", "60", "-h", "red"
@@ -35,10 +44,12 @@ Config
          ] 50
       , Run Date
          "<icon=calendar-clock-icon_24.xpm/> <fc=#ee9a00>%Y-%b-%0d %a %H:%M:%S</fc>"
+	 --- "<icon=calendar-clock-icon_24.xpm/> <fc=#ee9a00>%b-%0d %a %H:%M</fc>"
          "date" 10
       , Run DiskU
-         [ ("/", "<icon=harddisk-icon_24.xpm/> <usedp>% used, <free> free") ]
-         [] 20
+          [ ("/", "<icon=harddisk-icon_24.xpm/><usedp>% used, <free> free") ]
+	 -- [ ("/", "<icon=harddisk-icon_24.xpm/> <usedp>% used") ]
+         [] 800
       , Run DynNetwork
          [ "-t", "<icon=network-icon_24.xpm/> <dev> <icon=actions-arrow-down-icon_24.xpm/><rx>KB <icon=actions-arrow-up-icon_24.xpm/><tx>KB . "
          ] 10
@@ -52,14 +63,10 @@ Config
          , "-n", "green"
          ] 10
       , Run StdinReader
-      , Run Weather "KRDU"
-         [ "-t", "KRDU: <tempF>°F"
-         , "-L", "34", "-H", "93"
-         , "--normal", "green", "--high", "red", "--low", "lightblue"
-         ] 36000
+      , Run UnsafeStdinReader
       ]
    , sepChar = "%"
    , alignSep = "}{"
 
-   , template = "%StdinReader% . %multicpu% . %coretemp% . %memory% . %disku% }{ %dynnetwork%%battery% . <icon=sun-rain-icon_24.xpm/> %KRDU% . %date%"
+   , template = "  <action=`xdotool key control+alt+g`><icon=haskell_20.xpm/></action><fc=#666666>|</fc>%multicpu%  . %coretemp% . %memory% . %disku% }{ %dynnetwork%%battery% . %date% "
    }
