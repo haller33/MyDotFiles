@@ -2,6 +2,8 @@
 
 ;; ----- ido-last-directory-list -----
 (
+ ("/home/synbian/git/" . "clone/")
+ ("/home/synbian/" . "git/")
  ("/home/amnesia/" . ".emacs.d/")
  ("/home/" . "amnesia/")
  ("/" . "home/")
@@ -9,25 +11,41 @@
 
 ;; ----- ido-work-directory-list -----
 (
+ "/home/synbian/.emacs.d/"
+ "/etc/nixos/"
  "/home/amnesia/"
  "/home/amnesia/.emacs.d/"
 )
 
 ;; ----- ido-work-file-list -----
 (
- ".xinitrc"
+ "init.symbian.el"
  "init.el"
+ "configuration.nix"
+ ".xinitrc"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
+ ("/home/synbian/git/clone/" (24347 36440 386658 898000) "slideshow-simple/" "pattern/" "qemu-scripts/" "Miracle/" "flashforth/" "forthlisp/" "NonEuclidean/" "CSharpFunctionalExtensions/" "FunctionalExtensionsOriginal/" "FunctionalExtensions/" "yale-haskell/" "miranda/" "gofer/" "HylangPresentation/" "CNPJ-API-Request/" "BuscaArquivos-js/" "AutoPixieWps/" "sanctuary/" "ramda-fantasy/" "kdbxpasswordpwned/" "redoubler/" "emacsrepl/" "eltr/" "radare2/" "Redbox-hardware-true-random-number-generator/" "arpilisp/" "arduino-rng/" "infnoise/" "Z1FFER/" "biscuit/" "org-superstar-mode/" "Org-Mode/" "emacsos/" "alexandria/" "callbag-scheme/" "haskell-mode/" "learnhaskell/" "My-scheme48/" "callbag-take/" "callbag-basics/" "callbag/" "fritzroy/" "dvorak-qwerty/" "nix-index/" "bucklespring/" "sicp-solutions/" "paip-lisp/" "ansi-Common-Lisp/" "projectile/" "nixpkgs/" "dotnet/" "orangepi_uboot/" "st-transparency/" "MyDotFiles/" "../" "./")
+
+ ("/home/synbian/git/" (24211 35887 163783 382000) "wget/" "clone/" "../" "./")
+
+ ("/home/synbian/.emacs.d/" (24348 19250 900719 765000) "init.el" "init.el~" "session.2c6c471d6-cc93-4783-959c-f6550cc70ce1" "org-mode.el" "org-mode.org" "org-mode.org~" "url/" "themes/" "sites/" "quicklisp.lisp" "init.symbian.el" "init.fasl" "init.el.arm" "ido.last" "eshell/" "elpa/" "auto-save-list/" "HyperSpec/" "../" "./")
+
+ ("/home/synbian/" (24348 18980 32998 781000) ".z" ".compose-cache/" ".xsession-errors" ".xsession-errors.old" ".zsh_history" ".bash_history" "some_000.jpg" "some.jpg" ".xmobarrc" ".xmobarrc~" "mtu" ".stack/" ".zcompdump" ".xmonad/" "tempdb-full.jpg" ".zcompdump-morpheus-5.7.1" ".zshrc" ".zshrc~" ".gdb_history" "SebIxmMrACws9NWO.mp4" "asdf.jpg" "peda-session-coreutils.txt" "peda/" "result/" ".ICEauthority" ".xsession" "VM/" "openbsdvm.sh" "Backup_/" "doc-openbsd/" ".xfce4-session.verbose-log" ".xfce4-session.verbose-log.last" "#org.example.org#" "org.example.html" ".#org.example.org" "org.example.org" ".react-native-cli/" "Android/" ".android/" ".AndroidStudio4.0/" ".mcreator/" ".gnome/" ".arduino15/" ".gforth-history" "ODONTO_SYSTEM_04_02_2020.csv" ".cabal/" ".viminfo" "CERTIFICADO/" "2020-06-17_10-14.png" ".putty/" "org-mode.org" "org-mode.org~" ".tooling/" "eclipse-workspace/" ".m2/" ".gradle/" ".netbeans/" ".minecraft/" "2020-06-01_11-08.png" "2020-06-01_11-07.png" "2020-06-01_11-00.png" "#.zshrc#" ".deno/" ".lesshst" ".swt/" ".eclipse/" ".links/" ".mysql/" ".npm/" ".pki/" "#ASDF#" "ESAB/" ".jssc/" ".java/" "Arduino/" "Calibre Library/" ".node_repl_history" ".slime-history.eld" ".racket/" ".python_history" ".wget-hsts" "ESTACIO/" "mises.jpg" ".slime/" ".ghc/" ".chezscheme_history" "selft.jpg" "glitch anime image.jpg" "glish lain.jpg" "deams images.jpg" "aaaa.jpg" ".thumbnails/" "mozilla.pdf" "kabaka.jpg" ".gstreamer-0.10/" ".nuget/" ".templateengine/" ".dotnet/" ".mono/" ".var/" ".tor/" "quicklisp/" ".bashrc" "ENV/" "Backup/" ".ssh/" "Images/" "Downloads/" ".sbclrc" ".gdbinit" ".emacs.d/" ".zcompdump-nixos-5.7.1" ".oh-my-zsh/" "git/" ".mozilla/" ".nix-profile/" ".nix-defexpr/" ".nix-channels" "Desktop/" ".esd_auth" ".gnupg/" ".cache/" ".config/" ".local/" ".dbus/" ".Xauthority" "../" "./")
+
+ ("/etc/nixos/" (24348 18453 56767 904000) "configuration.nix" "configuration.nix~" "configuration.nix.bkp" "hardware-configuration.nix" "../" "./")
+
+ ("/etc/" (24348 18525 536606 804000) "zshrc" "zshenv" "zprofile" "zoneinfo/" "zinputrc" "vconsole.conf" "terminfo/" "sudoers" "subuid" "subgid" "shells" "set-environment" "services" "rpc" "resolvconf.conf" "protocols" "profile" "os-release" "nsswitch.conf" "nscd.conf" "nanorc" "man.conf" "login.defs" "localtime" "locale.conf" "libao.conf" "kbd/" "issue" "inputrc" "hosts" "hostname" "host.conf" "fuse.conf" "fstab" "fonts/" "dhcpcd.exit-hook" "dbus-1/" "cups/" "bashrc" "asound.conf" "static/" "shadow" "passwd" "group" "mtab" "printcap" ".git/" "resolv.conf.bak" "resolv.conf.bak~" "resolv.conf" "group-" "resolv.dnscry.conf" "bind/" "docker/" "adjtime" ".updated" "machine-id" ".pwd.lock" "openal/" "pulse/" "default/" "pam.d/" "udev/" "X11/" "modules-load.d/" "tmpfiles.d/" "systemd/" "sysctl.d/" "ssl/" "ssh/" "samba/" "polkit-1/" "pki/" "nix/" "modprobe.d/" "lightdm/" "binfmt.d/" ".clean" "NIXOS" "nixos/" "../" "./")
+
+ ("/home/" (24211 28784 628227 809000) "synbian/" "../" "./")
+
  ("/home/amnesia/" (24181 59872 479972 398000) ".z" ".zsh_history" ".xinitrc" ".xinitrc~" "init2.jpg" "init.jpg" "myemacs.jpg" ".dbus/" ".clfswmrc" ".clfswmrc~" ".viminfo" ".xinitrc.bkp" ".xinitrc.bkp~" "xstart.sh" ".stumpwmrc" ".stumpwmrc~" "x.log" "startx.sh~" "i2p/" "i2p-bkp/" "pki/" ".thunderbird/" ".purple/" ".python_history" "boletineletronico.jpg" "lucy.jpg" "mydest.jpg" "hahaha.jpg" "mydesk.jpg" "mydes.jpg" ".audacity-data/" "hahahatovendo.jpg" "desk.jpg" ".serverauth.11373" "ohmypdf.jpg" "maehm.jpg" "foto.jpg" ".telega/" "mydeskt.jpg" "lisp-in-less-than-200-lines-of-c.html" "img.jpg" "2020-02-24-220501_1366x768_scrot.png" "asdf.lisp" ".openbazaar/" ".openbazaar2.0-clientData/" ".zshrc" ".zshrc~" "stopped." ".zcompdump-amnesia-5.8" ".zcompdump" ".nuget/" ".templateengine/" ".dotnet/" "snap/" ".serverauth.2403" "default.nix" "default.nix~" ".profile" ".nix-channels" ".nix-profile/" ".nix-defexpr/" ".serverauth.2511" ".serverauth.2763" ".serverauth.2394" ".roswell/" ".eclrc" "sbcl-arm/" "botnet." "botnet" ".sbclrc" ".sbclrc~" ".swp" ".xsession" "Telecomix.Crypto.Munitions.Bureau." "messageofhope.telecomix.org." "rpmbuild/" "scsh/" ".buildman" "its/" "common-lisp/" ".slime-history.eld" ".sqlite_history" "kkk.png" ".serverauth.8168" ".stumpwm.d/" ".zcompdump-amnesia-5.7.1-test-2" "irc/" ".slime/" "openbsdvm.sh" "openbsdvm.sh~" "opbsd66.img" ".xsession-errors" ".xsession-errors.old" ".subversion/" ".dmrc" ".Xauthority" ".hy-history" "timeEnvPy/" ".initrc~" "user.change.dm." "quicklisp/" "text/" ".qmmp/" "sourcewharever/" ".zsh_history~" ".pyhistory" ".theano/" "fdpds./" "bin/" ".lesshst" "ing stable" ".irssi/" "package-lock.json" "node_modules/" ".dosbox/" "hello.ml" ".wine/" "start.amnesia.sh" "att/" ".jupyter/" "awsepubs/" "Biblioteca do calibre/" "test.hy" "test.hy~" "__pycache__/" ".keras/" "apresentation/" ".ipython/" ".condarc" ".conda/" ".anaconda/" ".bashrc" "dbb/" "foo.image" "hda.img" "testingimage.img" ".z.13418" ".links/" ".dwm_log" ".xdg_menu_cache/" ".icewm/" ".terminfo/" ".jssc/" "Arduino/" ".arduino15/" ".oracle_jre_usage/" ".gnome/" ".deno/" ".docker/" "awesome/" "env/" "uptime." ".chezscheme_history" ".w3m/" ".cargo/" ".racket/" ".i2p/" ".java/" "Backup/" ".gitconfig" ".node_repl_history" ".npm/" ".vscode-oss/" ".pki/" ".var/" ".zcompdump-amnesia-5.7.1" "gnome-sdk.gpg" "start-tor-browser.desktop" ".scdhistory" ".zdirs" ".directory_history/" ".otp/" ".emacs.d/" ".zcompdump-linux-hne6-5.7.1" ".oh-my-zsh/" ".wget-hsts" ".y2usersettings" ".y2log" ".tor/" "git/" ".gnupg/" ".ssh/" ".esd_auth" ".mozilla/" ".bash_history" ".config/" "Vídeos/" "Imagens/" "Música/" "Documentos/" "Público/" "Modelos/" "Downloads/" "Área de trabalho/" ".local/" ".cache/" "../" "./")
 
  ("/home/amnesia/git/clone/emacsos/exwm.wiki/" (24181 6061 87987 558000) "x2go---EXWM.org" "images/" "_Sidebar.md" "The-Emacs-Operating-System.md" "Screenshots.md" "Notes-to-Spacemacs-users.org" "Installation-on-macOS.md" "Home.md" "EXWM-User-Guide.md" "Configuration-Example.md" ".git/" "../" "./")
 
  ("/home/amnesia/.emacs.d/" (24179 62841 40029 332000) "init.el" "init.el~" "#init.el#~" "sites/" "init.fasl" "HyperSpec/" "url/" "themes/" "eshell/" "elpa/" "auto-save-list/" "../" "./")
-
- ("/home/" (24066 6138 625644 644000) "linuxbrew/" "amnesia/" "../" "./")
 
  ("/home/amnesia/git/" (24148 33476 518193 565000) "dict." "crypt/" "dnscrypt.csv" "wget/" "dat/" ".vscode/" "lucena/" "clone/" "../" "./")
 

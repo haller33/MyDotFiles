@@ -71,18 +71,20 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-     zsh git ranger screen dmenu htop iw usbutils st qemu ncdu tmux radare2 qemu gdb nitrogen
-     vim emacs calibre arduino gimp vim okular xaos
+     zsh git ranger screen dmenu htop iw usbutils st qemu ncdu tmux radare2 qemu gdb nitrogen feh
+     vim emacs calibre arduino gimp vim okular xaos 
 
-     nodejs ghc guile racket cabal2nix cabal-install
+     nodejs ghc guile racket cabal2nix cabal-install binutils-unwrapped
 
      firefox nmap netcat wget tor wpa_supplicant bind opera openvpn
      keepassxc 
-     vlc scrot
+     vlc scrot 
 
      logmein-hamachi
 
      openjdk
+
+     teamviewer
      
      # oracle-instantclient odpic
 
@@ -94,10 +96,16 @@
      stack
   ];
 
+  # teamviewer
+  services.teamviewer.enable = true;
   
   # Haskell hoogle Copy
-  
+
   services.hoogle.enable = true;
+  services.hoogle.packages = hp: with hp; [
+    text lens  tonalude stack statistics parsec hspec
+  ];
+
 
   # services.logmein-hamachi.enable = false;
 
@@ -111,9 +119,7 @@
   services.blueman.enable = false;
   hardware.bluetooth.powerOnBoot = false;
 
-  # services.xserver.libinput.enable = false;
-  # services.xserver.synaptics.enable = true;
-
+  # Emacs Daemon
   services.emacs.enable = true;
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -143,6 +149,7 @@
   sound.enable = true;
   nixpkgs.config.pulseaudio = true;
   hardware.pulseaudio.enable = true;
+  
   nixpkgs.config = {
 
     allowUnfree = true;
@@ -189,7 +196,13 @@
   # }
 
   # Enable touchpad support.
+  services.xserver.libinput.naturalScrolling = false;
   services.xserver.libinput.enable = true;
+  services.xserver.libinput.middleEmulation = true;
+  services.xserver.libinput.tapping = true;
+
+  # services.xserver.libinput.enable = false;
+  # services.xserver.synaptics.enable = true;
 
 
   services.printing.enable = true;
@@ -210,7 +223,7 @@
   # compatible, in order to avoid breaking some software such as database
   # servers. You should change this only after NixOS release notes say you
   # should.
-  system.stateVersion = "19.09"; # Did you read the comment?
+  system.stateVersion = "19.08"; # Did you read the comment?
 
 }
 
