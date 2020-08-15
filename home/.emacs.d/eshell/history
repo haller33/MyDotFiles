@@ -1,108 +1,3 @@
-find zips -name '^[\w\d]+$'
-find zips -name '^[\w\d]*$'
-find zips -name '^.*[\w\d]*$'
-find zips -name '^.*[\w\d]$'
-find zips -name '^.*[\w\d]+$'
-find zips -name '.*[\w\d]+'
-find zips -name '[\w\d]+'
-find zips -name '[\w\d]*'
-find zips -name '[\w\d]+_[\w\s]*'
-find zips -name '[\w\d]+_[\w\s]+'
-find zips -name '[\w\d]+_[\w\s]+'
-find zips -name '[\w\d]_[\w\s]'
-find zips -regextype sed -regex "^.*[\s\w]+_[\s\w]+$"
-find zips -regextype sed -regex ".*[\s\w]+_[\s\w]+.*"
-sh star.sh find zips -regextype sed -regex ".*[\s\w]+_[\s\w]+.*"
-find zips -regextype sed -regex '\/[\d\w]+_[\w\d]+[^__MACOSX]$/'
-find zips -regextype sed -regex '\/[\d\w]+_[\w\d]+$/'
-find zips -regextype sed -regex '\/[\d\w]+_[\w\d]+$'
-find zips -regextype sed -regex '[\d\w]+_[\w\d]+$'
-find zips -regextype sed -regex '/[\d\w]+_[\w\d]+$/'
-find zips -regextype sed -regex '/^.*[\d\w]+_[\w\d]+$/'
-find zips -regextype sed -regex '/^.*[\d\w]+_[\w\d]+/'
-find zips -regextype sed -regex '/.*[\d\w]+_[\w\d]+/'
-find zips -regextype sed -regex '/[\d\w]+_[\w\d]+/'
-find zips -regextype sed -regex '/[\d\w]{1,}_[\w\d]{1,}/'
-find zips -regextype sed -regex '/[\d\w]{1,}_[\w\d]{1,}'
-find zips -regextype sed -regex '[\d\w]{1,}_[\w\d]{1,}'
-find zips -regextype sed -regex '[\w]'
-ls zips/30-BRADESCO/NAO_PROCESSADOS/
-ls zips/1-ODONTOPREV/
-ls zips/1-ODONTOPREV/NAO_PROCESSADOS/
-ls zips/1-ODONTOPREV/NAO_PROCESSADOS/1590080713099_1208981582292874/
-ls zips/1-ODONTOPREV/NAO_PROCESSADOS/1590080713099_1208981582292874/chats/
-ls zips/1-ODONTOPREV/NAO_PROCESSADOS/1590080713099_1208981582292874/chats/2020/
-ls zips/1-ODONTOPREV/NAO_PROCESSADOS/1590080713099_1208981582292874/chats/2020/05/
-ls zips/1-ODONTOPREV/NAO_PROCESSADOS/1590080713099_1208981582292874/chats/2020/05/20/
-c
-ls
-sh run.sh zips
-sh run.sh zips
-ls /home/synbian/ENV/TRNASFORM/Final/zips/40-ODONTOSYSTEM/NAO_PROCESSADOS//1590255599425_1213416784263710
-sh run.sh zips
-sh run.sh zips
-sh run.sh zips
-sh run.sh zips
-sh run.sh zips
-sh run.sh zips
-sh run.sh zips
-sh run.sh zips
-sh run.sh zips
-ls /home/synbian/ENV/TRNASFORM/Final/zips/40-ODONTOSYSTEM/NAO_PROCESSADOS/1590255667473_1213425608448298.zip
-ls /home/synbian/ENV/TRNASFORM/Final/zips/40-ODONTOSYSTEM/NAO_PROCESSADOS/1590255667473_1213425608448298.zip
-sh run.sh zips
-sh run.sh zips
-sh run.sh zips
-sh run.sh zips
-sh run.sh zips
-sh run.sh zips
-sh run.sh zips
-sh run.sh zips
-sh run.sh zips
-sh run.sh zips
-stringS='/home/synbian/ENV/TRNASFORM/Final/zips/1-ODONTOPREV/FINALIZADOS'
-/home/synbian/ENV/TRNASFORM/Final/zips/1-ODONTOPREV/NAO_PROCESSADOS
-cd ..
-ls 
-find . -name '*.zip'
-cd ..
-cd ..
-find . -name '*.zip'
-node
-sh run.sh zips
-/home/synbian/ENV/TRNASFORM/Final/zips/1-ODONTOPREV/NAO_PROCESSADOS/1590080713099_1208981582292874/chats/2020/05/20/60c2f1b0-9ab8-11ea-90bf-b36247f8a6e4.json
-sh run.sh zips
-sh run.sh zips
-sh run.sh zips
-sh run.sh zips
-sh run.sh zips
-less result.json 
-sh run.sh zips
-find . -name '*.zip'
-find . -name '*.json'
-find zips -name '*.json'
-find zips -name '*.json' | sort
-find zips -name '*.json' | sort | less
-zips/40-ODONTOSYSTEM/NAO_PROCESSADOS/1590255667473_1213425608448298/chats/2020/05/22/fcad8b80-9c75-11ea-843d-537a18773c7c.json
-sh run.sh zips
-sh run.sh zips
-sh run.sh zips
-sh run.sh zips
-sh run.sh zips
-sh run.sh zips
-ls /home/synbian/ENV/TRNASFORM/Final/zips/1-ODONTOPREV/NAO_PROCESSADOS/1590080713099_1208981582292874
-sh run.sh zips
-ls /home/synbian/ENV/TRNASFORM/Final/zips/1-ODONTOPREV/NAO_PROCESSADOS/1590080713099_1208981582292874
-sh run.sh zips
-sh run.sh zips
-sh run.sh zips
-sh run.sh zips
-nix-shell -p unzip
-sh run.sh zips
-s=/home/synbian/ENV/TRNASFORM/Final/zips/40-ODONTOSYSTEM/NAO_PROCESSADOS
-s
-sh run.sh zips
-ls /home/synbian/ENV/TRNASFORM/Final/zips/40-ODONTOSYSTEM/NAO_PROCESSADOS
 sh run.sh zips/
 /home/synbian/ENV/TRNASFORM/Final/zips/40-ODONTOSYSTEM/NAO_PROCESSADOS
 cd -
@@ -126,3 +21,108 @@ node
 nix-env -qa 'sublime.*'
 nix-env -i] 'sublimetext3'
 nix-env -i 'sublimetext3'
+whereis bash
+cp mcreator.sh mcreat.sh
+cp mcreator.sh mcreat.sh.bkp
+ls
+rm mcreat.sh
+ls
+whereis java
+lsblk 
+ls
+whereis bash
+./nix/store/yyncp9l9c0ifgg8b4c9yymca9yfq8y3c-system-path/bin/bash
+./mcreator.sh
+./mcreator.sh
+whereis
+ls jdk/bin/java
+exec jdk/bin/java
+exec
+./jdk/bin/java
+java -version
+./mcreator.sh
+ls
+cd ..
+ls
+nix-shell -p unzip
+whereis bash
+df -h
+whereis bash
+whereis bash
+whereis bash
+curl "sh -c \"$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)\"" | curl -f 'f:1=<-' ix.io
+curl "sh -c \"$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)\"" | curl -F 'f:1=<-' ix.io
+curl ix.io/2s7t
+echo "sh -c \"$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)\"" | curl -F 'f:1=<-' ix.io
+echo sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+echo "sh -c \"$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)\""
+echo sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+echo "sh -c" "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+echo sadf asdf
+whereis ls
+gdb /nix/store/7v06mmszrgv2nshhy9qjlzzywywd5lkn-system-path/bin/ls
+sudo sh conection.open.sh 
+sudo sh conection.open.sh 
+xmobar
+ifconfig
+wlp2s0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+ps aux | grep xmobar
+ps aux | grep xmo
+kill 6514
+kill 6514
+ps aux | grep xmo
+xmobar
+xmobar
+xmobar
+xmobar
+xmobar
+xmobar
+ghci
+firefox
+cat .emacs.d/init.el
+man exwm
+xmobar
+links startpage.com
+ps aux | grep xmabar
+kill 4122
+kill -9 4122
+kill -8 4122
+kill 4122
+kill 4122
+kill 4122 -9
+killall 4122 
+killall xmobar 
+htop
+ps aux | grep xmobar
+xmobar
+sudo xmobar
+sudo xmobar -x 0 .xmobarrc
+ls
+cd ,,
+cd ..
+cat *.conf
+ls
+cat vpnWSTC-TCP4-1194-config.config
+ghci
+cd git/wget/haskell/
+ls
+mkdir codewars
+cd codewars/
+stack init
+ls
+ghc DescendingOrderSpec.hs
+stack search
+stack 
+cat stack.yaml
+# Extra package databases containing global packages
+stack install
+stack start
+stack run
+stack run
+stack install Test.Hspec
+stack install Hspec
+stack init
+stack new
+stack init
+stack run
+ghci
