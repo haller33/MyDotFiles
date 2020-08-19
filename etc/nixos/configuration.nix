@@ -18,7 +18,8 @@
   boot.kernelParams = [
     "intel_pstate=no_hwp,console=ttyUSB,115200n8"
   ];
-  
+
+  boot.kernelPackages = pkgs.linuxPackagesFor pkgs.linux_latest;
 
   # Supposedly better for the SSD.
   fileSystems."/".options = [ "noatime" "nodiratime" "discard" ];
@@ -74,17 +75,19 @@
      zsh git ranger screen dmenu htop iw usbutils st qemu ncdu tmux radare2 qemu gdb nitrogen feh
      vim emacs calibre arduino gimp vim okular xaos 
 
-     nodejs ghc guile racket cabal2nix cabal-install binutils-unwrapped
+     nodejs ghc guile racket cabal2nix cabal-install binutils-unwrapped 
 
      firefox nmap netcat wget tor wpa_supplicant bind opera openvpn
      keepassxc 
-     vlc scrot 
+     vlc scrot audacity
 
      logmein-hamachi
 
      openjdk
 
-     teamviewer
+     yggdrasil
+
+     teamviewer mumble # obs-studio
      
      # oracle-instantclient odpic
 
@@ -107,6 +110,11 @@
   ];
 
 
+  # Yggdrasil Service
+  services.yggdrasil.enable = true;
+
+  services.yggdrasil.configFile = "/home/synbian/yggdrasil.conf";
+
   # services.logmein-hamachi.enable = false;
 
   xdg.portal.enable = true;
@@ -118,6 +126,9 @@
   hardware.bluetooth.enable = false;
   services.blueman.enable = false;
   hardware.bluetooth.powerOnBoot = false;
+
+  # VOIP OVER CELL
+  services.murmur.enable = true;
 
   # Emacs Daemon
   services.emacs.enable = true;
@@ -148,8 +159,15 @@
   # Enable sound.
   sound.enable = true;
   nixpkgs.config.pulseaudio = true;
-  hardware.pulseaudio.enable = true;
+  hardware.pulseaudio = {
   
+    enable = true;
+    package = pkgs.pulseaudioFull;
+    support32Bit = true;
+  };
+
+
+
   nixpkgs.config = {
 
     allowUnfree = true;

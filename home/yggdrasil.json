@@ -1,0 +1,38 @@
+{
+  "Peers": [],
+  "InterfacePeers": {},
+  "Listen": [],
+  "AdminListen": "unix:///var/run/yggdrasil/yggdrasil.sock",
+  "MulticastInterfaces": [
+    ".*"
+  ],
+  "AllowedEncryptionPublicKeys": [],
+  "EncryptionPublicKey": "00d1a83fdf9c8d3882b111738b6871b38440c310004d18502c23eef6575cff21",
+  "EncryptionPrivateKey": "3f92030ce3313211691cc92622a4b4ccd4ad1d8a88a2f5d40a12ab9ae8db9202",
+  "SigningPublicKey": "695e351662b58855514f430d773eb7ab7bd1f0c0275e4539260f13203d475059",
+  "SigningPrivateKey": "f96b56772c70fbae7c2f5cd343121199a4af9635746972fe5480f988dd39c653695e351662b58855514f430d773eb7ab7bd1f0c0275e4539260f13203d475059",
+  "LinkLocalTCPPort": 0,
+  "IfName": "auto",
+  "IfTAPMode": false,
+  "IfMTU": 65535,
+  "SessionFirewall": {
+    "Enable": false,
+    "AllowFromDirect": true,
+    "AllowFromRemote": true,
+    "AlwaysAllowOutbound": true,
+    "WhitelistEncryptionPublicKeys": null,
+    "BlacklistEncryptionPublicKeys": null
+  },
+  "TunnelRouting": {
+    "Enable": false,
+    "IPv6RemoteSubnets": null,
+    "IPv6LocalSubnets": null,
+    "IPv4RemoteSubnets": null,
+    "IPv4LocalSubnets": null
+  },
+  "SwitchOptions": {
+    "MaxTotalQueueSize": 4194304
+  },
+  "NodeInfoPrivacy": false,
+  "NodeInfo": null
+}
