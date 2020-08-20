@@ -31,6 +31,15 @@
   boot.loader.grub.efiSupport = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
+  boot.kernel.sysctl = {
+    "net.core.default_qdisc"             = "fq";
+    "net.ipv4.tcp_congestion_control"    = "bbr";
+    "net.ipv6.conf.all.disable_ipv6"     = 0;
+    # net.ipv4.tcp_allowed_congestion_control = reno bbr
+    # net.ipv4.tcp_available_congestion_control = reno bbr
+    # net.ipv4.tcp_congestion_control = bbr
+  };
+
   # Grub menu is painted really slowly on HiDPI, so we lower the
   # resolution. Unfortunately, scaling to 1280x720 (keeping aspect
   # ratio) doesn't seem to work, so we just pick another low one.
@@ -113,7 +122,26 @@
   # Yggdrasil Service
   services.yggdrasil.enable = true;
 
-  services.yggdrasil.configFile = "/home/synbian/yggdrasil.conf";
+  services.yggdrasil.config = {
+   
+     # Listen = [ "tcp://0.0.0.0:xxxxx" ];
+   
+     Peers = [ "tcp://45.231.133.188:58301"
+               "tcp://[2804:49fc::ffff:ffff:5b5:e8be]:58301"
+	       "tcp://aa.bb.cc.dd:eeeee"
+     	       "tcp://[aaaa:bbbb:cccc:dddd::eeee]:fffff"
+	       "tcp://67.205.187.55:19103"
+	       "tls://67.205.187.55:19102"
+    	       "tcp://[2604:a880:400:d0::16e5:7001]:19103"
+    	       "tls://[2604:a880:400:d0::16e5:7001]:19102"
+    	       "tcp://198.58.100.240:44478"
+               "tcp://[2600:3c00::f03c:91ff:feae:3efa]:44478"
+	
+
+     ];
+  };
+  
+  # services.yggdrasil.configFile = "/home/synbian/yggdrasil.conf";
 
   # services.logmein-hamachi.enable = false;
 
