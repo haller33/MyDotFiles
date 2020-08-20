@@ -69,7 +69,7 @@ ZSH_THEME="cdimascio-lambda"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(battery command-not-found common-aliases dnf docker docker-compose docker-machine encode64 firewalld git git-auto-fetch git-extras gitfast github gitignore git-remote-branch glassfish globalias gnu-utils go gpg-agent history history-substring-search jsontools man node npm npx nvm python rsync scala screen ssh-agent sudo systemd themes timer torrent transfer urltools vim-interaction vi-mode virtualenv yarn z zeus zsh-navigation-tools zsh_reload)
+plugins=(battery command-not-found common-aliases dnf docker docker-compose docker-machine encode64 firewalld git git-auto-fetch git-extras gitfast github gitignore glassfish globalias gnu-utils golang gpg-agent history history-substring-search jsontools man node npm npx nvm python rsync scala screen ssh-agent sudo systemd themes timer torrent transfer urltools vim-interaction vi-mode virtualenv yarn z zeus zsh-navigation-tools zsh_reload)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -101,17 +101,24 @@ source $ZSH/oh-my-zsh.sh
 
 # export DENO_INSTALL="/home/$USER/.deno"
 # export PATH="$DENO_INSTALL/bin:/home/$USER/.local/bin:/home/$USER/anaconda3/bin:/home/$USER/.racket/bin:/home/$USER/git/clone/simh/BIN:/home/$USER/.roswell/bin:/snap/bin:$PATH"
-export PATH="/home/$USER/.local/bin:/home/$USER/.racket/bin:/home/$USER/git/clone/simh/BIN:/home/$USER/.roswell/bin:/snap/bin:$PATH"
+export PATH="/home/$USER/.local/bin:/home/$USER/.racket/bin:/home/$USER/rbin:/home/$USER/git/clone/simh/BIN:/home/$USER/.roswell/bin:/snap/bin:$PATH"
+export NIX_PATH=$HOME/.nix-defexpr/channels${NIX_PATH:+:}$NIX_PATH
 export VISUAL="emacsclient -nw"
 export EDITOR="emacsclient -nw"
 
 alias emacsn='emacsclient -nw'
+
+alias objdump='objdump -M intel -d '
 
 alias simpleterminal="exec st -t \"Simple Terminal\" -f \"Source Code Pro:style=Semibold:size=12\""
 
 
 alias hy="hy --repl-output-fn=hy.contrib.hy-repr.hy-repr"
 alias gitcloneclone="cd /home/amnesia/git/clone ; git clone "
+
+alias screen="screen -c ~/.screenrc"
+
+export LOCKPRG='/bin/true'
 
 # alias alexa-telegram='telegram-desktop -many -workdir /home/amnesia/Downloads/Telegram-Alexa'
 
