@@ -94,6 +94,8 @@
 
      openjdk
 
+     nethack nethack-x11
+
      yggdrasil
 
      teamviewer mumble # obs-studio
@@ -132,7 +134,7 @@
      	       "tcp://[aaaa:bbbb:cccc:dddd::eeee]:fffff"
 	       "tcp://67.205.187.55:19103"
 	       "tls://67.205.187.55:19102"
-    	       "tcp://[2604:a880:400:d0::16e5:7001]:19103"
+
     	       "tls://[2604:a880:400:d0::16e5:7001]:19102"
     	       "tcp://198.58.100.240:44478"
                "tcp://[2600:3c00::f03c:91ff:feae:3efa]:44478"
@@ -215,12 +217,12 @@
   # Xmonad window manager
   services.xserver = {
   
-   windowManager.xmonad = {
-     enable = true;
-     enableContribAndExtras = true;
-   };
+  windowManager.xmonad = {
+      enable = true;
+      enableContribAndExtras = true;
+    };
   
-   wacom.enable = true;
+    wacom.enable = true;
   };
 
 
@@ -233,13 +235,13 @@
   # };
 
   # olds xfce4 interface
-  #  services.xserver = {
-  #    desktopManager = {
-  #      default = "xfce";
-  #      xterm.enable = false;
-  #      xfce.enable = true;
-  #    };
-  # }
+  # services.xserver = {
+  #     desktopManager = {
+  #       default = "xfce";
+  #       xterm.enable = false;
+  #       xfce.enable = true;
+  #     };
+  # };
 
   # Enable touchpad support.
   services.xserver.libinput.naturalScrolling = false;
