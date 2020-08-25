@@ -95,6 +95,20 @@
  ;; ("melpa-milk" . "http://melpa.milkbox.net/packages/")
  )
 
+
+(defun slime-eval-buffer-without-comments ()
+  (interactive)
+  (let ((old-buffer (current-buffer)))
+    (with-temp-buffer
+      (insert-buffer-substring old-buffer)
+      (goto-char 0)
+      (flush-lines "^#")
+      (flush-lines "^|")
+      (flush-lines "^exec")
+      (slime-eval-buffer))))
+
+(global-set-key (kbd "H-:") 'slime-eval-buffer-without-comments)
+
 ;; Haskell Interact Mode
 ;; TODO
 ;; (haskell-interactive-mode-echo SESSION MESSAGE &optional MODE)
