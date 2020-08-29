@@ -82,6 +82,9 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
      zsh git ranger screen dmenu htop iw usbutils st qemu ncdu tmux radare2 qemu gdb nitrogen feh
+
+     sbcl ecl ros
+
      vim emacs calibre arduino gimp vim okular xaos 
 
      nodejs ghc guile racket cabal2nix cabal-install binutils-unwrapped 
