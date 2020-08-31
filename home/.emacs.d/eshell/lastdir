@@ -1,4 +1,3 @@
-/home/synbian/ENV/openvpn
 ~/.xmonad
 /home/synbian/git/wget/haskell/aula10
 /home/synbian
@@ -16,7 +15,6 @@
 /home/synbian/git/wget/obs-websocket-4.8.0/build
 /home/synbian/git/clone/fritzroy
 ~/git/clone/MyDotFiles/Scripts
-/home/synbian/.emacs.d
 /home/synbian/git/clone/MyDotFiles/home/.emacs.d
 /home/synbian/git/clone/MyDotFiles/home
 /home/synbian/git/clone/MyDotFiles
@@ -31,3 +29,5 @@
 ~/git/clone
 /home/synbian/git/clone/MyDotFiles/Scripts
 /home/synbian/git/clone/MyDotFiles/Scripts/nix.shell
+/home/synbian/.emacs.d
+/home/synbian/git/clone/MyDotFiles
