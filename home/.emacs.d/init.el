@@ -21,11 +21,11 @@
 
 ;; Using Dired-subtree
 (use-package dired-subtree
-  :config
-  (bind-keys :map dired-mode-map
-             ("i" . dired-subtree-insert)
-             (";" . dired-subtree-remove)))
-
+   :config
+   (bind-keys :map dired-mode-map
+              ("i" . dired-subtree-insert)
+              (";" . dired-subtree-remove)))
+ 
 ;;;;
 ;;; Telega.el Session
 ;;
@@ -69,11 +69,12 @@
  '(fringe-mode 1 nil (fringe))
  '(ivy-mode t)
  '(menu-bar-mode nil)
+ '(treemacs-no-png-images t)
  '(org-support-shift-select nil)
  '(package-check-signature nil)
  '(package-selected-packages
    (quote
-    (dired-subtree nix-mode nixos-options haskell-mode hindent org org-mode exwm lisp-mode slime scheme-complete lispy racket-mode rcirc-menu circe hy-mode dr-racket-like-unicode zoom-window quack racer lsp-rust cargo flycheck-rust use-package emmet-mode markdown-mode noflet code-archive js-auto-beautify zoom vue-mode color-theme-modern async web web-beautify)))
+    (ranger treemacs dired-subtree nix-mode nixos-options haskell-mode hindent org org-mode exwm lisp-mode slime scheme-complete lispy racket-mode rcirc-menu circe hy-mode dr-racket-like-unicode zoom-window quack racer lsp-rust cargo flycheck-rust use-package emmet-mode markdown-mode noflet code-archive js-auto-beautify zoom vue-mode color-theme-modern async web web-beautify)))
  '(scroll-bar-mode nil)
  '(setq display-time-default-load-average)
  '(show-paren-mode t)
