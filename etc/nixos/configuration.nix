@@ -77,23 +77,23 @@
 
   # Set your time zone.
   time.timeZone = "America/Fortaleza";
-
+   
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
      zsh git ranger screen dmenu htop iw usbutils st qemu ncdu tmux radare2 qemu gdb nitrogen feh
 
-     sbcl ecl ros
+     sbcl ecl nasm
 
-     vim emacs calibre arduino gimp vim okular xaos 
+     vim emacs calibre arduino vim okular xaos 
 
-     nodejs ghc guile racket cabal2nix cabal-install binutils-unwrapped 
+     nodejs ghc guile racket cabal2nix cabal-install binutils-unwrapped msbuild
 
      firefox nmap netcat wget tor wpa_supplicant bind opera openvpn
      keepassxc 
-     vlc scrot audacity
+     vlc gimp scrot # audacity
 
-     logmein-hamachi
+     # logmein-hamachi
 
      openjdk
 
@@ -120,7 +120,7 @@
 
   services.hoogle.enable = true;
   services.hoogle.packages = hp: with hp; [
-    text lens  tonalude stack statistics parsec hspec
+    text lens tonalude stack statistics parsec hspec
   ];
 
 
@@ -270,11 +270,11 @@
     extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
   };
 
-  # This value determines the NixOS release with which your system is to be
-  # compatible, in order to avoid breaking some software such as database
-  # servers. You should change this only after NixOS release notes say you
-  # should.
-  system.stateVersion = "19.08"; # Did you read the comment?
-
+  # This value determines the NixOS release from which the default # settings for stateful data, like file locations and database versions
+  # on your system were taken. It‘s perfectly fin  e and recommended to leave
+  # this value at the release version of the first install of this system.
+  # Before changing this value read the documentation for this option
+  # (e.g. man   configuration.nix or on https://nixos.org/nixos/options.html).
+  system.stateVersion = "20.03"; # Did you read the comment? 
 }
 
