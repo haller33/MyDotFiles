@@ -1,47 +1,3 @@
-stack 
-cat stack.yaml
-stack install
-stack start
-stack run
-stack run
-stack install Test.Hspec
-stack install Hspec
-stack init
-stack new
-stack init
-stack run
-ghci
-cmake -DLIBOBS_INCLUDE_DIR="/home/synbian/git/clone/obs-studio/libobs" -DCMAKE_INSTALL_PREFIX=/home/synbian/obss -DUSE_UBUNTU_FIX=true ..
-cmake -DLIBOBS_INCLUDE_DIR="/home/synbian/git/clone/obs-studio/libobs" -DCMAKE_INSTALL_PREFIX=/home/synbian/obss -DUSE_UBUNTU_FIX=true ..
-ls /home/synbian/git/clone/obs-studio/libobs
-ls
-cd ../../../clone/obs-studio/
-cd libobs/
-ls
-cp LibObsConfigVersion.cmake.in LibObsConfig.cmake
-cp LibObsConfigVersion.cmake.in LibObsConfigVersion.cmake
-cd -
-cd ..
-cd ..
-cd wget/obs-websocket-4.8.0/
-cd build/
-cmake -DLIBOBS_INCLUDE_DIR="/home/synbian/git/clone/obs-studio/libobs" -DCMAKE_INSTALL_PREFIX=/home/synbian/obss -DUSE_UBUNTU_FIX=true ..
-cmake -DLIBOBS_INCLUDE_DIR="/home/synbian/git/clone/obs-studio/libobs" -DCMAKE_INSTALL_PREFIX=/usr -DUSE_UBUNTU_FIX=true ..
-cmake -DLIBOBS_DIR="/home/synbian/git/clone/obs-studio/libobs" -DCMAKE_INSTALL_PREFIX=/home/synbian/obss -DUSE_UBUNTU_FIX=true ..
-nix-env -qa obs
-nix-env -qa 'obs.*'
-sudo emacs -nw /etc/nixos/configuration.nix
-whereis obs
-ls https://my-personality-test.com/personality-type-indicator
-ls /nix/store/y2w96hhv7i2gj3yns99j3n39qfvarfly-system-path/bin/obs
-ls /nix/store/y2w96hhv7i2gj3yns99j3n39qfvarfly-system-path/bin/obs/
-ls /nix/store/y2w96hhv7i2gj3yns99j3n39qfvarfly-system-path/bin/obs
-ls /nix/store/y2w96hhv7i2gj3yns99j3n39qfvarfly-system-path/bin/
-ls /nix/store/y2w96hhv7i2gj3yns99j3n39qfvarfly-system-path/
-ls /nix/store/y2w96hhv7i2gj3yns99j3n39qfvarfly-system-path/lib
-ls /nix/store/y2w96hhv7i2gj3yns99j3n39qfvarfly-system-path/lib | less
-ls /nix/store/y2w96hhv7i2gj3yns99j3n39qfvarfly-system-path/lib 
-ls /nix/store/y2w96hhv7i2gj3yns99j3n39qfvarfly-system-path/lib/libobs
 ls /nix/store/y2w96hhv7i2gj3yns99j3n39qfvarfly-system-path/lib/libobs*
 ls /nix/store/y2w96hhv7i2gj3yns99j3n39qfvarfly-system-path/lib/libobs.so
 ls /nix/store/y2w96hhv7i2gj3yns99j3n39qfvarfly-system-path/lib/
@@ -126,3 +82,47 @@ git status
 git add .
 git commit -m "my new kybind using a new package dired-subtree"
 git push
+ls
+cd 
+cd git/clone/MyDotFiles/
+cp -r ~/.emacs.d/ home/
+git status
+cp -ra ~/.emacs.d/ home/
+git status
+git add .
+git status
+git commit -m "add ranger and treemacs with configuration for emacs"
+git push
+git push
+ls
+git status
+cd ../learnRust/
+git pull
+git reset --hard
+git status
+git reset --hard
+ls
+git stash
+git status
+git add .
+git stash
+git status
+git pull
+cd src/LESSON3/control_flow/
+cargo run
+cd -
+cd ../MyDotFiles/Scripts/nix.shell/
+nix-shell shell.cargo.nix 
+docker run -it mysql
+sudo docker run -it mysql
+sudo docker run -it -e MYSQL_ROOT_PASSWORD=123 mysql 
+sudo docker run -it b1d /bin/sh 
+sudo docker exec -it b1d /bin/sh 
+cd
+cd git/wget/
+ls
+cd cd haskell/
+cd haskell/
+ls
+s
+ls
