@@ -81,6 +81,7 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
+
      zsh git ranger screen dmenu htop iw usbutils st qemu ncdu tmux radare2 qemu gdb nitrogen wirelesstools
 
      sbcl ecl nasm
@@ -91,8 +92,10 @@
 
      firefox nmap netcat wget tor wpa_supplicant bind opera openvpn
      keepassxc 
-     vlc gimp scrot feh audacity pulseaudio
+     vlc gimp scrot feh
 
+     lxqt.pavucontrol-qt 
+     
      # logmein-hamachi
 
      openjdk
@@ -113,10 +116,11 @@
      haskellPackages.xmonad-contrib
      haskellPackages.xmonad-extras
      stack
-
-     # virtual box
-
-     # linuxPackages.virtualboxGuestAdditions
+     
+     ## broken
+     # audacity
+     ## cause of so mutch problems.
+     # pulseaudio
   ];
 
   # teamviewer
@@ -170,13 +174,13 @@
   # Virtual Box / Virtualization
   virtualisation.virtualbox.host.enable = true;
   virtualisation.virtualbox.guest.enable = true;
-  ## maybe not work...
+  ## Realy/maybe not work...
   # virtualisation.virtualbox.host.enableExtensionPack = true;
   ## not surt Effect
   # nixpkgs.config.virtualbox.enableExtensionPack = true;
   
   # VOIP OVER CELL
-  services.murmur.enable = true;
+  # services.murmur.enable = true;
 
   # Emacs Daemon
   services.emacs.enable = true;
@@ -192,7 +196,7 @@
   # List services that you want to enable:
 
   # Enable the OpenSSH daemon.
-  # services.openssh.enable = true;
+  services.openssh.enable = true;
   programs.zsh.enable = true;
 
   # Open ports in the firewall.
@@ -205,18 +209,32 @@
   # services.printing.enable = true;
 
   # Enable sound.
-  nixpkgs.config.pulseaudio = true;
-  sound.enable = true;
   
-  ## Not working 
-  # nixpkgs.config.pulseaudio = true;
-  # hardware.pulseaudio = {
-  #
-  #   enable = true;
-  #   package = pkgs.pulseaudioFull;
-  #   support32Bit = true;
-  # };
+  sound.enable = true;
 
+  sound.extraConfig = ''
+    defaults.ctl.card 1
+  '';
+  
+  ## Not working with mic but working with firefox...
+  # nixpkgs.config.pulseaudio = true;
+  #
+  hardware.pulseaudio = {
+    
+     enable = true;
+     package = pkgs.pulseaudioFull;
+     support32Bit = true;
+  };
+  #
+  # Fix headphone white-noise on Dell XPS 13.
+  services.acpid.enable = true;
+  services.acpid.handlers.fixHeadphoneNoise = {
+    event = "jack/headphone HEADPHONE plug";
+    action = "${pkgs.alsaUtils}/bin/amixer -c0 sset 'Headphone Mic Boost' 10dB";
+  };
+  
+  
+  # Unfree packages
   nixpkgs.config = {
 
     allowUnfree = true;
@@ -262,7 +280,7 @@
   #     };
   # };
 
-  # Enable touchpad support.
+  # Enable touchpad support. TODO :: solve Scrol in touchpad.
   services.xserver.libinput.naturalScrolling = false;
   services.xserver.libinput.enable = true;
   services.xserver.libinput.middleEmulation = true;
@@ -272,7 +290,6 @@
   # services.xserver.synaptics.enable = true;
 
 
-  services.printing.enable = true;
   # Show the manual on virtual console 8 :
   services.nixosManual.showManual = true;
 
@@ -283,7 +300,7 @@
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.synbian = {
     isNormalUser = true;
-    extraGroups = [ "vboxusers" "wheel" ]; # Enable VMBox and ‘sudo’ for the user.
+    extraGroups = [ "vboxusers" "wheel" "audio" ]; # Enable VMBox and ‘sudo’ for the user.
   };
 
   # This value determines the NixOS release from which the default # settings for stateful data, like file locations and database versions
