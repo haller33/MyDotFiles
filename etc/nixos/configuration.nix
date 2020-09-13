@@ -81,7 +81,7 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-     zsh git ranger screen dmenu htop iw usbutils st qemu ncdu tmux radare2 qemu gdb nitrogen feh
+     zsh git ranger screen dmenu htop iw usbutils st qemu ncdu tmux radare2 qemu gdb nitrogen wirelesstools
 
      sbcl ecl nasm
 
@@ -91,13 +91,15 @@
 
      firefox nmap netcat wget tor wpa_supplicant bind opera openvpn
      keepassxc 
-     vlc gimp scrot # audacity
+     vlc gimp scrot feh audacity pulseaudio
 
      # logmein-hamachi
 
      openjdk
 
      nethack nethack-x11
+
+     aircrack-ng crunch sshpass msf # virtualbox 
 
      yggdrasil
 
@@ -111,6 +113,10 @@
      haskellPackages.xmonad-contrib
      haskellPackages.xmonad-extras
      stack
+
+     # virtual box
+
+     # linuxPackages.virtualboxGuestAdditions
   ];
 
   # teamviewer
@@ -160,6 +166,15 @@
   services.blueman.enable = false;
   hardware.bluetooth.powerOnBoot = false;
 
+
+  # Virtual Box / Virtualization
+  virtualisation.virtualbox.host.enable = true;
+  virtualisation.virtualbox.guest.enable = true;
+  ## maybe not work...
+  # virtualisation.virtualbox.host.enableExtensionPack = true;
+  ## not surt Effect
+  # nixpkgs.config.virtualbox.enableExtensionPack = true;
+  
   # VOIP OVER CELL
   services.murmur.enable = true;
 
@@ -190,16 +205,17 @@
   # services.printing.enable = true;
 
   # Enable sound.
-  sound.enable = true;
   nixpkgs.config.pulseaudio = true;
-  hardware.pulseaudio = {
+  sound.enable = true;
   
-    enable = true;
-    package = pkgs.pulseaudioFull;
-    support32Bit = true;
-  };
-
-
+  ## Not working 
+  # nixpkgs.config.pulseaudio = true;
+  # hardware.pulseaudio = {
+  #
+  #   enable = true;
+  #   package = pkgs.pulseaudioFull;
+  #   support32Bit = true;
+  # };
 
   nixpkgs.config = {
 
@@ -267,7 +283,7 @@
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.synbian = {
     isNormalUser = true;
-    extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
+    extraGroups = [ "vboxusers" "wheel" ]; # Enable VMBox and ‘sudo’ for the user.
   };
 
   # This value determines the NixOS release from which the default # settings for stateful data, like file locations and database versions
