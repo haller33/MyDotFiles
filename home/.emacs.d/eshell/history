@@ -1,26 +1,3 @@
-ls /nix/store/y2w96hhv7i2gj3yns99j3n39qfvarfly-system-path/lib/libobs*
-ls /nix/store/y2w96hhv7i2gj3yns99j3n39qfvarfly-system-path/lib/libobs.so
-ls /nix/store/y2w96hhv7i2gj3yns99j3n39qfvarfly-system-path/lib/
-cmake -DCMAKE_INSTALL_PREFIX=/home/synbian/git/clone/obs-studio/libobs -DUSE_UBUNTU_FIX=true ..
-cmake -DCMAKE_INSTALL_PREFIX=/home/synbian/git/clone/obs-studio/libobs -DUSE_UBUNTU_FIX=true ..
-nix-env -qa 'qt*dev*'
-nix-env -qa 'qt*'
-./handmade.scm 
-./handmade.scm 
-echo "hello"
-./handmade.scm 
-./handmade.scm 
-./handmade.scm 
-./handmade.scm 
-./handmade.scm 
-./handmade.scm 
-./handmade.scm 
-./handmade.scm 
-./handmade.scm 
-scheme
-./handmade.scm 
-scheme
-ghci
 cp init.el ../git/clone/MyDotFiles/home/.emacs.d/
 cd ../git/clone/MyDotFiles/home/.emacs.d/
 git status
@@ -126,3 +103,26 @@ cd haskell/
 ls
 s
 ls
+git status
+git push
+stack ghci
+ghci
+ghci
+cd
+cd RSI/
+mkdir ENGREV
+cd ENGREV/
+ls
+mkdir intrudoção
+mv intrudoção/ intro
+cd intro/
+ls
+touch hello.c
+make hello.c 
+make hello
+nix-shell -p make gcc
+nix-shell -p cmake gcc
+whereis bash
+./run.sh 
+./run.sh  pe32
+./run.sh  build
