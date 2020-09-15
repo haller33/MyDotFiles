@@ -102,7 +102,12 @@
 
      nethack nethack-x11
 
-     aircrack-ng crunch sshpass msf # virtualbox 
+     aircrack-ng crunch sshpass msf busybox ht gcc cmake gdb lldb
+
+     pythonPackages.voltron
+
+     ## break reference
+     # virtualbox 
 
      yggdrasil
 
@@ -213,7 +218,7 @@
   sound.enable = true;
 
   sound.extraConfig = ''
-    defaults.ctl.card 1
+    defaults.ctl.card 0
   '';
   
   ## Not working with mic but working with firefox...
