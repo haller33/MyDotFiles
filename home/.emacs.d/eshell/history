@@ -1,24 +1,3 @@
-cp init.el ../git/clone/MyDotFiles/home/.emacs.d/
-cd ../git/clone/MyDotFiles/home/.emacs.d/
-git status
-cd ..
-git add .
-git status
-git commit -m "add key bind and slime-eval-buffer"
-git push
-cp -a /etc/nixos/configuration.nix ../etc/nixos/
-cd ..
-git status
-git add .
-git diff
-git reset
-git status
-git diff
-git add .
-git commit -m "add yggdrasil and some program to desktop"
-git push
-ls
-cd ../../wget/
 ls
 cd haskell/
 ls
@@ -126,3 +105,24 @@ whereis bash
 ./run.sh 
 ./run.sh  pe32
 ./run.sh  build
+msf
+msfconsole
+sudo msfconsole
+whereis bash
+mkdir gitstash
+cd gitstash/
+ls
+git init
+l
+ls
+ls -a
+ps aux | grep firefox
+kill 26964
+git log
+git diff 9c7744bf94fa12c58cfc86579109d1b6b04c0f37
+git branch
+cat ~/.gitconfig 
+git commit -m "add yggdrasil and some program to desktop"
+git merge --help
+git merge --hels
+git merge --help

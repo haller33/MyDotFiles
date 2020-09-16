@@ -68,9 +68,10 @@
  '(display-time-mode t)
  '(fringe-mode 1 nil (fringe))
  '(ivy-mode t)
+ '(blink-cursor-blinks 0)
  '(menu-bar-mode nil)
  '(org-support-shift-select nil)
- '(package-check-signature nil)
+ '(package-check-signature 1)
  '(package-selected-packages
    (quote
     (magit ranger treemacs dired-subtree nix-mode nixos-options haskell-mode hindent org org-mode exwm lisp-mode slime scheme-complete lispy racket-mode rcirc-menu circe hy-mode dr-racket-like-unicode zoom-window quack racer lsp-rust cargo flycheck-rust use-package emmet-mode markdown-mode noflet code-archive js-auto-beautify zoom vue-mode color-theme-modern async web web-beautify)))
@@ -193,8 +194,8 @@
 (add-to-list 'load-path "/home/amnesia/git/clone/emacsos/exwm/")
 
 
-(defvar blink-cursor-interval-visible .2)
-(defvar blink-cursor-interval-invisible .2)
+(defvar blink-cursor-interval-visible .1)
+(defvar blink-cursor-interval-invisible .1)
 
 (defadvice internal-show-cursor (before unsymmetric-blink-cursor-interval)
   (when blink-cursor-timer
