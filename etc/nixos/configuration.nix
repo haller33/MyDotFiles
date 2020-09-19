@@ -77,12 +77,12 @@
 
   # Set your time zone.
   time.timeZone = "America/Fortaleza";
-   
+
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
 
-     zsh git ranger screen dmenu htop iw usbutils st qemu ncdu tmux radare2 qemu gdb nitrogen wirelesstools
+     zsh git ranger screen dmenu htop iw usbutils st qemu ncdu tmux qemu gdb nitrogen wirelesstools
 
      sbcl ecl nasm
 
@@ -102,14 +102,13 @@
 
      nethack nethack-x11
 
-     aircrack-ng crunch sshpass msf busybox ht gcc cmake gdb lldb
+     aircrack-ng crunch sshpass msf busybox ht gdb lldb pev radare2 wineWowPackages.stable
 
-     pythonPackages.voltron
 
      ## break reference
      # virtualbox 
 
-     yggdrasil
+     yggdrasil chirp
 
      teamviewer mumble # obs-studio
      
