@@ -75,6 +75,10 @@
   #   defaultLocale = "en_US.UTF-8";
   # };
 
+  # configure Garbage Collector
+  nix.gc.automatic = true;
+  nix.gc.options = "--delete-older-than 8d";
+
   # Set your time zone.
   time.timeZone = "America/Fortaleza";
 
@@ -82,35 +86,34 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
 
-     zsh git ranger screen dmenu htop iw usbutils st qemu ncdu tmux qemu gdb nitrogen wirelesstools
+     zsh git ranger screen dmenu htop iw st qemu ncdu tmux gdb nitrogen wirelesstools # qemu usbutils
 
-     sbcl ecl nasm
+     docker docker-compose
+
+     sbcl ecl # nasm
 
      vim emacs calibre arduino vim okular xaos 
 
-     nodejs ghc guile racket cabal2nix cabal-install binutils-unwrapped msbuild
+     nodejs ghc guile binutils-unwrapped # racket msbuild
 
      firefox nmap netcat wget tor wpa_supplicant bind opera openvpn
      keepassxc 
-     vlc gimp scrot feh
+     vlc scrot feh # gimp
 
      lxqt.pavucontrol-qt 
      
      # logmein-hamachi
 
-     openjdk
+     # openjdk
 
      nethack nethack-x11
 
-     aircrack-ng crunch sshpass msf busybox ht gdb lldb pev radare2 wineWowPackages.stable
+     aircrack-ng crunch sshpass busybox ht gdb lldb pev radare2 wineWowPackages.stable # msf
 
-
-     ## break reference
-     # virtualbox 
 
      yggdrasil chirp
 
-     teamviewer mumble # obs-studio
+     # teamviewer mumble # obs-studio
      
      # oracle-instantclient odpic
 
@@ -120,15 +123,17 @@
      haskellPackages.xmonad-contrib
      haskellPackages.xmonad-extras
      stack
-     
+
+     ## break reference
+     # virtualbox 
      ## broken
      # audacity
      ## cause of so mutch problems.
      # pulseaudio
   ];
 
-  # teamviewer
-  services.teamviewer.enable = true;
+  # teamviewer - off if not needed
+  # services.teamviewer.enable = true;
   
   # Haskell hoogle Copy
 
@@ -175,10 +180,13 @@
   hardware.bluetooth.powerOnBoot = false;
 
 
+  ## problems in swith to 20.03 channel
   # Virtual Box / Virtualization
   virtualisation.virtualbox.host.enable = true;
-  virtualisation.virtualbox.guest.enable = true;
-  ## Realy/maybe not work...
+  ## services.virtualbox.enable = true;
+  # virtualisation.virtualbox.host.enable = true;
+  # virtualisation.virtualbox.guest.enable = true;
+  # ## Realy/maybe not work...
   # virtualisation.virtualbox.host.enableExtensionPack = true;
   ## not surt Effect
   # nixpkgs.config.virtualbox.enableExtensionPack = true;
@@ -304,7 +312,7 @@
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.synbian = {
     isNormalUser = true;
-    extraGroups = [ "vboxusers" "wheel" "audio" ]; # Enable VMBox and ‘sudo’ for the user.
+    extraGroups = [ "vboxusers" "wheel" "audio" "docker" ]; # Enable VMBox and ‘sudo’ for the user.
   };
 
   # This value determines the NixOS release from which the default # settings for stateful data, like file locations and database versions
