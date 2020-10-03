@@ -82,11 +82,16 @@
   # Set your time zone.
   time.timeZone = "America/Fortaleza";
 
+  nixpkgs.config.st.patches = [
+    /etc/nixos/st.alpha.diff
+  ];
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
 
-     zsh git ranger screen dmenu htop iw st qemu ncdu tmux gdb nitrogen wirelesstools # qemu usbutils
+     zsh git ranger screen dmenu htop iw qemu ncdu tmux st rxvt-unicode gdb nitrogen wirelesstools qemu # usbutils 
+
+     compton
 
      docker docker-compose
 
@@ -108,7 +113,7 @@
 
      nethack nethack-x11
 
-     aircrack-ng crunch sshpass busybox ht gdb lldb pev radare2 wineWowPackages.stable # msf
+     aircrack-ng crunch sshpass busybox ht gdb lldb pev radare2 wineWowPackages.stable steam-run # msf
 
 
      yggdrasil chirp
