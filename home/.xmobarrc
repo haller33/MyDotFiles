@@ -1,5 +1,5 @@
 Config
-   { font = "xft:Inconsolata:size=9"
+   { font = "xft:Inconsolata:size=8"
    , border = NoBorder
    , bgColor = "#292d3e"
    , fgColor = "white"
@@ -39,7 +39,7 @@ Config
 	 -- [ ("/", "<icon=harddisk-icon_24.xpm/> <usedp>% used") ]
          [] 20
       , Run DynNetwork
-         [ "-t", "<icon=network-icon_24.xpm/> <dev> <icon=actions-arrow-down-icon_24.xpm/><rx>KB <icon=actions-arrow-up-icon_24.xpm/><tx>KB . "
+         [ "-t", "<icon=network-icon_24.xpm/><dev> <icon=actions-arrow-down-icon_24.xpm/><rx>KB <icon=actions-arrow-up-icon_24.xpm/><tx>KB . "
          ] 10
       , Run Memory
          [ "-t", "<icon=memory-icon_24.xpm/> <usedratio>% used, <available>M free"] 10
@@ -55,5 +55,5 @@ Config
    , sepChar = "%"
    , alignSep = "}{"
 
-   , template = "%StdinReader%  <action=`xdotool key control+alt+g`><icon=haskell_20.xpm/></action>%multicpu%  . %coretemp% . %memory% }{ %disku% %dynnetwork%%battery% . %date% "
+   , template = "%StdinReader%  <action=`xdotool key control+alt+g`><icon=haskell_20.xpm/></action>%multicpu% . %coretemp% . %memory% }{ %disku% . %dynnetwork%%battery% . %date% "
    }
