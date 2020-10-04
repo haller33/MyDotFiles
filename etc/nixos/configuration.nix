@@ -86,6 +86,7 @@
     /etc/nixos/patches/st.alpha.diff
     /etc/nixos/patches/st.scrollback.diff
     /etc/nixos/patches/st.no-bold-colors.diff
+    /etc/nixos/patches/st.anysize.diff
 #    /etc/nixos/patches/st.solarized.diff
   ];
   # List packages installed in system profile. To search, run:
