@@ -83,13 +83,16 @@
   time.timeZone = "America/Fortaleza";
 
   nixpkgs.config.st.patches = [
-    /etc/nixos/st.alpha.diff
+    /etc/nixos/patches/st.alpha.diff
+    /etc/nixos/patches/st.scrollback.diff
+    /etc/nixos/patches/st.no-bold-colors.diff
+#    /etc/nixos/patches/st.solarized.diff
   ];
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
 
-     zsh git ranger screen dmenu htop iw qemu ncdu tmux st rxvt-unicode gdb nitrogen wirelesstools qemu # usbutils 
+     zsh git ranger screen dmenu htop iw qemu ncdu tmux st gdb nitrogen wirelesstools qemu # usbutils
 
      compton
 
@@ -97,7 +100,7 @@
 
      sbcl ecl # nasm
 
-     vim emacs calibre arduino vim okular xaos 
+     emacs calibre vim okular xaos vim # arduino 
 
      nodejs ghc guile binutils-unwrapped # racket msbuild
 
@@ -113,7 +116,7 @@
 
      nethack nethack-x11
 
-     aircrack-ng crunch sshpass busybox ht gdb lldb pev radare2 wineWowPackages.stable steam-run # msf
+     aircrack-ng crunch sshpass busybox ht gdb lldb pev radare2 wineWowPackages.stable steam-run upx # msf
 
 
      yggdrasil chirp
