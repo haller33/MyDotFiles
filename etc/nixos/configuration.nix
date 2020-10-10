@@ -54,6 +54,22 @@
     }
   ];
 
+  # enable powersave
+  services.tlp.enable = true;
+  services.tlp.extraConfig = ''
+    CPU_SCALING_GOVERNOR_ON_AC=performance
+    CPU_SCALING_GOVERNOR_ON_BAT=powersave
+    CPU_MAX_PERF_ON_AC=100
+    CPU_MAX_PERF_ON_BAT=30
+  '';
+  
+  # prevent shutdown by press Power Button
+  # powerManagement.enable = true;
+  services.logind.lidSwitch = "suspend-then-hibernate";
+  services.logind.extraConfig = "HandlePowerKey=ignore";
+  # services.logind.extraConfig = "IdleAction=ignore";
+  # don’t shutdown when power button is short-pressed
+      
   networking.hostName = "morpheus"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
@@ -87,13 +103,13 @@
     /etc/nixos/patches/st.scrollback.diff
     /etc/nixos/patches/st.no-bold-colors.diff
     /etc/nixos/patches/st.anysize.diff
-#    /etc/nixos/patches/st.solarized.diff
   ];
+
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
 
-     zsh git ranger screen dmenu htop iw qemu ncdu tmux st gdb nitrogen wirelesstools qemu # usbutils
+     zsh man-pages git ranger screen dmenu htop iw qemu ncdu tmux st gdb nitrogen wirelesstools qemu # usbutils
 
      compton
 
@@ -105,7 +121,7 @@
 
      nodejs ghc guile binutils-unwrapped # racket msbuild
 
-     firefox nmap netcat wget tor wpa_supplicant bind opera openvpn
+     firefox opera nmap netcat wget tor wpa_supplicant bind openvpn
      keepassxc 
      vlc scrot feh # gimp
 
@@ -238,6 +254,7 @@
   '';
   
   ## Not working with mic but working with firefox...
+  # enable mic with amixer
   # nixpkgs.config.pulseaudio = true;
   #
   hardware.pulseaudio = {
@@ -268,9 +285,9 @@
   # services.xserver.xkbOptions = "eurosign:e";
 
 
-  # EXWM
-  
+  # EXWM  
   # services.xserver.windowManager.exwm.enable = true;
+
 
   # Xmonad window manager
   services.xserver = {
@@ -282,7 +299,6 @@
   
     wacom.enable = true;
   };
-
 
 
   # config for dwm
