@@ -1,5 +1,4 @@
 
-![MyDotFiles](Images/logo.dotfiles.png)
 
 * MyDotFiles
  
