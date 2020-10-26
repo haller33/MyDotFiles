@@ -47,8 +47,8 @@
 
   boot.initrd.luks.devices = [
     {
-      name = "root";
-      device = "/dev/disk/by-uuid/b405dc2e-cce8-46ff-b092-24e8b475c5a1";
+      name = "eos";
+      device = "/dev/disk/by-uuid/e6ac9502-6698-4046-8e2e-47a964c807ef";
       preLVM = true;
       allowDiscards = true;
     }
@@ -79,6 +79,8 @@
   networking.useDHCP = false;
   networking.interfaces.enp1s0f1.useDHCP = true;
   networking.interfaces.wlp2s0.useDHCP = true;
+
+  system.autoUpgrade.channel = "https://nixos.org/channels/nixos-20.09/";
 
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
@@ -345,6 +347,6 @@
   # this value at the release version of the first install of this system.
   # Before changing this value read the documentation for this option
   # (e.g. man   configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = "20.03"; # Did you read the comment? 
+  system.stateVersion = "20.09"; # Did you read the comment? 
 }
 
