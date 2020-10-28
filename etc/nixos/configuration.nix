@@ -115,7 +115,7 @@
 
      compton
 
-     docker docker-compose
+     docker docker-compose 
 
      sbcl ecl # nasm
 
