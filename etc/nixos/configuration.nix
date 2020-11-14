@@ -80,7 +80,7 @@
   networking.interfaces.enp1s0f1.useDHCP = true;
   networking.interfaces.wlp2s0.useDHCP = true;
 
-  system.autoUpgrade.channel = "https://nixos.org/channels/nixos-20.09/";
+  system.autoUpgrade.channel = "https://nixos.org/channels/nixos-20.03/";
 
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
@@ -111,7 +111,7 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
 
-     zsh man-pages git ranger screen dmenu htop iw qemu ncdu tmux st gdb nitrogen wirelesstools qemu # usbutils
+     zsh keybase man-pages git ranger screen dmenu htop iw qemu ncdu tmux st gdb nitrogen wirelesstools qemu # usbutils
 
      compton
 
@@ -121,9 +121,9 @@
 
      emacs calibre vim okular xaos vim # arduino 
 
-     nodejs ghc guile binutils-unwrapped # racket msbuild
+     nodejs ghc guile binutils-unwrapped go racket # msbuild
 
-     firefox opera nmap netcat wget tor wpa_supplicant bind openvpn
+     firefox opera nmap netcat wget tor wpa_supplicant bind openvpn kotatogram-desktop
      keepassxc 
      vlc scrot feh # gimp
 
@@ -136,6 +136,8 @@
      nethack nethack-x11
 
      aircrack-ng crunch sshpass busybox ht gdb lldb pev radare2 wineWowPackages.stable steam-run upx # msf
+
+     hyperledger-fabric
 
 
      yggdrasil chirp
@@ -195,6 +197,12 @@
   # services.yggdrasil.configFile = "/home/synbian/yggdrasil.conf";
 
   # services.logmein-hamachi.enable = false;
+
+  # keybase
+
+  services.kbfs.enable = true;
+  services.keybase.enable = true;
+  
 
   xdg.portal.enable = true;
   services.flatpak.enable = true;
@@ -347,6 +355,6 @@
   # this value at the release version of the first install of this system.
   # Before changing this value read the documentation for this option
   # (e.g. man   configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = "20.09"; # Did you read the comment? 
+  system.stateVersion = "20.03"; # Did you read the comment? 
 }
 
