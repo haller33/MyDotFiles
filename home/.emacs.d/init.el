@@ -6,9 +6,9 @@
 ;; You may delete these explanatory comments.
 (package-initialize)
 
-;; (load (expand-file-name "~/quicklisp/slime-helper.el"))
+(load (expand-file-name "~/quicklisp/slime-helper.el"))
 ;; Replace "sbcl" with the path to your implementation
-;; (setq inferior-lisp-program "/nix/store/jw2522hjypr3dv8v2sjk8gmk4jywi43w-user-environment/bin/sbcl")
+(setq inferior-lisp-program "/nix/store/jw2522hjypr3dv8v2sjk8gmk4jywi43w-user-environment/bin/sbcl")
 
 ;; Keybinds for clear Slime IDE
 (local-set-key [(control l)] 'slime-repl-clear-buffer)
@@ -38,32 +38,21 @@
 ;; (add-to-list 'load-path "/home/amnesia/.telega")
 ;; (require 'telega)
 
-;;(add-hook 'telega-chat-mode-hook
-;;          (lambda ()
-;;            (set (make-local-variable 'company-backends)
-;;                 (append '(telega-company-emoji
-;;                           telega-company-username
-;;                           telega-company-hashtag)
-;;                         (when (telega-chat-bot-p telega-chatbuf--chat)
-;;                           '(telega-company-botcmd))))
-;;            (company-mode 1)))
+(add-hook 'telega-chat-mode-hook
+          (lambda ()
+            (set (make-local-variable 'company-backends)
+                 (append '(telega-company-emoji
+                           telega-company-username
+                           telega-company-hashtag)
+                         (when (telega-chat-bot-p telega-chatbuf--chat)
+                           '(telega-company-botcmd))))
+            (company-mode 1)))
 
 ;;(setq telega-proxies
 ;;      (list
 ;;       '(:server "127.0.0.1" :port 9050 :enable :false
 ;;                 :type (:@type "proxyTypeSocks5"
 ;;                               :username "rkn" :password "jopa"))))
-
-(add-to-list 'custom-theme-load-path (expand-file-name "~/.emacs.d/themes/"))
- 
-(setq common-lisp-hyperspec-root
-      (concat "file:/" (expand-file-name "~/.emacs/HyperSpec/HyperSpec/")))
-
-;;; theme for error in init.el
-;; (load-theme 'taming-mr-arneson t t)
-;; (enable-theme 'taming-mr-arneson)
-(load-theme 'gotham t t)
-(enable-theme 'gotham)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -81,7 +70,7 @@
  '(ivy-mode t)
  '(blink-cursor-blinks 0)
  '(menu-bar-mode nil)
- ;'(org-support-shift-select nil)
+ '(org-support-shift-select nil)
  '(package-check-signature 1)
  '(package-selected-packages
    (quote
@@ -114,27 +103,19 @@
  ;; ("melpa-milk" . "http://melpa.milkbox.net/packages/")
  )
 
-;; (use-package auto-package-update
-;;    :ensure t
-;;    :config
-;;    (setq auto-package-update-delete-old-versions t
-;;          auto-package-update-interval 4)
-;;    (auto-package-update-maybe))
-;;
 
-;; (defun slime-eval-buffer-without-comments ()
-;;   (interactive)
-;;   (let ((old-buffer (current-buffer)))
-;;     (with-temp-buffer
-;;       (insert-buffer-substring old-buffer)
-;;       (goto-char 0)
-;;       (flush-lines "^#")
-;;       (flush-lines "^|")
-;;       (flush-lines "^exec")
-;;       (slime-eval-buffer))))
-;;
+(defun slime-eval-buffer-without-comments ()
+  (interactive)
+  (let ((old-buffer (current-buffer)))
+    (with-temp-buffer
+      (insert-buffer-substring old-buffer)
+      (goto-char 0)
+      (flush-lines "^#")
+      (flush-lines "^|")
+      (flush-lines "^exec")
+      (slime-eval-buffer))))
 
-;; (global-set-key (kbd "H-:") 'slime-eval-buffer-without-comments)
+(global-set-key (kbd "H-:") 'slime-eval-buffer-without-comments)
 
 ;; Haskell Interact Mode
 ;; TODO
@@ -142,9 +123,9 @@
 
 ;;; Org-mode
 ;;
-;; (org-babel-load-file
-;; (expand-file-name "org-mode.org"
-;;                   user-emacs-directory))
+(org-babel-load-file
+ (expand-file-name "org-mode.org"
+                   user-emacs-directory))
 
 ;;; Zoom using scrool
 ;;
@@ -156,28 +137,19 @@
 
 (defun eshell/clear ()
   "04Dec2001 - sailor, to clear the eshell buffer."
+  
   (interactive)
   (let ((inhibit-read-only t))
-    (erase-buffer)))
+    (if (string= (buffer-name) "*eshell*")
+	(erase-buffer))))
 
-;;;; Count words of a line
-;;
-
-(defvar show-line-length--lighter
-  '(:eval (concat " LL:" (number-to-string (- (line-end-position) (line-beginning-position))))))
-(put 'show-line-length--lighter 'risky-local-variable t)
-
-(define-minor-mode show-line-length-mode
-  "just do it"
-  :global t
-    :lighter show-line-length--lighter)
 
 ;;; Begin Scheme48
 ;; s48
 (setq scheme-program-name "scheme48")
 
-;; (setq load-path (cons (expand-file-name "~/git/wget/scheme48-1.9.2/emacs/")
-;;		      load-path))
+(setq load-path (cons (expand-file-name "~/git/wget/scheme48-1.9.2/emacs/")
+		      load-path))
 
 (autoload 'cmulisp "cmulisp"
            "Run an inferior Lisp process."
@@ -208,6 +180,16 @@
 (add-to-list 'load-path "~/emacs.d/emmet-mode")
 (require 'emmet-mode)
 
+(add-to-list 'custom-theme-load-path (expand-file-name "~/.emacs.d/themes/"))
+ 
+(setq common-lisp-hyperspec-root
+      (concat "file:/" (expand-file-name "~/.emacs/HyperSpec/HyperSpec/")))
+
+;;; theme for error in init.el
+;; (load-theme 'taming-mr-arneson t t)
+;; (enable-theme 'taming-mr-arneson)
+(load-theme 'gotham t t)
+(enable-theme 'gotham)
 
 ;; Add paths (not required if EXWM is installed from GNU ELPA).
 (add-to-list 'load-path "/home/amnesia/git/clone/emacsos/xelb/")
