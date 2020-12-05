@@ -80,6 +80,14 @@
   networking.interfaces.enp1s0f1.useDHCP = true;
   networking.interfaces.wlp2s0.useDHCP = true;
 
+  networking.extraHosts =
+  ''
+      127.0.0.2 other-localhost
+      10.0.0.1  server
+
+  '';
+	    
+
   system.autoUpgrade.channel = "https://nixos.org/channels/nixos-20.03/";
 
   # Configure network proxy if necessary
@@ -107,11 +115,24 @@
     /etc/nixos/patches/st.anysize.diff
   ];
 
+  # set nix-serve options
+  services.nix-serve.port = 8088;
+  services.nix-serve.enable = true;
+  services.nix-serve.extraParams = ''
+
+    storeDir = "/mnt/nix-cache",
+    stateDir = "/mnt/nix-var"
+
+  '';
+
+  # set binary caches for nixos
+  nix.trustedBinaryCaches = ["http://localhost:8088/" "https://cache.nixos.org/"];
+
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
 
-     zsh keybase man-pages git ranger screen dmenu htop iw qemu ncdu tmux st gdb nitrogen wirelesstools qemu # usbutils
+     zsh keybase man-pages git ranger screen dmenu htop iw qemu ncdu tmux st gdb nitrogen wirelesstools qemu xorg.xkill # usbutils
 
      compton
 
@@ -133,11 +154,13 @@
 
      # openjdk
 
+     nano-wallet appimage-run
+
      nethack nethack-x11
 
      aircrack-ng crunch sshpass busybox ht gdb lldb pev radare2 wineWowPackages.stable steam-run upx # msf
 
-     hyperledger-fabric
+     hyperledger-fabric nix-serve nix-binary-cache cachix
 
 
      yggdrasil chirp
@@ -302,7 +325,7 @@
   # Xmonad window manager
   services.xserver = {
   
-  windowManager.xmonad = {
+    windowManager.xmonad = {
       enable = true;
       enableContribAndExtras = true;
     };
