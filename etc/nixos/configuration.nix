@@ -45,23 +45,14 @@
   # ratio) doesn't seem to work, so we just pick another low one.
   boot.loader.grub.gfxmodeEfi = "1024x768";
 
-  boot.initrd.luks.devices = [
+  boot.initrd.luks.devices = 
     {
-      name = "eos";
-      device = "/dev/disk/by-uuid/e6ac9502-6698-4046-8e2e-47a964c807ef";
-      preLVM = true;
-      allowDiscards = true;
-    }
-  ];
-
-  # enable powersave
-  services.tlp.enable = true;
-  services.tlp.extraConfig = ''
-    CPU_SCALING_GOVERNOR_ON_AC=performance
-    CPU_SCALING_GOVERNOR_ON_BAT=powersave
-    CPU_MAX_PERF_ON_AC=100
-    CPU_MAX_PERF_ON_BAT=30
-  '';
+      eos = {
+        device = "/dev/disk/by-uuid/e6ac9502-6698-4046-8e2e-47a964c807ef";
+        preLVM = true;
+        allowDiscards = true;
+      };
+    };
   
   # prevent shutdown by press Power Button
   # powerManagement.enable = true;
@@ -102,8 +93,8 @@
   # };
 
   # configure Garbage Collector
-  nix.gc.automatic = true;
-  nix.gc.options = "--delete-older-than 8d";
+  nix.gc.automatic = false;
+  # nix.gc.options = "--delete-older-than 8d";
 
   # Set your time zone.
   time.timeZone = "America/Fortaleza";
@@ -115,16 +106,6 @@
     /etc/nixos/patches/st.anysize.diff
   ];
 
-  # set nix-serve options
-  services.nix-serve.port = 8088;
-  services.nix-serve.enable = true;
-  services.nix-serve.extraParams = ''
-
-    storeDir = "/mnt/nix-cache",
-    stateDir = "/mnt/nix-var"
-
-  '';
-
   # set binary caches for nixos
   nix.trustedBinaryCaches = ["http://localhost:8088/" "https://cache.nixos.org/"];
 
@@ -132,7 +113,7 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
 
-     zsh keybase man-pages git ranger screen dmenu htop iw qemu ncdu tmux st gdb nitrogen wirelesstools qemu xorg.xkill # usbutils
+     zsh keybase man-pages git ranger screen dmenu htop iw qemu ncdu tmux st gdb nitrogen wirelesstools qemu xorg.xkill links # usbutils
 
      compton
 
@@ -142,7 +123,7 @@
 
      emacs calibre vim okular xaos vim # arduino 
 
-     nodejs ghc guile binutils-unwrapped go racket # msbuild
+     nodejs ghc guile binutils-unwrapped chez go racket # msbuild
 
      firefox opera nmap netcat wget tor wpa_supplicant bind openvpn kotatogram-desktop
      keepassxc 
@@ -184,76 +165,197 @@
      # pulseaudio
   ];
 
-  # teamviewer - off if not needed
-  # services.teamviewer.enable = true;
-  
-  # Haskell hoogle Copy
 
-  services.hoogle.enable = true;
-  services.hoogle.packages = hp: with hp; [
-    text lens tonalude stack statistics parsec hspec
-  ];
+  # List services that you want to enable:
 
+  # programs.zsh.enable = true;
 
-  # Yggdrasil Service
-  services.yggdrasil.enable = true;
+  services = {
 
-  services.yggdrasil.config = {
+    # enable powersave
+    tlp.enable = true;
+    tlp.extraConfig = ''
+      CPU_SCALING_GOVERNOR_ON_AC=performance
+      CPU_SCALING_GOVERNOR_ON_BAT=powersave
+      CPU_MAX_PERF_ON_AC=100
+      CPU_MAX_PERF_ON_BAT=30
+    '';
+     
+    # set nix-serve options
+    nix-serve.port = 8088;
+    nix-serve.enable = true;
+    nix-serve.extraParams = ''
+     
+      storeDir = "/mnt/nix-cache",
+      stateDir = "/mnt/nix-var"
+    
+    '';
+     
+     
+    # teamviewer - off if not needed
+    # teamviewer.enable = true;
+
+    # Haskell hoogle Copy
+    hoogle.enable = true;
+    hoogle.packages = hp: with hp; [
+       text lens tonalude stack statistics parsec hspec
+    ];
+
+    # Yggdrasil Service
+    # yggdrasil.configFile = "/home/synbian/yggdrasil.conf";
+    yggdrasil.enable = true;
+    yggdrasil.config = {
    
-     # Listen = [ "tcp://0.0.0.0:xxxxx" ];
+      # Listen = [ "tcp://0.0.0.0:xxxxx" ];
    
-     Peers = [ "tcp://45.231.133.188:58301"
-               "tcp://[2804:49fc::ffff:ffff:5b5:e8be]:58301"
-	       "tcp://aa.bb.cc.dd:eeeee"
-     	       "tcp://[aaaa:bbbb:cccc:dddd::eeee]:fffff"
-	       "tcp://67.205.187.55:19103"
-	       "tls://67.205.187.55:19102"
+      Peers = [ "tcp://45.231.133.188:58301"
+              "tcp://[2804:49fc::ffff:ffff:5b5:e8be]:58301"
+              "tcp://aa.bb.cc.dd:eeeee"
+     	      "tcp://[aaaa:bbbb:cccc:dddd::eeee]:fffff"
+	      "tcp://67.205.187.55:19103"
+	      "tls://67.205.187.55:19102"
 
-    	       "tls://[2604:a880:400:d0::16e5:7001]:19102"
-    	       "tcp://198.58.100.240:44478"
-               "tcp://[2600:3c00::f03c:91ff:feae:3efa]:44478"
+    	      "tls://[2604:a880:400:d0::16e5:7001]:19102"
+    	      "tcp://198.58.100.240:44478"
+              "tcp://[2600:3c00::f03c:91ff:feae:3efa]:44478"
 	
 
-     ];
+      ];
+    };
+
+    # hamachi
+    logmein-hamachi.enable = false;
+
+    # keybase
+    kbfs.enable = true;
+    keybase.enable = true;
+
+    # flatpak
+    flatpak.enable = true;
+
+    # VOIP OVER CELL
+    # murmur.enable = true;
+
+    # Emacs Daemon
+    emacs.enable = true;
+
+    # bluetooth
+    blueman.enable = false;
+
+    # gnunet
+    gnunet.enable = true;
+
+    # Enable the OpenSSH daemon.
+    openssh.enable = true;
+    
+    # Enable CUPS to print documents.
+    # printing.enable = true;
+    # Fix headphone white-noise on Dell XPS 13.
+    acpid.enable = true;
+    acpid.handlers.fixHeadphoneNoise = {
+      event = "jack/headphone HEADPHONE plug";
+      action = "${pkgs.alsaUtils}/bin/amixer -c0 sset 'Headphone Mic Boost' 10dB";
+    };
+    
+    
+    xserver = {
+    
+      # Enable the X11 windowing system.
+      enable = true;
+      layout = "br";
+      desktopManager.xterm.enable=false;
+      # xkbOptions = "eurosign:e";
+
+      # EXWM  
+      # xserver.windowManager.exwm.enable = true;
+
+      # Xmonad window manager
+      windowManager.xmonad = {
+        enable = true;
+        enableContribAndExtras = true;
+      };
+      wacom.enable = true;
+
+      # config for dwm
+      # desktopManager.default="none";
+      # windowManager.dwm.enable = true;
+
+      # olds xfce4 interface
+      # desktopManager = {
+      # default = "xfce";
+      # xterm.enable = false;
+      # xfce.enable = true;
+      # };
+        
+      # };
+    
+      # Enable the KDE Desktop Environment.
+      # displayManager.sddm.enable = true;
+      # desktopManager.plasma5.enable = true;
+
+
+      # Enable touchpad support.
+      # TODO :: solve Scrol in touchpad.
+      libinput.naturalScrolling = false;
+      libinput.enable = true;
+      libinput.middleEmulation = true;
+      libinput.tapping = true;
+  
+      # libinput.enable = false;
+      # synaptics.enable = true;
+    };
+
+    # Show the manual on virtual console 8 :
+    nixosManual.showManual = true;
+
+    # DNS
+    # bind.enable = true;
+    # dnscrypt-proxy2.enable = true;
+
+    dnscrypt-proxy2 = {
+      enable = true;
+      settings = {
+        ipv6_servers = true;
+        require_dnssec = true;
+        
+        sources.public-resolvers = {
+        urls = [
+          "https://raw.githubusercontent.com/DNSCrypt/dnscrypt-resolvers/master/v3/public-resolvers.md"
+          "https://download.dnscrypt.info/resolvers-list/v3/public-resolvers.md"
+        ];
+        cache_file = "/var/lib/dnscrypt-proxy2/public-resolvers.md";
+        minisign_key = "RWQf6LRCGA9i53mlYecO4IzT51TGPpvWucNSCh1CBM0QTaLn73Y7GFO3";
+      };
+      
+      # You can choose a specific set of servers
+      # from https://github.com/DNSCrypt/dnscrypt-resolvers/blob/master/v3/public-resolvers.md
+      # server_names = [ ... ];
+      };
+    };
+    
   };
   
-  # services.yggdrasil.configFile = "/home/synbian/yggdrasil.conf";
-
-  # services.logmein-hamachi.enable = false;
-
-  # keybase
-
-  services.kbfs.enable = true;
-  services.keybase.enable = true;
-  
-
   xdg.portal.enable = true;
-  services.flatpak.enable = true;
-  # DNS
-  services.bind.enable = true;
-  # services.dnscrypt-proxy.enable = true;
-  virtualisation.docker.enable = true;
-  hardware.bluetooth.enable = false;
-  services.blueman.enable = false;
-  hardware.bluetooth.powerOnBoot = false;
 
+
+  # bluetooth
+  hardware.bluetooth.enable = false;
+  hardware.bluetooth.powerOnBoot = false;
 
   ## problems in swith to 20.03 channel
   # Virtual Box / Virtualization
-  virtualisation.virtualbox.host.enable = true;
-  ## services.virtualbox.enable = true;
+  # virtualbox
+  # virtualisation.virtualbox.enable = true;
+  # virtualisation.virtualbox.host.enable = true;
   # virtualisation.virtualbox.host.enable = true;
   # virtualisation.virtualbox.guest.enable = true;
+  # Docker
+  virtualisation.docker.enable = true;
   # ## Realy/maybe not work...
   # virtualisation.virtualbox.host.enableExtensionPack = true;
   ## not surt Effect
   # nixpkgs.config.virtualbox.enableExtensionPack = true;
   
-  # VOIP OVER CELL
-  # services.murmur.enable = true;
-
-  # Emacs Daemon
-  services.emacs.enable = true;
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
@@ -263,28 +365,30 @@
     shell = pkgs.zsh;
   };
 
-  # List services that you want to enable:
-
-  # Enable the OpenSSH daemon.
-  services.openssh.enable = true;
-  programs.zsh.enable = true;
-
-  # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
-  # networking.firewall.allowedUDPPorts = [ ... ];
+  # networking.
   # Or disable the firewall altogether.
-  networking.firewall.enable = true;
+  networking = {
 
-  # Enable CUPS to print documents.
-  # services.printing.enable = true;
-
-  # Enable sound.
+    nameservers = [ "127.0.0.1" "::1" ];
+    # resolvconf.enable = false;
+   
+    # Open ports in the firewall.
+    firewall.enable = true; 
+    # firewall.allowedTCPPorts = [ ... ];
+    
+    # If using dhcpcd:
+    dhcpcd.extraConfig = "nohook resolv.conf";
+    # If using NetworkManager:
+    networkmanager.dns = "none";
+  };
   
-  sound.enable = true;
-
-  sound.extraConfig = ''
-    defaults.ctl.card 0
-  '';
+  # Enable sound.  
+  sound = {
+    enable = true;
+    extraConfig = ''
+      defaults.ctl.card 0
+    '';
+  };
   
   ## Not working with mic but working with firefox...
   # enable mic with amixer
@@ -296,76 +400,13 @@
      package = pkgs.pulseaudioFull;
      support32Bit = true;
   };
-  #
-  # Fix headphone white-noise on Dell XPS 13.
-  services.acpid.enable = true;
-  services.acpid.handlers.fixHeadphoneNoise = {
-    event = "jack/headphone HEADPHONE plug";
-    action = "${pkgs.alsaUtils}/bin/amixer -c0 sset 'Headphone Mic Boost' 10dB";
-  };
-  
-  
+    
   # Unfree packages
   nixpkgs.config = {
 
     allowUnfree = true;
     # oraclejdk.accept_license = true;
   };
-
-  # Enable the X11 windowing system.
-  services.xserver.enable = true;
-  services.xserver.layout = "br";
-  # services.xserver.xkbOptions = "eurosign:e";
-
-
-  # EXWM  
-  # services.xserver.windowManager.exwm.enable = true;
-
-
-  # Xmonad window manager
-  services.xserver = {
-  
-    windowManager.xmonad = {
-      enable = true;
-      enableContribAndExtras = true;
-    };
-  
-    wacom.enable = true;
-  };
-
-
-  # config for dwm
-  # services.xserver = {
-  #   desktopManager.xterm.enable=false;
-  #   # desktopManager.default="none";
-  #   windowManager.dwm.enable = true;
-  # };
-
-  # olds xfce4 interface
-  # services.xserver = {
-  #     desktopManager = {
-  #       default = "xfce";
-  #       xterm.enable = false;
-  #       xfce.enable = true;
-  #     };
-  # };
-
-  # Enable touchpad support. TODO :: solve Scrol in touchpad.
-  services.xserver.libinput.naturalScrolling = false;
-  services.xserver.libinput.enable = true;
-  services.xserver.libinput.middleEmulation = true;
-  services.xserver.libinput.tapping = true;
-
-  # services.xserver.libinput.enable = false;
-  # services.xserver.synaptics.enable = true;
-
-
-  # Show the manual on virtual console 8 :
-  services.nixosManual.showManual = true;
-
-  # Enable the KDE Desktop Environment.
-  # services.xserver.displayManager.sddm.enable = true;
-  # services.xserver.desktopManager.plasma5.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.synbian = {
