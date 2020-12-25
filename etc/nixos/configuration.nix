@@ -79,7 +79,7 @@
   '';
 	    
 
-  system.autoUpgrade.channel = "https://nixos.org/channels/nixos-20.03/";
+  system.autoUpgrade.channel = "https://nixos.org/channels/nixos-20.09/";
 
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
@@ -113,7 +113,7 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
 
-     zsh keybase man-pages git ranger screen dmenu htop iw qemu ncdu tmux st gdb nitrogen wirelesstools qemu xorg.xkill links # usbutils
+     zsh keybase man-pages git ranger screen dmenu htop iw qemu ncdu tmux st gdb nitrogen wirelesstools qemu xorg.xkill links ark nixfmt # usbutils
 
      compton
 
@@ -121,13 +121,15 @@
 
      sbcl ecl # nasm
 
-     emacs calibre vim okular xaos vim # arduino 
+     emacs calibre vim okular xaos vim vscode # arduino 
 
-     nodejs ghc guile binutils-unwrapped chez go racket # msbuild
+     nodejs ghc guile binutils-unwrapped chez go racket dotnet-sdk_3  # msbuild
 
      firefox opera nmap netcat wget tor wpa_supplicant bind openvpn kotatogram-desktop
      keepassxc 
      vlc scrot feh # gimp
+
+     libreoffice
 
      lxqt.pavucontrol-qt 
      
@@ -310,10 +312,10 @@
 
     # DNS
     # bind.enable = true;
-    # dnscrypt-proxy2.enable = true;
+    dnscrypt-proxy2.enable = true;
 
     dnscrypt-proxy2 = {
-      enable = true;
+      # enable = true;
       settings = {
         ipv6_servers = true;
         require_dnssec = true;
@@ -323,7 +325,7 @@
           "https://raw.githubusercontent.com/DNSCrypt/dnscrypt-resolvers/master/v3/public-resolvers.md"
           "https://download.dnscrypt.info/resolvers-list/v3/public-resolvers.md"
         ];
-        cache_file = "/var/lib/dnscrypt-proxy2/public-resolvers.md";
+        cache_file = "public-resolvers.md";
         minisign_key = "RWQf6LRCGA9i53mlYecO4IzT51TGPpvWucNSCh1CBM0QTaLn73Y7GFO3";
       };
       
@@ -342,7 +344,7 @@
   hardware.bluetooth.enable = false;
   hardware.bluetooth.powerOnBoot = false;
 
-  ## problems in swith to 20.03 channel
+  ## problems in swith to 20.09 channel
   # Virtual Box / Virtualization
   # virtualbox
   # virtualisation.virtualbox.enable = true;
@@ -350,6 +352,8 @@
   # virtualisation.virtualbox.host.enable = true;
   # virtualisation.virtualbox.guest.enable = true;
   # Docker
+  virtualisation.virtualbox.host.enable = true;
+  
   virtualisation.docker.enable = true;
   # ## Realy/maybe not work...
   # virtualisation.virtualbox.host.enableExtensionPack = true;
@@ -410,15 +414,17 @@
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.synbian = {
+    
     isNormalUser = true;
-    extraGroups = [ "vboxusers" "wheel" "audio" "docker" ]; # Enable VMBox and ‘sudo’ for the user.
+    extraGroups = [ "vboxusers" "wheel" "audio" "docker" ]; # Enable VMBox, Docker and ‘sudo’ for the user.
   };
-
+  users.extraGroups.vboxusers.members = [ "user-with-access-to-virtualbox" ];
+  
   # This value determines the NixOS release from which the default # settings for stateful data, like file locations and database versions
   # on your system were taken. It‘s perfectly fin  e and recommended to leave
   # this value at the release version of the first install of this system.
   # Before changing this value read the documentation for this option
   # (e.g. man   configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = "20.03"; # Did you read the comment? 
+  system.stateVersion = "20.09"; # Did you read the comment? 
 }
 
