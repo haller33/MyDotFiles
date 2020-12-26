@@ -4,7 +4,7 @@
 ;; installed packages.  Don't delete this line.  If you don't want it,
 ;; just comment it out by adding a semicolon to the start of the line.
 ;; You may delete these explanatory comments.
-(package-initialize)
+;; (package-initialize)
 
 (load (expand-file-name "~/quicklisp/slime-helper.el"))
 ;; Replace "sbcl" with the path to your implementation
@@ -15,16 +15,16 @@
 
 ;; Flychecker
 
-(use-package flycheck
-  :ensure t
-  :init (global-flycheck-mode))
+;;(use-package flycheck
+;;  :ensure t
+;;  :init (global-flycheck-mode))
 
 ;; Using Dired-subtree
-(use-package dired-subtree
-   :config
-   (bind-keys :map dired-mode-map
-              ("i" . dired-subtree-insert)
-              (";" . dired-subtree-remove)))
+;;(use-package dired-subtree
+;;   :config
+;;   (bind-keys :map dired-mode-map
+;;              ("i" . dired-subtree-insert)
+;;              (";" . dired-subtree-remove)))
  
 ;;;;
 ;;; Telega.el Session
@@ -59,6 +59,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(blink-cursor-blinks 0)
  '(blink-cursor-mode t)
  '(custom-safe-themes
    (quote
@@ -67,14 +68,20 @@
  '(display-battery-mode t)
  '(display-time-mode t)
  '(fringe-mode 1 nil (fringe))
+ '(global-flycheck-mode t)
  '(ivy-mode t)
- '(blink-cursor-blinks 0)
  '(menu-bar-mode nil)
  '(org-support-shift-select nil)
- '(package-check-signature 1)
+ '(package-archives
+   (quote
+    (("gnu-elpa" . "https://elpa.gnu.org/packages/")
+     ("melpa" . "https://melpa.org/packages/")
+     ("org" . "https://orgmode.org/elpa/")
+     ("stable-melpa" . "http://stable.melpa.org/packages/"))))
+ '(package-check-signature nil)
  '(package-selected-packages
    (quote
-    (magit ranger treemacs dired-subtree nix-mode nixos-options haskell-mode hindent org org-mode exwm lisp-mode slime scheme-complete lispy racket-mode rcirc-menu circe hy-mode dr-racket-like-unicode zoom-window quack racer lsp-rust cargo flycheck-rust use-package emmet-mode markdown-mode noflet code-archive js-auto-beautify zoom vue-mode color-theme-modern async web web-beautify)))
+    (json-mode epm multi-web-mode flymake-eslint helpful flymake-jslint flymake-json js2-mode lsp-mode auto-package-update tern-auto-complete tern magit ranger treemacs dired-subtree nix-mode nixos-options haskell-mode hindent org org-mode exwm lisp-mode slime scheme-complete lispy racket-mode rcirc-menu circe hy-mode dr-racket-like-unicode zoom-window quack racer lsp-rust cargo flycheck-rust use-package emmet-mode markdown-mode noflet code-archive js-auto-beautify zoom vue-mode color-theme-modern async web web-beautify)))
  '(scroll-bar-mode nil)
  '(setq display-time-default-load-average)
  '(show-paren-mode t)
@@ -83,6 +90,7 @@
  '(tooltip-mode nil)
  '(treemacs-no-png-images t)
  '(visible-cursor nil))
+
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -93,16 +101,17 @@
 ;;; Melpa Packages
 ;;
 (require 'package)
-(add-to-list
- 'package-archives
- ;; '("Melpa" . "http://stable.melpa.org/packages/") ; many packages won't show if using stable
- ;;'("gnu" . "https://elpa.gnu.org/packages/") ;; error
- '("melpa" . "https://melpa.org/packages/")
- '("melpa" . "http://stable.melpa.org/packages/")
- ;; '("org" . "http://orgmode.org/elpa/")
- ;; ("melpa-milk" . "http://melpa.milkbox.net/packages/")
- )
+;; (add-to-list
+;;  'package-archives
+;;  ;; '("Melpa" . "http://stable.melpa.org/packages/") ; many packages won't show if using stable
+;;  '("gnu" . "https://elpa.gnu.org/packages/") ;; error
+;;  ;; '("melpa" . "https://melpa.org/packages/")
+;;  '("melpa-stable" . "http://stable.melpa.org/packages/")
+;;  ;; '("org" . "http://orgmode.org/elpa/")
+;;  ;; ("melpa-milk" . "http://melpa.milkbox.net/packages/")
+;;  )
 
+(package-initialize)
 
 (defun slime-eval-buffer-without-comments ()
   (interactive)
@@ -142,6 +151,11 @@
   (let ((inhibit-read-only t))
     (if (string= (buffer-name) "*eshell*")
 	(erase-buffer))))
+
+
+;;; Load El Kanban
+(add-to-list 'load-path "/home/synbian/.emacs.d/kanban.el")
+;; (require 'kanban)
 
 
 ;;; Begin Scheme48
@@ -207,6 +221,8 @@
             blink-cursor-interval-invisible))))
 
 (ad-activate 'internal-show-cursor)
+
+(global-flycheck-mode)
 
 ;; 
 ;; ;; Load EXWM.
