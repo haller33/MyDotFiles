@@ -113,7 +113,7 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
 
-     zsh keybase man-pages git ranger screen dmenu htop iw qemu ncdu tmux st gdb nitrogen wirelesstools qemu xorg.xkill links ark nixfmt # usbutils
+     zsh keybase man-pages git ranger screen dmenu htop iw qemu ncdu tmux st gdb nitrogen wirelesstools qemu xorg.xkill links ark nixfmt screenkey slop # usbutils
 
      compton
 
@@ -285,9 +285,10 @@
       # olds xfce4 interface
       # desktopManager = {
       # default = "xfce";
-      # xterm.enable = false;
       # xfce.enable = true;
       # };
+      # newer ?
+      # displayManager.defaultSession = "xfce";
         
       # };
     
