@@ -1,128 +1,128 @@
+docker ps -a
+docker start f10
+docker ps
+ls ../privproxy/
+cp ../privproxy/privoxy-start.sh .
+cp -a ../privproxy/privoxy-start.sh .
 ls
-cd haskell/
+cp ../privproxy/config  .
+pwd
 ls
-cd ..
-cd ../clone/sleepsorts/
 ls
-mkdir haskell
-cd haskell/
+mv dnscrypt-proxy.toml vpncray.yml
+s
 ls
-touch sleepsort.hs
-cd ../../wget/
-stack init
-stack ghci
-node
-2.12123123 - (2.12123123 % 1)
-======++++++====
+mv start.dns.sh start.vpn.cray.sh
 ls
+ls
+docker images
+-rwxr-xr-x   1 synbian        users       94 2020-12-09 18:33 #start.dns.sh#
+docker run -d aaa
+docker run -it aaa /bin/sh
+docker images | head
+docker run -d a770
+docker ps 
+docker ps -a 
+docker rm $(docker ps -aq)
+docker ps
+docker stop f10
+docker rm f10
+docker ps -a
+docker images | head
+docker run -it 9be5d /bin/sh
+exit
+git init
 git status
-cargo build
-rustc -vV
-scrot ~/aaa.jpg
-scrot ~/aaab.jpg
-sudo ln -s /run/current-system/sw/lib/ld-linux-x86-64.so.2 /lib64/ld-linux-x86-64.so.2
-sudo ln -s /run/current-system/sw/lib/libz.so.1.2.11 /lib64/libz.so.1.2.11
-nix-env -qa 'zlib1g'
-nix-env -qa 'zlib'
-ls
-sudo docker run -it ubuntu
-source ~/.zshrc
-git clone https://github.com/haller33/sintropia
-cd MyDotFiles/Scripts/
-ls
-cd nix.shell/
-nix-shell shell.cargo.nix 
-cd ../git/clone/MyDotFiles/
-cp ~/.emacs.d/ home/ -ra
+git status
 git status
 git add .
-git commit -m "my new kybind using a new package dired-subtree"
+git config -l
+git config -l user.name any
+git config --local user.name any
+git config --local user.email any@amnesia.com
+git status
+git add .
+git commit -m "begin burn"
+git remote -v
+git remote add origin https://notabug.org/antonearro/vpncray.git
+git push -u origin master
+git push -u origin master
+git pull
+git pull
+git log
+git log
+git remote -v
+git pull origin master
+git log
+git status
+ls
+cat >> .gitignore
+ls
+git status
+git add .
+git commit -m "little change"
 git push
+docker-compose build
+docker-compose build
+docker-compose build
+docker-compose build
+docker-compose build
+docker-compose build
+docker-compose build
+docker-compose build
+docker-compose build
+docker-compose build
+git add .
+git status
+git commit -m "little change for rw volumes"
+git push 
+git status
+docker-compose build
+git add .
+git add .
+git status
+git commit -m "now is read only bro"
+git push
+git status
+git push
+cp -raf /home/synbian/ENV/openvpn/acenty/* source/ 
+ls source/
+mv source/vpnascenty-TCP4-1194-config.conf source/vpn.config
+docker-compose build
+docker-compose up
+docker-compose build
+docker-compose down
+docker-compose up
+ls
+docker-compose down
+docker-compose build
+docker-compose up
+docker-compose build
+docker-compose up
+docker-compose build
+docker-compose up
+docker-compose build
+docker-compose up
+qvpncray_1  | Thu Dec 10 01:23:17 2020 ERROR: Cannot ioctl TUNSETIFF tun: Operation not permitted (errno=1)
+ls /etc/net/tun
+ls /etc/net
+ls /dev/net
+ls /dev/net/tun
+ls -lsha  /dev/net/tun
+scheme
+nix-shell -p chezscheme
+nix-shell -p chezscheme
+nix-shell -p scheme
+whereis systemctl
+/nix/store/4v4bar7hzz701qa10z2qqak3y5js5rip-system-path/bin/systemctl suspend
+ls
+ls
+ls -lR
 ls
 cd 
 cd git/clone/MyDotFiles/
-cp -r ~/.emacs.d/ home/
-git status
-cp -ra ~/.emacs.d/ home/
-git status
-git add .
-git status
-git commit -m "add ranger and treemacs with configuration for emacs"
-git push
-git push
-ls
-git status
-cd ../learnRust/
 git pull
-git reset --hard
-git status
-git reset --hard
-ls
-git stash
-git status
-git add .
-git stash
-git status
-git pull
-cd src/LESSON3/control_flow/
-cargo run
-cd -
-cd ../MyDotFiles/Scripts/nix.shell/
-nix-shell shell.cargo.nix 
-docker run -it mysql
-sudo docker run -it mysql
-sudo docker run -it -e MYSQL_ROOT_PASSWORD=123 mysql 
-sudo docker run -it b1d /bin/sh 
-sudo docker exec -it b1d /bin/sh 
-cd
-cd git/wget/
-ls
-cd cd haskell/
-cd haskell/
-ls
-s
-ls
-git status
-git push
-stack ghci
-ghci
-ghci
-cd
-cd RSI/
-mkdir ENGREV
-cd ENGREV/
-ls
-mkdir intrudoção
-mv intrudoção/ intro
-cd intro/
-ls
-touch hello.c
-make hello.c 
-make hello
-nix-shell -p make gcc
-nix-shell -p cmake gcc
-whereis bash
-./run.sh 
-./run.sh  pe32
-./run.sh  build
-msf
-msfconsole
-sudo msfconsole
-whereis bash
-mkdir gitstash
-cd gitstash/
-ls
-git init
-l
-ls
-ls -a
-ps aux | grep firefox
-kill 26964
-git log
-git diff 9c7744bf94fa12c58cfc86579109d1b6b04c0f37
-git branch
-cat ~/.gitconfig 
-git commit -m "add yggdrasil and some program to desktop"
-git merge --help
-git merge --hels
-git merge --help
+cp -raf home/.emacs.d/ ~
+cd ..
+cd git/clone/MyDotFiles/
+git remote -v
