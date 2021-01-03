@@ -1,5 +1,3 @@
-/home/synbian/git/clone/MyDotFiles/Scripts
-/home/synbian/git/clone/MyDotFiles/Scripts/nix.shell
 /home/synbian/git/clone/learnRust/src/LESSON3/control_flow/src
 /home/synbian/git/clone/MyDotFiles
 /home/synbian/git/clone/learnRust/src/LESSON3/control_flow
@@ -31,3 +29,5 @@
 /home/synbian/.emacs.d
 /home/synbian
 /home/synbian/git/clone/MyDotFiles
+~
+/home/synbian/CLOJURE/rest-demo/src/rest_demo
