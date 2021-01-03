@@ -81,7 +81,7 @@
  '(package-check-signature nil)
  '(package-selected-packages
    (quote
-    (json-mode epm multi-web-mode flymake-eslint helpful flymake-jslint flymake-json js2-mode lsp-mode auto-package-update tern-auto-complete tern magit ranger treemacs dired-subtree nix-mode nixos-options haskell-mode hindent org org-mode exwm lisp-mode slime scheme-complete lispy racket-mode rcirc-menu circe hy-mode dr-racket-like-unicode zoom-window quack racer lsp-rust cargo flycheck-rust use-package emmet-mode markdown-mode noflet code-archive js-auto-beautify zoom vue-mode color-theme-modern async web web-beautify)))
+    (treemacs-icons-dired snippet lsp-treemacs treemacs-projectile treemacs-all-the-icons lsp-java lsp-haskell scala-mode clojure-mode json-mode epm multi-web-mode flymake-eslint helpful flymake-jslint flymake-json js2-mode lsp-mode auto-package-update tern-auto-complete tern magit ranger treemacs dired-subtree nix-mode nixos-options haskell-mode hindent org org-mode exwm lisp-mode slime scheme-complete lispy racket-mode rcirc-menu circe hy-mode dr-racket-like-unicode zoom-window quack racer lsp-rust cargo flycheck-rust use-package emmet-mode markdown-mode noflet code-archive js-auto-beautify zoom vue-mode color-theme-modern async web web-beautify)))
  '(scroll-bar-mode nil)
  '(setq display-time-default-load-average)
  '(show-paren-mode t)
@@ -224,6 +224,9 @@
 
 (global-flycheck-mode)
 
+;; rholang syntax checker
+(add-to-list 'load-path "~/.emacs.d/syntax-modes/")
+(require 'rholang-mode)
 ;; 
 ;; ;; Load EXWM.
 ;; (require 'exwm)
