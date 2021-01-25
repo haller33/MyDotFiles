@@ -1,5 +1,3 @@
-ls ../privproxy/
-cp ../privproxy/privoxy-start.sh .
 cp -a ../privproxy/privoxy-start.sh .
 ls
 cp ../privproxy/config  .
@@ -126,3 +124,5 @@ git remote -v
 ls
 pwd
 scheme
+cd ../../../clone/
+git clone https://github.com/haller33/API_FUNCTIONAL_CSHARP
