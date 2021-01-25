@@ -55,7 +55,7 @@
     };
   
   # prevent shutdown by press Power Button
-  # powerManagement.enable = true;
+  powerManagement.enable = true;
   services.logind.lidSwitch = "suspend-then-hibernate";
   services.logind.extraConfig = "HandlePowerKey=ignore";
   # services.logind.extraConfig = "IdleAction=ignore";
@@ -75,6 +75,7 @@
   ''
       127.0.0.2 other-localhost
       10.0.0.1  server
+      
 
   '';
 	    
@@ -113,7 +114,7 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
 
-     zsh keybase man-pages git ranger screen dmenu htop iw qemu ncdu tmux st gdb nitrogen wirelesstools qemu xorg.xkill links ark nixfmt screenkey slop # usbutils
+     doas zsh keybase man-pages git ranger screen dmenu htop iw qemu ncdu tmux st gdb nitrogen wirelesstools qemu xorg.xkill links ark nixfmt screenkey slop gvfs android-file-transfer # usbutils
 
      compton
 
@@ -123,27 +124,31 @@
 
      emacs calibre vim okular xaos vim vscode # arduino 
 
-     nodejs ghc guile binutils-unwrapped chez go racket dotnet-sdk_3  # msbuild
+     nodejs ghc guile binutils-unwrapped chez go racket clojure leiningen dotnet-sdk_3 scala sbt # msbuild
 
-     firefox opera nmap netcat wget tor wpa_supplicant bind openvpn kotatogram-desktop
+     palemoon firefox opera nmap netcat wget tor torsocks wpa_supplicant bind openvpn kotatogram-desktop
      keepassxc 
      vlc scrot feh # gimp
 
+     monero-gui
+     
      libreoffice
 
-     lxqt.pavucontrol-qt 
+     lxqt.pavucontrol-qt
+
+     qt5.full qtcreator
      
      # logmein-hamachi
 
      # openjdk
 
-     nano-wallet appimage-run
+     appimage-run # nano-wallet 
 
      nethack nethack-x11
 
-     aircrack-ng crunch sshpass busybox ht gdb lldb pev radare2 wineWowPackages.stable steam-run upx # msf
+     msf aircrack-ng crunch sshpass busybox ht gdb lldb pev radare2 wineWowPackages.stable steam-run upx
 
-     hyperledger-fabric nix-serve nix-binary-cache cachix
+     hyperledger-fabric nix-serve nix-binary-cache cachix nix-index
 
 
      yggdrasil chirp
@@ -180,7 +185,7 @@
       CPU_SCALING_GOVERNOR_ON_AC=performance
       CPU_SCALING_GOVERNOR_ON_BAT=powersave
       CPU_MAX_PERF_ON_AC=100
-      CPU_MAX_PERF_ON_BAT=30
+      CPU_MAX_PERF_ON_BAT=40
     '';
      
     # set nix-serve options
@@ -241,6 +246,12 @@
     # Emacs Daemon
     emacs.enable = true;
 
+    # TOR
+    tor.enable = true;
+    # tor.tsocks.enable = true;
+    # tor.torsocks.enable = true;
+    tor.client.enable = true;
+    
     # bluetooth
     blueman.enable = false;
 
