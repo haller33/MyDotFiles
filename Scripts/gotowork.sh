@@ -17,6 +17,8 @@ while true; do
 
 	echo "GOTOWORK"
 
+	sleep 3
+	
 #    else
 #	echo "no process or procastination fold"
 
