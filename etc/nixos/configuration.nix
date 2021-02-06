@@ -8,6 +8,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      ./hosts.nix
     ];
 
   # Use the systemd-boot EFI boot loader.
@@ -71,16 +72,19 @@
   networking.interfaces.enp1s0f1.useDHCP = true;
   networking.interfaces.wlp2s0.useDHCP = true;
 
-  networking.extraHosts =
-  ''
-      127.0.0.2 other-localhost
-      10.0.0.1  server
-      
+  ### because we added a new hosts.nix file
+  ## 
+  # networking.extraHosts =
+  # ''
+  #    127.0.0.2 other-localhost
+  #    10.0.0.1  server
+  #    
 
-  '';
-	    
+  #'';
 
-  system.autoUpgrade.channel = "https://nixos.org/channels/nixos-20.09/";
+
+  # system.autoUpgrade.channel = "https://nixos.org/channels/nixos-20.09/";
+  system.autoUpgrade.channel = "https://nixos.org/channels/nixos-unstable";
 
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
@@ -136,7 +140,7 @@
 
      lxqt.pavucontrol-qt
 
-     qt5.full qtcreator
+     # gcc llvm clang cmake qt5.full qt5.qmake qtcreator qt5.qtbase  qt5.qttools qt5.qtwebview 
      
      # logmein-hamachi
 
@@ -424,6 +428,7 @@
     # oraclejdk.accept_license = true;
   };
 
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.synbian = {
     
@@ -437,6 +442,6 @@
   # this value at the release version of the first install of this system.
   # Before changing this value read the documentation for this option
   # (e.g. man   configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = "20.09"; # Did you read the comment? 
+  system.stateVersion = "unstable"; # Did you read the comment? 
 }
 
