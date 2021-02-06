@@ -152,7 +152,9 @@
 
      msf aircrack-ng crunch sshpass busybox ht gdb lldb pev radare2 wineWowPackages.stable steam-run upx
 
-     hyperledger-fabric nix-serve nix-binary-cache cachix nix-index
+     hyperledger-fabric
+
+     nix-serve nix-binary-cache cachix nix-index
 
 
      yggdrasil chirp
@@ -429,6 +431,35 @@
   };
 
 
+#  security.doas.extraRule = [
+#      # Allow execution of any command by any user in group doas, requiring
+#      # a password and keeping any previously-defined environment variables.
+#      { groups = [ "doas" ]; noPass = false; keepEnv = true; }
+#      
+#      # Allow execution of "/home/root/secret.sh" by user `backup` OR user
+#      # `database` OR any member of the group with GID `1006`, without a
+#      # password.
+#      { users = [ "backup" "database" ]; groups = [ 1006 ];
+#      cmd = "/home/root/secret.sh"; noPass = true; }
+#      
+#      # Allow any member of group `bar` to run `/home/baz/cmd1.sh` as user
+#      # `foo` with argument `hello-doas`.
+#      { groups = [ "bar" ]; runAs = "foo";
+#      cmd = "/home/baz/cmd1.sh"; args = [ "hello-doas" ]; }
+#      
+#      # Allow any member of group `bar` to run `/home/baz/cmd2.sh` as user
+#      # `foo` with no arguments.
+#      { groups = [ "bar" ]; runAs = "foo";
+#      cmd = "/home/baz/cmd2.sh"; args = [ ]; }
+#      
+#      # Allow user `abusers` to execute "nano" and unset the value of
+#      # SSH_AUTH_SOCK, override the value of ALPHA to 1, and inherit the
+#      # value of BETA from the current environment.
+#      { users = [ "abusers" ]; cmd = "nano";
+#      setEnv = [ "-SSH_AUTH_SOCK" "ALPHA=1" "BETA" ]; }
+#    ];
+#
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.synbian = {
     
@@ -442,6 +473,6 @@
   # this value at the release version of the first install of this system.
   # Before changing this value read the documentation for this option
   # (e.g. man   configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = "unstable"; # Did you read the comment? 
+  system.stateVersion = "20.09"; # Did you read the comment? 
 }
 
