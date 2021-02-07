@@ -83,8 +83,11 @@
   #'';
 
 
-  # system.autoUpgrade.channel = "https://nixos.org/channels/nixos-20.09/";
-  system.autoUpgrade.channel = "https://nixos.org/channels/nixos-unstable";
+  system.autoUpgrade.channel = [
+      "https://nixos.org/channels/nixos-20.09"
+      "https://channels.nixos.org/nixpkgs-unstable"
+      "https://nixos.org/channels/nixos-unstable"
+    ];
 
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
@@ -460,6 +463,12 @@
 #    ];
 #
 
+  # Enable zram to have better memory management.
+  zramSwap = {
+    enable = true;
+    algorithm = "zstd";
+  };
+  
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.synbian = {
     
