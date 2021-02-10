@@ -128,14 +128,14 @@
 ;; (haskell-interactive-mode-echo SESSION MESSAGE &optional MODE)
 
 ;; Auto Complet
-(add-to-list 'ac-modes 'org-mode)
-(ac-set-trigger-key "TAB")
+;; (add-to-list 'ac-modes 'org-mode)
+;; (ac-set-trigger-key "TAB")
 
 ;;; Org-mode
 ;;
-(org-babel-load-file
- (expand-file-name "org-mode.org"
-                   user-emacs-directory))
+;; (org-babel-load-file
+;; (expand-file-name "org-mode.org"
+;;                   user-emacs-directory))
 
 ;;; Zoom using scrool
 ;;
@@ -192,8 +192,8 @@
 ;;	("http" . "127.0.0.1:9050")
 ;;	("https" . "127.0.0.1:9050")))
 
-(add-to-list 'load-path "~/emacs.d/emmet-mode")
-(require 'emmet-mode)
+;; (add-to-list 'load-path "~/emacs.d/emmet-mode")
+;; (require 'emmet-mode)
 
 (add-to-list 'custom-theme-load-path (expand-file-name "~/.emacs.d/themes/"))
  
