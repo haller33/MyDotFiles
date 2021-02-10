@@ -62,8 +62,7 @@
  '(blink-cursor-blinks 0)
  '(blink-cursor-mode t)
  '(custom-safe-themes
-   (quote
-    ("64bbc123707a1cc25f145921589d0708c4b6789015e2c50a2ec23cafcee76940" default)))
+   '("64bbc123707a1cc25f145921589d0708c4b6789015e2c50a2ec23cafcee76940" default))
  '(delete-selection-mode nil)
  '(display-battery-mode t)
  '(display-time-mode t)
@@ -73,15 +72,13 @@
  '(menu-bar-mode nil)
  '(org-support-shift-select nil)
  '(package-archives
-   (quote
-    (("gnu-elpa" . "https://elpa.gnu.org/packages/")
+   '(("gnu-elpa" . "https://elpa.gnu.org/packages/")
      ("melpa" . "https://melpa.org/packages/")
      ("org" . "https://orgmode.org/elpa/")
-     ("stable-melpa" . "http://stable.melpa.org/packages/"))))
+     ("stable-melpa" . "http://stable.melpa.org/packages/")))
  '(package-check-signature nil)
  '(package-selected-packages
-   (quote
-    (treemacs-icons-dired snippet lsp-treemacs treemacs-projectile treemacs-all-the-icons lsp-java lsp-haskell scala-mode clojure-mode json-mode epm multi-web-mode flymake-eslint helpful flymake-jslint flymake-json js2-mode lsp-mode auto-package-update tern-auto-complete tern magit ranger treemacs dired-subtree nix-mode nixos-options haskell-mode hindent org org-mode exwm lisp-mode slime scheme-complete lispy racket-mode rcirc-menu circe hy-mode dr-racket-like-unicode zoom-window quack racer lsp-rust cargo flycheck-rust use-package emmet-mode markdown-mode noflet code-archive js-auto-beautify zoom vue-mode color-theme-modern async web web-beautify)))
+   '(org-ac helm-org-recent-headings mqtt-mode qt-pro-mode treemacs-icons-dired snippet lsp-treemacs treemacs-projectile treemacs-all-the-icons lsp-java lsp-haskell scala-mode clojure-mode json-mode epm multi-web-mode flymake-eslint helpful flymake-jslint flymake-json js2-mode lsp-mode auto-package-update tern-auto-complete tern magit ranger treemacs dired-subtree nix-mode nixos-options haskell-mode hindent org org-mode exwm lisp-mode slime scheme-complete lispy racket-mode rcirc-menu circe hy-mode dr-racket-like-unicode zoom-window quack racer lsp-rust cargo flycheck-rust use-package emmet-mode markdown-mode noflet code-archive js-auto-beautify zoom vue-mode color-theme-modern async web web-beautify))
  '(scroll-bar-mode nil)
  '(setq display-time-default-load-average)
  '(show-paren-mode t)
@@ -129,6 +126,10 @@
 ;; Haskell Interact Mode
 ;; TODO
 ;; (haskell-interactive-mode-echo SESSION MESSAGE &optional MODE)
+
+;; Auto Complet
+(add-to-list 'ac-modes 'org-mode)
+(ac-set-trigger-key "TAB")
 
 ;;; Org-mode
 ;;
