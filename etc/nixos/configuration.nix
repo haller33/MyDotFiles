@@ -8,6 +8,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      ./hosts.nix
     ];
 
   # Use the systemd-boot EFI boot loader.
@@ -71,16 +72,22 @@
   networking.interfaces.enp1s0f1.useDHCP = true;
   networking.interfaces.wlp2s0.useDHCP = true;
 
-  networking.extraHosts =
-  ''
-      127.0.0.2 other-localhost
-      10.0.0.1  server
-      
+  ### because we added a new hosts.nix file
+  ## 
+  # networking.extraHosts =
+  # ''
+  #    127.0.0.2 other-localhost
+  #    10.0.0.1  server
+  #    
 
-  '';
-	    
+  #'';
 
-  system.autoUpgrade.channel = "https://nixos.org/channels/nixos-20.09/";
+
+  system.autoUpgrade.channel = [
+      "https://nixos.org/channels/nixos-20.09"
+      "https://channels.nixos.org/nixpkgs-unstable"
+      "https://nixos.org/channels/nixos-unstable"
+    ];
 
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
@@ -136,7 +143,7 @@
 
      lxqt.pavucontrol-qt
 
-     qt5.full qtcreator
+     # gcc llvm clang cmake qt5.full qt5.qmake qtcreator qt5.qtbase  qt5.qttools qt5.qtwebview 
      
      # logmein-hamachi
 
@@ -148,7 +155,9 @@
 
      msf aircrack-ng crunch sshpass busybox ht gdb lldb pev radare2 wineWowPackages.stable steam-run upx
 
-     hyperledger-fabric nix-serve nix-binary-cache cachix nix-index
+     hyperledger-fabric
+
+     nix-serve nix-binary-cache cachix nix-index
 
 
      yggdrasil chirp
@@ -424,6 +433,42 @@
     # oraclejdk.accept_license = true;
   };
 
+
+#  security.doas.extraRule = [
+#      # Allow execution of any command by any user in group doas, requiring
+#      # a password and keeping any previously-defined environment variables.
+#      { groups = [ "doas" ]; noPass = false; keepEnv = true; }
+#      
+#      # Allow execution of "/home/root/secret.sh" by user `backup` OR user
+#      # `database` OR any member of the group with GID `1006`, without a
+#      # password.
+#      { users = [ "backup" "database" ]; groups = [ 1006 ];
+#      cmd = "/home/root/secret.sh"; noPass = true; }
+#      
+#      # Allow any member of group `bar` to run `/home/baz/cmd1.sh` as user
+#      # `foo` with argument `hello-doas`.
+#      { groups = [ "bar" ]; runAs = "foo";
+#      cmd = "/home/baz/cmd1.sh"; args = [ "hello-doas" ]; }
+#      
+#      # Allow any member of group `bar` to run `/home/baz/cmd2.sh` as user
+#      # `foo` with no arguments.
+#      { groups = [ "bar" ]; runAs = "foo";
+#      cmd = "/home/baz/cmd2.sh"; args = [ ]; }
+#      
+#      # Allow user `abusers` to execute "nano" and unset the value of
+#      # SSH_AUTH_SOCK, override the value of ALPHA to 1, and inherit the
+#      # value of BETA from the current environment.
+#      { users = [ "abusers" ]; cmd = "nano";
+#      setEnv = [ "-SSH_AUTH_SOCK" "ALPHA=1" "BETA" ]; }
+#    ];
+#
+
+  # Enable zram to have better memory management.
+  zramSwap = {
+    enable = true;
+    algorithm = "zstd";
+  };
+  
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.synbian = {
     
